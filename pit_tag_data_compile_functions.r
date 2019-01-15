@@ -1,12 +1,11 @@
-
-
-
 library(tidyverse)
 library(lubridate)
 readr.show_progress = F
 
 # list of time zones
 #https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+# timeZone = "America/Los_Angeles"
 
 
 getDate = function(dateChunk='thisisafillerdate'){
@@ -49,7 +48,8 @@ makeORFIDtagDF = function(tagDataDF, tz){
   date = as.Date(tagDataDF[,2])
   time = as.character(tagDataDF[,3])
   fracsec = round(as.numeric(str_sub(time, 9, 11)), 2)
-  datetime = strptime(paste(date, time),format='%Y-%m-%d %H:%M:%S', tz=tz)
+  datetime = strftime(paste(date, time),format='%Y-%m-%d %H:%M:%S', tz=tz, usetz=FALSE)
+  #datetime = strptime(paste(date, time),format='%Y-%m-%d %H:%M:%S', tz=tz)
   duration = period_to_seconds(hms(tagDataDF[,4]))
   tagtype = as.character(tagDataDF[,5])
   tagid = as.character(tagDataDF[,6])
@@ -58,7 +58,7 @@ makeORFIDtagDF = function(tagDataDF, tz){
   arrint = as.character(tagDataDF[,8])
   arrint[arrint == '.'] = '65001'
   arrint = as.numeric(arrint)
-  
+
   return(data.frame(date, time, fracsec, datetime, duration, tagtype, tagid, antnum, consdetc, arrint, stringsAsFactors = F))
 }
 
@@ -67,15 +67,16 @@ makeORFIDmetaDF = function(metaDataDF, tz){
   #print(metaDataDF[,1])
   date = as.Date(metaDataDF[,1])
   time = as.character(metaDataDF[,2])
-  datetime = strptime(paste(date, time),format='%Y-%m-%d %H:%M:%S', tz=tz)
+  datetime = strftime(paste(date, time),format='%Y-%m-%d %H:%M:%S', tz=tz, usetz=FALSE)
+  #datetime = strptime(paste(date, time),format='%Y-%m-%d %H:%M', tz=tz)
   power = as.numeric(sub("V", "", metaDataDF[,3]))  
-  rx = (metaDataDF[,4])
-  tx = (metaDataDF[,5])
-  ea = (metaDataDF[,6])
-  charge = (metaDataDF[,7])
-  listen = (metaDataDF[,8])
-  temp = (metaDataDF[,9])
-  noise = (metaDataDF[,10])
+  rx = as.numeric(sub("A", "",metaDataDF[,4]))
+  tx = as.numeric(sub("A", "",metaDataDF[,5]))
+  ea = as.numeric(sub("A", "",metaDataDF[,6]))
+  charge = as.numeric(sub("ms/", "",metaDataDF[,7]))
+  listen = as.numeric(sub("ms", "",metaDataDF[,8]))
+  temp = as.numeric(sub("C", "",metaDataDF[,9]))
+  noise = as.numeric(sub("N", "",metaDataDF[,10]))
   
   return(data.frame(date, time, datetime, power, rx, tx, ea, charge, listen, temp, noise, stringsAsFactors = F))
 }
@@ -84,7 +85,8 @@ makeBiomarkDF = function(tagDataDF, tz){
   date = as.Date(do.call("c", lapply(as.character(tagDataDF[,4]), getDate)))
   time = as.character(str_sub(tagDataDF[,5], 1, 11))
   fracsec = round(as.numeric(str_sub(time, 9, 11)), 2)
-  datetime = strptime(paste(date, time),format='%Y-%m-%d %H:%M:%S', tz=tz)
+  datetime = strftime(paste(date, time),format='%Y-%m-%d %H:%M:%S', tz=tz, usetz=FALSE)
+  #datetime = strptime(paste(date, time),format='%Y-%m-%d %H:%M:%S', tz=tz)
   duration = NA
   tagtype = NA
   tagid = as.character(str_replace(tagDataDF[,6], '[.]', '_')) #str_replace(tagDataDF[,6], '[.]', '_')
@@ -123,7 +125,6 @@ writeDF = function(df, fname){
   write_csv(df, fname, append=T)
 }
 
-
 parseScanLog = function(logFile, tz, dbDir, archiveDir){
   #logFile = logFiles[1]
   #logFile = "C:/Users/ohmsh/Documents/gtransfer/Carmel Project/Array code and data/Code Test Jan 3/example/BLP/downloads/BLP2_Oct20to25_clean.txt"
@@ -148,7 +149,6 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
   }
   
   if(!any(biomark)){
-  #if(length(which(str_detect(lines[1:end], 'Oregon RFID Datalogger') == TRUE)) != 0){
     site = unlist(str_split(basename(logFile),'_'))[1]
     reader = 'ORFID'
     print(str_glue('        Reader: ',reader))
@@ -178,7 +178,7 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
         tagDataList = spaceDelim(lines[tagDataLines])
         tagDataMatrix = do.call(rbind, tagDataList)
         tagDataDF = as.data.frame(tagDataMatrix) %>%  #cbind(tagDataMatrix, tagDataLines)
-          makeORFIDtagDF(tz) %>%
+         makeORFIDtagDF(tz) %>%
           addInfo(tagDataLines, archiveFile, site, reader)
       }
       
@@ -277,7 +277,7 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
     }
   }
     
-    
+  
 #Biomark parsing starts here#################    
     
   } else { #TODO - check to see if this is a biomark reader - we are assuming it is right now
@@ -484,9 +484,9 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
     reader=reader, 
     fname=archiveFile, 
     dateadded=Sys.Date(), 
-    tagpct=tagDataDFpercent,
     metapct=metaDataDFpercent,
     metabadpct=metaDataBadDFpercent,
+    tagpct=tagDataDFpercent,
     tagfailpct=tagDataFailDFpercent,
     tagbadpct=tagDataJunkDFpercent,
     msgpct=msgDataDFpercent,
