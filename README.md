@@ -1,6 +1,6 @@
 # AntWrangler
 
-Automated PIT tag antenna data organization and cleaning tool
+Automated PIT tag antenna data organization and cleaning tool for Oregon RFID and Biomark antennas
 
 
 ## Instructions
@@ -61,8 +61,8 @@ Here is the structure you need to create per site:
     +---site2
     |   +---archive
     |   \---downloads
-	|
-	\---site3
+    |
+    +---site3
         +---archive
         \---downloads
 ```
@@ -84,27 +84,29 @@ calling the compiling program. First. Four variables need to be defined
 | dbDir | String, directory path | The full system path to the directory where the compiled log data base file exist or should be initially written to
 | timeZone | String | The time zone for where the raw PIT tag data was collected. Use this to find your time zone: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
-Alter the variable definitions for suite your needs and then run the script.
+Alter the variable definitions to suit your needs and then run the script.
 
 
 
 
 ##### About the compiled data tables
 
-There are 6 data tables that can be produced
+There are 7 data tables that may be produced, depending on your data inputs
 
-**logDB.csv**: these are successful tag readings where are data acquired from the scanner is formatted correctly
+**logDB.csv**: these are successful tag readings where are data acquired from the reader is formatted correctly
 
-The data table does not have a column header. The columns are defined as such:
+The log data table does not have a column header. The columns are defined as such:
 
 ```
-site, reader, srcfile, compdate, tagpct, tagfailpct, tagbadpct, msgpct, msgbadpct, otherpct, tagnrow, tagfailnrow, tagbadnrow, msgnrow, msgbadnrow, othernrow, totalnrow
+site, manuf, srcfile, compdate, metapct, metabadpct, tagpct, tagfailpct, tagbadpct, msgpct, msgbadpct, otherpct, tagnrow, tagfailnrow, tagbadnrow, msgnrow, msgbadnrow, othernrow, totalnrow
 ```
 
-+ `site`: the name of the site that the PIT tag data was collected
-+ `reader`: the type of PIT reader system
++ `site`: the name of the site or antenna 
++ `manuf`: the type of PIT reader system (ORFID or Biomark)
 + `srcfile`: the raw PIT tag data source file path
-+ `compdate`: the date this entry was compiled
++ `compdate`: the date this entry was compiled to the database
++ `metapct`: the percent of lines in source file that were metadata (ORFID)
++ `metabadpct`: the percent of lines in source file that were bad metadata (ORFID)
 + `tagpct`: the percent of lines in log file that are good tag reads
 + `tagfailpct`: the percent of lines in log file that are failed tag reads - the tag ID is not valid
 + `tagbadpct`: the percent of lines in log file that are bad tag reads - the line could not be parsed correctly
@@ -119,7 +121,55 @@ site, reader, srcfile, compdate, tagpct, tagfailpct, tagbadpct, msgpct, msgbadpc
 + `othernrow`: the number of lines in log file that could not be parsed correctly to identify whether it was a tag reading or a message
 + `totalnrow`: the total number of lines in the reader log file
   
-**tagDB.csv**: these are successful tag readings where data acquired from the scanner is formatted correctly
+**tagDB.csv**: these are successful tag readings where data acquired from the reader is formatted correctly
+
+The tag data table does not have a column header. The columns are defined as such:
+
+```
+date, time, fracsec, datetime, duration, tagtype, tagid, antnum, consdetc, arrint, site, manuf, srcfile, srcline, compdate
+```
+
++ `date`: raw data collection datetime
++ `time`: raw data collection time
++ `fracsec`: raw data collection fraction of a second for the time
++ `datetime`: raw date and time
++ `duration`: duration tag was in the field 
++ `tagtype`: tag type (A for ISO animal format, R for read-only, W for writeable tag; OregonRFID)
++ `tagid`: the PIT tag id
++ `antnum`: antenna number (multiple antenna reader only)
++ `consdetc`: consecutive detections count  
++ `arrint`: arrival interval - empty scans before detection
++ `site`: site or antenna where PIT tag data was collected
++ `manuf`: equipment manufacturer (ORFID or Biomark)
++ `srcfile`: the raw PIT tag data source file path
++ `srcline`: the raw PIT tag data source file line
++ `compdate`: the date this entry was compiled
+
+**metaDB.csv**: these are the metadata from OregonRFID readers
+
+The metadata table does not have a column header. The columns are defined as such:
+
+```
+date, time, datetime, power, rx, tx, ea, charge, listen, temp, noise, site, manuf, srcfile, srcline, compdate
+```
+
++ `date`: raw data collection datetime
++ `time`: raw data collection time
++ `datetime`: raw date and time
++ `power`: voltage received by the reader
++ `rx`:  charge amperage used
++ `tx`: listen amperage used
++ `ea`: average of charge and listen amperages over the minute
++ `charge`: field charge time (ms)
++ `listen`: listen time (ms)
++ `temp`: temperature inside datalogger (degrees Cel)
++ `noise`: number of noise detections over the minute
++ `site`: site or antenna where PIT tag data was collected
++ `manuf`: equipment manufacturer (ORFID or Biomark)
++ `srcfile`: the raw PIT tag data source file path
++ `srcline`: the raw PIT tag data source file line
++ `compdate`: the date this entry was compiled
+
 
 **tagFailDB.csv**: these are tag readings where the tag id was not recorded correctly during scan
 
@@ -128,26 +178,4 @@ site, reader, srcfile, compdate, tagpct, tagfailpct, tagbadpct, msgpct, msgbadpc
 **msgDB.csv**: these proper messages from the scanner system
 
 **msgBadDB.csv**: these are messages from the scanner system that 
-
-The data table does not have a column header. The columns are defined as such:
-
-```
-site, position, date, time, fracsec, datetime, duration, tagtype, tagid, antnum, consdetc, arrint, srcfile, srcline, compdate
-```
-
-+ `site`: the name of the site that the PIT tag data was collected
-+ `position`: an indicator for whether the collection was made upstream or downstream in an array pair
-+ `date`: raw data collection datetime
-+ `time`: raw data collection time
-+ `fracsec`: raw data collection fraction of a second for the time
-+ `datetime`: raw data collection and time
-+ `duration`: ???
-+ `tagtype`: whether the read was a test or an observation
-+ `tagid`: the PIT tag id
-+ `antnum`: antenna number
-+ `consdetc`: consecutive detections count  
-+ `arrint`: arrival interval - empty scans before detection
-+ `srcfile`: the raw PIT tag data source file path
-+ `srcline`: the raw PIT tag data source file line
-+ `compdate`: the date this entry was compiled
 
