@@ -125,10 +125,13 @@ writeDF = function(df, fname){
   write_csv(df, fname, append=T)
 }
 
+isJunkMetaFn = function(line){
+  return(str_squish(unlist(line)[5]))
+}
+
 parseScanLog = function(logFile, tz, dbDir, archiveDir){
   #logFile = logFiles[1]
   #logFile = "C:/Users/ohmsh/Documents/gtransfer/Carmel Project/Array code and data/Code Test Jan 3/example/BLP/downloads/BLP2_Oct20to25_clean.txt"
-  
   
   print(str_glue('    File: ', logFile))
   bname = basename(logFile)
@@ -161,7 +164,7 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
     isDate = !is.na(dateCheck)
     
     ########## DEAL WITH THE TAG DATA (D CODE)
-    dataMaybe = which(lineStart == 'D ')
+    dataMaybe = which(lineStart == 'D ') #OR LINE CONTAINS WORD 'DETECT"
     dataMaybeLength = length(dataMaybe)
     if(dataMaybeLength > 0){
       dataLines = spaceDelim(lines[dataMaybe])
@@ -249,13 +252,14 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
     
     
   ##########  DEAL WITH METADATA
-  metaLines = which(isDate == T) 
+  #   #### SOMEWHERE IN HERE DEAL WITH DETECT DATA AND PUT IT INTO JUNK METADATA
+  # metaLines = which(isDate == T & lines)  # AND LINE DOES NOT CONTAIN WORD "DETECT" 
+    
+  metaLines = which(isDate == T)  
   metaLinesLength = length(metaLines)
   if(metaLinesLength > 0){
     metaDataList = spaceDelim(lines[metaLines])
-    metaDataMatrix = do.call(rbind, metaDataList)
-    
-    isJunkMeta = str_squish(metaDataMatrix[,4]) #pick a column
+    isJunkMeta = do.call("c", lapply(metaDataList, isJunkMetaFn))
     isJunkMetaNchar = nchar(isJunkMeta)
     isJunkMeta = substring(isJunkMeta, isJunkMetaNchar,isJunkMetaNchar) # condition on 5th character being an A
     isJunkMeta = isJunkMeta != 'A' # true false - is thing junk
@@ -264,7 +268,8 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
   
     #identify good and bad lines here; each need to go into a separate dataframe
     if(length(notJunkMetaLines) != 0){
-      metaDataDF = as.data.frame(metaDataMatrix[notJunkMetaLines,]) %>%  #cbind(tagDataMatrix, tagDataLines)
+      metaDataMatrix = do.call(rbind, metaDataList[notJunkMetaLines])
+      metaDataDF = as.data.frame(metaDataMatrix) %>%  #cbind(tagDataMatrix, tagDataLines)
         makeORFIDmetaDF(tz) %>%   
         addInfo(metaLines[notJunkMetaLines], archiveFile, site, reader)
     } 
@@ -511,10 +516,14 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
 
 
 PITcompile = function(dataDir, dbDir, timeZone){
+  #logFile = "C:/Users/HaleyOhms/Documents/Carmel Project/Array data/BGS/downloads/BGS_JAN15.txt"
+  
+  #dataDir = "C:/Users/HaleyOhms/Documents/Carmel Project/Array data"
   siteDirs = normalizePath(list.dirs(dataDir, recursive = F))
   tz = timeZone
   
   for(dir in siteDirs){
+    #dir = siteDirs[3]
     print(str_glue('Site: ', dir))
     downloadDir = normalizePath(file.path(dir,"downloads"))
     archiveDir = normalizePath(file.path(dir,"archive"))
