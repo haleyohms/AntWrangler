@@ -59,7 +59,8 @@ makeORFIDtagDF = function(tagDataDF, tz){
   arrint[arrint == '.'] = '65001'
   arrint = as.numeric(arrint)
 
-  return(data.frame(date, time, fracsec, datetime, duration, tagtype, tagid, antnum, consdetc, arrint, stringsAsFactors = F))
+  return(data.frame(datetime, fracsec, duration, tagtype, tagid, antnum, consdetc, arrint, stringsAsFactors = F))
+  #return(data.frame(date, time, fracsec, datetime, duration, tagtype, tagid, antnum, consdetc, arrint, stringsAsFactors = F))
 }
 
 
@@ -78,7 +79,8 @@ makeORFIDmetaDF = function(metaDataDF, tz){
   temp = as.numeric(sub("C", "",metaDataDF[,9]))
   noise = as.numeric(sub("N", "",metaDataDF[,10]))
   
-  return(data.frame(date, time, datetime, power, rx, tx, ea, charge, listen, temp, noise, stringsAsFactors = F))
+  return(data.frame(datetime, power, rx, tx, ea, charge, listen, temp, noise, stringsAsFactors = F))
+  #return(data.frame(date, time, datetime, power, rx, tx, ea, charge, listen, temp, noise, stringsAsFactors = F))
 }
 
 makeBiomarkDF = function(tagDataDF, tz){
@@ -93,7 +95,8 @@ makeBiomarkDF = function(tagDataDF, tz){
   antnum = NA
   consdetc = NA
   arrint = NA
-  return(data.frame(date, time, fracsec, datetime, duration, tagtype, tagid, antnum, consdetc, arrint, stringsAsFactors = F))
+  return(data.frame(datetime, fracsec, duration, tagtype, tagid, antnum, consdetc, arrint, stringsAsFactors = F))
+  #return(data.frame(date, time, fracsec, datetime, duration, tagtype, tagid, antnum, consdetc, arrint, stringsAsFactors = F))
 }
 
 parseORFIDmsg = function(line){
@@ -538,5 +541,12 @@ PITcompile = function(dataDir, dbDir, timeZone){
     }
   }
 }
+
+
+# tagdf<-read_csv(paste(dbDir,"/tagDB.csv", sep=""), col_names =FALSE)
+# tagdf<-tagdf[!duplicated(tagdf), ]
+# write_csv(tagdf, paste(dbDir,"/tagDB.csv", sep=""), append=FALSE, col_names=FALSE)
+
+
 
 
