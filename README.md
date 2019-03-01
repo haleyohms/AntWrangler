@@ -1,6 +1,6 @@
 # AntWrangler
 
-Automated PIT tag antenna data organization and cleaning tool for Oregon RFID and Biomark antennas
+Automated PIT tag antenna data cleaning tool for Oregon RFID and Biomark readers
 
 
 ## Instructions
@@ -18,36 +18,11 @@ There are three R files included:
 + **pit_tag_data_compile_run.r**: a file that runs the PIT tag data compiling program  
 + **pit_tag_data_explorer.r**: a script will a few plotting and summary utilities for exploring the compiled PIT tag data
 
-#### The example files
-
-There is an ***example*** folder that contain all files needed to perform a test of the scripts.
-
-```
-\---example
-	|
-    +---CAWD
-    |   +---archive
-    |   \---downloads
-    |           CAWD2_06082018
-    |
-    +---RanchoSanCarlos
-    |   +---archive
-    |   \---downloads
-    |           01_00120.log
-    |
-    +---Scarlett
-    |   +---archive
-    |   \---downloads
-    \---SleepyHollow
-        +---archive
-        \---downloads
-                SH2_20180607_fulldownload
-```
-
+We will come back to these files in a minute. First, you need to set up your data directory.
 
 ### Directory Setup
 
-The compilation program is expecting a certain directory structure so that it can find files to incorporate and where it should move log file that have been parsed and included in the database files.
+AntWrangler is expecting a certain directory structure so that it can find data files to parse, clean and incorporate, and then move them to an archive.
 
 Here is the structure you need to create per site:
 
@@ -61,21 +36,37 @@ Here is the structure you need to create per site:
     +---site2
     |   +---archive
     |   \---downloads
-    |
-    +---site3
-        +---archive
-        \---downloads
 ```
 
-`site`: will hold the log files for an individual reader - whatever the name of the folder is, is what the name of the site will be in the database files
-`archive`: is where files that have been parsed and incorporated into the database files will be moved to - the date of inclusion in the db files will be prepended to the original file name
-`download` is where you should place log files from the readers that you want incorporated into the DB files
+`site`: will hold the data files for an individual site. This will *not* be used for the site designation in the compilation data. Instead, site will come from the downloaded file name (see download below)
+`archive`: is where files that have been parsed and incorporated into the compilation files will be moved to - the date of inclusion in the compliation files will be prepended to the original file name
+`download` is where you should place data files that you want parsed and incorporated into the compilation files. 
+
+***An important note:*** for OregonRFID data files, each file should be labeled with the site name first and followed with an underscore (i.e., BGS_nov21). The parser code will use the first entry of the file name (i.e., "BGS") as the site name in the compilation data. 
+
+#### The example files
+
+There is an ***example*** folder that contain all files needed to perform a test of the scripts.
+
+```
+\---example
+	|
+    +---BGS
+    |   +---archive
+    |   \---downloads
+    |           BGS_nov21
+    |
+    +---RanchoSanCarlos
+    |   +---archive
+    |   \---downloads
+    |           01_00006
+```
 
 
 ### Running the program
 
 Open the ***pit_tag_data_compile_run.r*** file in RStudio. This file is simply a helper for defining variables and 
-calling the compiling program. First. Four variables need to be defined 
+calling the compiling program. To start, **four variables need to be defined:**
 
 | Name | Type | Definition
 | - | - | - |
@@ -87,78 +78,78 @@ calling the compiling program. First. Four variables need to be defined
 Alter the variable definitions to suit your needs and then run the script.
 
 
-
-
 ##### About the compiled data tables
 
-There are 7 data tables that may be produced, depending on your data inputs
+There are seven compilation data tables that may be produced, depending on your data inputs. These data tables do not have column headers. See the code below to add column headers.
 
-**logDB.csv**: these are successful tag readings where are data acquired from the reader is formatted correctly
+**logDB.csv**: this is a log file to document which data files were processed by the parser program and some details about those files. 
 
-The log data table does not have a column header. The columns are defined as such:
+Here is my recommended way to open this file in RStudio with correct formatting and headers (copy and paste the code below). 
+
+```R
+#column names
+logcolnames <- c("site", "manuf", "srcfile", "compdate", "tagnrow", "tagbadnrow", "metanrow", "metabadnrow", "msgnrow", "msgbadnrow", "othernrow", "totalnrow")
+
+#read the file into R with correct column formats (see readr documentation here: https://readr.tidyverse.org/articles/readr.html)
+read_csv("logDB.csv", col_names=logcolnames, col_types = cols(site="c", manuf="c", srcfile="c", compdate=col_date(format = "%m/%d/%Y"), tagnrow="i", tagbadnrow="i", metanrow="i", metabadnrow="i", msgnrow="i", msgbadnrow="i", othernrow="i", totalnrow="i") )
 
 ```
-site, manuf, srcfile, compdate, metapct, metabadpct, tagpct, tagfailpct, tagbadpct, msgpct, msgbadpct, otherpct, tagnrow, tagfailnrow, tagbadnrow, msgnrow, msgbadnrow, othernrow, totalnrow
-```
-
-+ `site`: the name of the site or antenna 
-+ `manuf`: the type of PIT reader system (ORFID or Biomark)
+The fields are: 
++ `site`: the site or antenna name
++ `manuf`: the reader manufacturer (ORFID or Biomark)
 + `srcfile`: the raw PIT tag data source file path
-+ `compdate`: the date this entry was compiled to the database
-+ `metapct`: the percent of lines in source file that were metadata (ORFID)
-+ `metabadpct`: the percent of lines in source file that were bad metadata (ORFID)
-+ `tagpct`: the percent of lines in log file that are good tag reads
-+ `tagfailpct`: the percent of lines in log file that are failed tag reads - the tag ID is not valid
-+ `tagbadpct`: the percent of lines in log file that are bad tag reads - the line could not be parsed correctly
-+ `msgpct`: the percent of lines in log file that are good messages - parsed correctly
-+ `msgbadpct`: the percent of lines in log file that are bad messages - parsed incorrectly
-+ `otherpct`: the percent of lines in log file that could not be parsed correctly to identify whether it was a tag reading or a message
-+ `tagnrow`: the number of lines in log file that are good tag reads
-+ `tagfailnrow`: the number of lines in log file that are failed tag reads - the tag ID is not valid
-+ `tagbadnrow`: the number of lines in log file that are bad tag reads - the line could not be parsed correctly
-+ `msgnrow`: the number of lines in log file that are good messages - parsed correctly
-+ `msgbadnrow`: the number of lines in log file that are bad tag reads - the line could not be parsed correctly
-+ `othernrow`: the number of lines in log file that could not be parsed correctly to identify whether it was a tag reading or a message
-+ `totalnrow`: the total number of lines in the reader log file
++ `compdate`: the date this data file was compiled to the compilation files
+d tag reads
++ `tagnrow`: the number of lines in raw data file that were good tag reads and were parsed correctly
++ `tagbadnrow`: the number of lines in raw data file that were bad tag reads and were not be parsed correctly
++ `metanrow`: the number of lines in raw data file that were meta data and parsed correctly
++ `metabadnrow`: the number of lines in raw data file that were bad meta data and were not be parsed correctly
++ `msgnrow`: the number of lines in raw data file that are good messages and were parsed correctly
++ `msgbadnrow`: the number of lines in raw data file that are bad tag reads and could not be parsed correctly
++ `othernrow`: the number of lines in raw data file that could not be parsed into either a tag, metadata or message 
++ `totalnrow`: the total number of lines in the raw data file
   
 **tagDB.csv**: these are successful tag readings where data acquired from the reader is formatted correctly
 
-The tag data table does not have a column header. The columns are defined as such:
+Here is my recommended way to open this file in RStudio with correct formatting and headers 
 
-```
-date, time, fracsec, datetime, duration, tagtype, tagid, antnum, consdetc, arrint, site, manuf, srcfile, srcline, compdate
+```R
+#column names
+tagcolnames <- c("datetime", "fracsec", "duration", "tagtype", "tagid", "antnum", "consdetc", "arrint", "site", "manuf", "srcfile", "srcline", "compdate")
+
+#read the file into R with correct column formats 
+read_csv("tagDB.csv", col_names=tagcolnames, col_types = cols(datetime=col_datetime(format = "%m/%d/%Y %H%M%S"), fracsec="d", duration="d", tagtype="c", tagid="c", antnum="i", consdetc="i", arrint="i", site="c", manuf="c", srcfile="c", srcline="i", compdate=col_date(format = "%m/%d/%Y"))
 ```
 
-+ `date`: raw data collection datetime
-+ `time`: raw data collection time
-+ `fracsec`: raw data collection fraction of a second for the time
 + `datetime`: raw date and time
++ `fracsec`: raw data collection fraction of a second for the time
 + `duration`: duration tag was in the field 
 + `tagtype`: tag type (A for ISO animal format, R for read-only, W for writeable tag; OregonRFID)
-+ `tagid`: the PIT tag id
++ `tagid`: the PIT tag number
 + `antnum`: antenna number (multiple antenna reader only)
-+ `consdetc`: consecutive detections count  
-+ `arrint`: arrival interval - empty scans before detection
-+ `site`: site or antenna where PIT tag data was collected
++ `consdetc`: consecutive detections count  + `arrint`: number of empty scans prior to the detection
++ `site`: site or antenna 
 + `manuf`: equipment manufacturer (ORFID or Biomark)
 + `srcfile`: the raw PIT tag data source file path
 + `srcline`: the raw PIT tag data source file line
 + `compdate`: the date this entry was compiled
 
-**metaDB.csv**: these are the metadata from OregonRFID readers
+**metaDB.csv**: these are metadata from OregonRFID readers
 
-The metadata table does not have a column header. The columns are defined as such:
+Here is my recommended way to open this file in RStudio with correct formatting and headers 
 
+```R
+#column names
+metacolnames <- c("datetime", "power", "rx", "tx", "ea", "charge", "listen", "temp", "noise", "site", "manuf", "srcfile", "srcline", "compdate")
+
+#read the file into R with correct column formats 
+read_csv("metaDB.csv", col_names=metacolnames, col_types = cols(datetime=col_datetime(format = "%m/%d/%Y %H%M%S"), power="d", rx="d", tx="d", ea="d", charge="d", listen="d", temp="d", noise="i", site="c", manuf="c", srcfile="c", srcline="i", compdate=col_date(format = "%m/%d/%Y"))
 ```
-date, time, datetime, power, rx, tx, ea, charge, listen, temp, noise, site, manuf, srcfile, srcline, compdate
-```
 
-+ `date`: raw data collection datetime
-+ `time`: raw data collection time
 + `datetime`: raw date and time
 + `power`: voltage received by the reader
-+ `rx`:  charge amperage used
-+ `tx`: listen amperage used
++ `rx`:  charge amperage 
++ `tx`: listen amperage 
 + `ea`: average of charge and listen amperages over the minute
 + `charge`: field charge time (ms)
 + `listen`: listen time (ms)
@@ -171,11 +162,19 @@ date, time, datetime, power, rx, tx, ea, charge, listen, temp, noise, site, manu
 + `compdate`: the date this entry was compiled
 
 
-**tagFailDB.csv**: these are tag readings where the tag id was not recorded correctly during scan
+**tagBadDB.csv**: these are tag readings where the tag id was not recorded correctly or there was some formatting error
+**metaBadDB.csv**: these are metadata that were not formatted correctly. *Note: these include detections that occur when TeraTerm or whatever reader you use is open. These detections are also saved as tags in reader database, so we exclude them from tagDB.csv and instead parse them here.* **msgDB.csv**: these are messages from the reader
+**msgBadDB.csv**: these are messages from the reader that were not formatted correctly
+**otherDB.csv**: 
 
-**tagBadDB.csv**: these are tag readings whose format is incorrect and parsing failed
+Each of these files are formatted in the same way. Here is an example of my recommended way to open these files in RStudio with correct formatting and headers 
 
-**msgDB.csv**: these proper messages from the scanner system
+```R
+#column names
+tagbadcolnames <- c("linecontent", "site", "manuf", "srcfile", "srcline", "compdate")
 
-**msgBadDB.csv**: these are messages from the scanner system that 
+#read the file into R with correct column formats 
+read_csv("tagbadDB.csv", col_names=tagbadcolnames, col_types = cols(linecontent="c", site="c", manuf="c", srcfile="c", srcline="i", compdate=col_date(format = "%m/%d/%Y"))
+```
+
 
