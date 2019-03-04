@@ -39,7 +39,9 @@ Here is the structure you need to create per site:
 ```
 
 `site`: will hold the data files for an individual site. This will *not* be used for the site designation in the compilation data. Instead, site will come from the downloaded file name (see download below)
+
 `archive`: is where files that have been parsed and incorporated into the compilation files will be moved to - the date of inclusion in the compliation files will be prepended to the original file name
+
 `download` is where you should place data files that you want parsed and incorporated into the compilation files. 
 
 ***An important note:*** for OregonRFID data files, each file should be labeled with the site name first and followed with an underscore (i.e., BGS_nov21). The parser code will use the first entry of the file name (i.e., "BGS") as the site name in the compilation data. 
@@ -88,11 +90,14 @@ Here is my recommended way to open this file in RStudio with correct formatting 
 
 ```R
 #column names
-logcolnames <- c("site", "manuf", "srcfile", "compdate", "tagnrow", "tagbadnrow", "metanrow", "metabadnrow", "msgnrow", "msgbadnrow", "othernrow", "totalnrow")
+logcolnames <- c("site", "manuf", "srcfile", "compdate", "tagnrow", "tagbadnrow", 
+                 "metanrow", "metabadnrow", "msgnrow", "msgbadnrow", "othernrow", "totalnrow")
 
 #read the file into R with correct column formats (see readr documentation here: https://readr.tidyverse.org/articles/readr.html)
-read_csv("logDB.csv", col_names=logcolnames, col_types = cols(site="c", manuf="c", srcfile="c", compdate=col_date(format = "%m/%d/%Y"), tagnrow="i", tagbadnrow="i", metanrow="i", metabadnrow="i", msgnrow="i", msgbadnrow="i", othernrow="i", totalnrow="i") )
-
+read_csv(paste(dbDir,"/logDB.csv", sep=""), col_names=logcolnames, 
+         col_types = cols(site="c", manuf="c", srcfile="c", compdate="D", 
+                          tagnrow="i", tagbadnrow="i", metanrow="i", metabadnrow="i", msgnrow="i", 
+                          msgbadnrow="i", othernrow="i", totalnrow="i") )
 ```
 The fields are: 
 + `site`: the site or antenna name
@@ -115,10 +120,14 @@ Here is my recommended way to open this file in RStudio with correct formatting 
 
 ```R
 #column names
-tagcolnames <- c("datetime", "fracsec", "duration", "tagtype", "tagid", "antnum", "consdetc", "arrint", "site", "manuf", "srcfile", "srcline", "compdate")
+tagcolnames <- c("datetime", "fracsec", "duration", "tagtype", "tagid", "antnum", 
+                 "consdetc", "arrint", "site", "manuf", "srcfile", "srcline", "compdate")
 
 #read the file into R with correct column formats 
-read_csv("tagDB.csv", col_names=tagcolnames, col_types = cols(datetime=col_datetime(format = "%m/%d/%Y %H%M%S"), fracsec="d", duration="d", tagtype="c", tagid="c", antnum="i", consdetc="i", arrint="i", site="c", manuf="c", srcfile="c", srcline="i", compdate=col_date(format = "%m/%d/%Y"))
+read_csv(paste(dbDir,"/tagDB.csv", sep=""), col_names=tagcolnames, col_types = cols(datetime=col_datetime(format = "%m/%d/%Y %H:%M"), 
+                                                              fracsec="d", duration="d", tagtype="c", tagid="c",
+                                                              antnum="i", consdetc="i", arrint="i", site="c", manuf="c",
+                                                              srcfile="c", srcline="i", compdate=col_date(format = "%m/%d/%Y")))
 ```
 
 + `datetime`: raw date and time
@@ -140,10 +149,14 @@ Here is my recommended way to open this file in RStudio with correct formatting 
 
 ```R
 #column names
-metacolnames <- c("datetime", "power", "rx", "tx", "ea", "charge", "listen", "temp", "noise", "site", "manuf", "srcfile", "srcline", "compdate")
+metacolnames <- c("datetime", "power", "rx", "tx", "ea", "charge", "listen", 
+                  "temp", "noise", "site", "manuf", "srcfile", "srcline", "compdate")
 
 #read the file into R with correct column formats 
-read_csv("metaDB.csv", col_names=metacolnames, col_types = cols(datetime=col_datetime(format = "%m/%d/%Y %H%M%S"), power="d", rx="d", tx="d", ea="d", charge="d", listen="d", temp="d", noise="i", site="c", manuf="c", srcfile="c", srcline="i", compdate=col_date(format = "%m/%d/%Y"))
+read_csv(paste(dbDir,"/metaDB.csv", sep=""), col_names=metacolnames, 
+         col_types = cols(datetime=col_datetime(format = "%Y-%m-%d %H:%M:%S"), power="d", rx="d", tx="d", 
+                          ea="d", charge="d", listen="d", temp="d", noise="i", site="c", manuf="c", 
+                          srcfile="c", srcline="i", compdate=col_date(format = "%Y-%m-%d")))
 ```
 
 + `datetime`: raw date and time
@@ -163,18 +176,38 @@ read_csv("metaDB.csv", col_names=metacolnames, col_types = cols(datetime=col_dat
 
 
 **tagBadDB.csv**: these are tag readings where the tag id was not recorded correctly or there was some formatting error
+
 **metaBadDB.csv**: these are metadata that were not formatted correctly. *Note: these include detections that occur when TeraTerm or whatever reader you use is open. These detections are also saved as tags in reader database, so we exclude them from tagDB.csv and instead parse them here.* **msgDB.csv**: these are messages from the reader
+
 **msgBadDB.csv**: these are messages from the reader that were not formatted correctly
-**otherDB.csv**: 
+
+**otherDB.csv**: these are miscellaneous text that does not fit into any of the above categories.
 
 Each of these files are formatted in the same way. Here is an example of my recommended way to open these files in RStudio with correct formatting and headers 
 
 ```R
 #column names
-tagbadcolnames <- c("linecontent", "site", "manuf", "srcfile", "srcline", "compdate")
+badcolnames <- c("linecontent", "site", "manuf", "srcfile", "srcline", "compdate")
 
 #read the file into R with correct column formats 
-read_csv("tagbadDB.csv", col_names=tagbadcolnames, col_types = cols(linecontent="c", site="c", manuf="c", srcfile="c", srcline="i", compdate=col_date(format = "%m/%d/%Y"))
-```
+read_csv(paste(dbDir,"/tagbadDB.csv", sep=""), col_names=badcolnames, col_types = cols(linecontent="c", site="c",
+                                                                                            manuf="c", srcfile="c", srcline="i", 
+                                                                                            compdate=col_date(format = "%Y-%m-%d")))
+
+ #read the file into R with correct column formats 
+  read_csv(paste(dbDir,"/metabadDB.csv", sep=""), col_names=badcolnames, col_types = cols(linecontent="c", site="c",
+                                                                                            manuf="c", srcfile="c", srcline="i", 
+                                                                                            compdate=col_date(format = "%Y-%m-%d")))
+
+  #read the file into R with correct column formats 
+  read_csv(paste(dbDir,"/msgbadDB.csv", sep=""), col_names=badcolnames, col_types = cols(linecontent="c", site="c",
+                                                                                             manuf="c", srcfile="c", srcline="i", 
+                                                                                             compdate=col_date(format = "%Y-%m-%d")))
+
+  #read the file into R with correct column formats 
+  read_csv(paste(dbDir,"/otherDB.csv", sep=""), col_names=badcolnames, col_types = cols(linecontent="c", site="c",
+                                                                                            manuf="c", srcfile="c", srcline="i", 
+                                                                                            compdate=col_date(format = "%Y-%m-%d")))
+ ```
 
 
