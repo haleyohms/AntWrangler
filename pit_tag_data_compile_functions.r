@@ -93,7 +93,7 @@ makeBiomarkDF = function(tagDataDF, tz){
   duration = NA
   tagtype = NA
   tagid = as.character(str_replace(tagDataDF[,6], '[.]', '')) #str_replace(tagDataDF[,6], '[.]', '_')
-  antnum = NA
+  antnum = as.numeric(tagDataDF[,3])
   consdetc = NA
   arrint = NA
   return(data.frame(datetime, fracsec, duration, tagtype, tagid, antnum, consdetc, arrint, stringsAsFactors = F))
@@ -138,6 +138,11 @@ isJunkTagFn = function(line){
   return(grepl("^[0-9]+$",tag))
 }
 
+isBMJunkTagFn = function(line){
+  tag<-str_squish(unlist(line)[6])
+  tag<-sub("\\.", "",tag)
+  return(grepl("^[A-Za-z0-9]+$",tag))
+}
 
 parseScanLog = function(logFile, tz, dbDir, archiveDir){
   #logFile = logFiles[1]
@@ -152,12 +157,13 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
 
   
 ### Is this file orfid or biomark? - need to get site name
-  end = ifelse(lineLen < 10, lineLen, 10)
+  end = ifelse(lineLen < 150, lineLen, 150) #if ll is <150 use ll, if its greater, use only first 150 lines
+  #end = ifelse(lineLen < 10, lineLen, 10)
   readerTestLines = spaceDelim(lines[1:end])
   biomark = c()
   for(i in 1:length(readerTestLines)){
     tmp = as.character(unlist(readerTestLines[i])[1])
-    inIt = tmp %in% c("MSG:", "TAG:", "SRP:", "ALM:")
+    inIt = tmp %in% c("MSG:", "TAG:", "SRP:", "ALM:", "*TAG:", "*SRP:")
     biomark = c(biomark,inIt)
   }
   
@@ -188,7 +194,7 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
     
     if(dataMaybeLength > 0){
       dataLines = spaceDelim(lines[dataMaybe])
-      
+
       #...do a check on the date to make sure that its a proper date
       lens = lengths(dataLines)
       date = unlist(lapply(dataLines, function(l) {unlist(l[2])}))
@@ -200,12 +206,13 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
       if(tagDataLinesLength > 0){
         tagDataList = spaceDelim(lines[tagDataLines])
         #print(head(tagDataList)[1])
-        isGoodTag = do.call("c",lapply(tagDataList,isJunkTagFn)) #Remove underscore, test for numeric
+        isGoodTag = lapply(tagDataList,isJunkTagFn) #Remove underscore, test for numeric
+        #isGoodTag = do.call("c",lapply(tagDataList,isJunkTagFn)) #Remove underscore, test for numeric
         tagDataGood = which(isGoodTag==T) 
         tagDataGoodLength = length(tagDataGood)
         
         if(tagDataGoodLength>0){
-          tagDataLinesGood = spaceDelim(lines[dataMaybe[tagDataGood]])
+          tagDataLinesGood = spaceDelim(lines[tagDataLines[tagDataGood]])
           tagDataMatrixGood = do.call(rbind, tagDataLinesGood)
           tagDataDF = as.data.frame(tagDataMatrixGood) %>%  #cbind(tagDataMatrix, tagDataLines)
             makeORFIDtagDF(tz) %>%
@@ -358,8 +365,19 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
     lineStart = substr(lines, 1, 4)
     
     ########## DEAL WITH THE TAG DATA (TAG: CODE)
-    dataMaybe = which(lineStart == 'TAG:')
-    dataMaybeLength = length(dataMaybe)
+    #make an empty df in case there are no bad tags (as a holder for rbind below)
+    tagDataBadDF <- data.frame(msg=character(),
+                               site=character(),
+                               reader=character(), 
+                               fname=character(), 
+                               line=integer(), 
+                               dateadded=as.Date(character()),
+                               stringsAsFactors=FALSE) 
+    
+      #dataMaybe = which(lineStart == '*TAG' | lineStart == 'TAG:')
+      dataMaybe = which(lineStart == 'TAG:') 
+      dataMaybeLength = length(dataMaybe)
+     
     if(dataMaybeLength > 0){
       dataLines = spaceDelim(lines[dataMaybe])
       
@@ -373,13 +391,38 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
       tagDataLinesLength = length(tagDataLines)
       if(tagDataLinesLength > 0){
         tagDataList = spaceDelim(lines[tagDataLines])
-        tagDataMatrix = do.call(rbind, tagDataList)
+        isGoodTag = lapply(tagDataList, isBMJunkTagFn) #Check for bad characters
+        tagDataGood = which(isGoodTag==T) 
+        tagDataGoodLength = length(tagDataGood)
         
-        #tagDataDF = head(as.data.frame(tagDataMatrix))
-        tagDataDF = as.data.frame(tagDataMatrix) %>%  #cbind(tagDataMatrix, tagDataLines)
-          makeBiomarkDF(tz) %>%
-          addInfo(tagDataLines, archiveFile, site, reader)
+        if(tagDataGoodLength>0){
+          tagDataLinesGood = spaceDelim(lines[tagDataLines[tagDataGood]])
+          tagDataMatrixGood = do.call(rbind, tagDataLinesGood)
+          tagDataDF = as.data.frame(tagDataMatrixGood) %>%  #cbind(tagDataMatrix, tagDataLines)
+            makeBiomarkDF(tz) %>%
+            addInfo(dataMaybe[tagDataGood], archiveFile, site, reader)
+        }
+        
+        tagDataBad = which(isGoodTag==F) # any tags that have non-alpha-numeric characters
+        tagDataBadLength = length(tagDataBad)
+        if(tagDataBadLength > 0){
+          tagDataBadVector = lines[dataMaybe[tagDataBad]] %>% 
+            sub("\t", " ", .) %>%
+            str_squish()
+          tagDataBadDF = data.frame(msg=tagDataBadVector, stringsAsFactors = F) %>%
+            addInfo(dataMaybe[tagDataBad], archiveFile, site, reader)
+        }
+        
       }
+        
+       # ORIGINAL 3/6
+       # tagDataMatrix = do.call(rbind, tagDataList)
+        # 
+        # #tagDataDF = head(as.data.frame(tagDataMatrix))
+        # tagDataDF = as.data.frame(tagDataMatrix) %>%  #cbind(tagDataMatrix, tagDataLines)
+        #   makeBiomarkDF(tz) %>%
+        #   addInfo(tagDataLines, archiveFile, site, reader)
+      #}
       
       # ORIGINAL
       # #... for dates that are good but the number of columns is incorrect, assume they are failed reads and put them in a separate DF
@@ -450,19 +493,14 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
           addInfo(tagDataJunkLines, archiveFile, site, reader)
       }
       
-      tagDataJunkDF <- rbind(tagDataJunkieDF, tagDataFailDF)
+      tagDataJunkDF <- rbind(tagDataJunkieDF, tagDataFailDF, tagDataBadDF) 
       
     }
     
       
       
-      
-      
-    
-    
-    
     ##########  DEAL WITH THE MESSAGE DATA (ALM, NRP, SRP AND MSG CODES)
-    msgMaybe = which(lineStart == 'ALM:' | lineStart == 'NRP:' | lineStart == 'SRP:' | lineStart == 'MSG:')
+    msgMaybe = which(lineStart == 'ALM:' | lineStart == 'NRP:' | lineStart == 'SRP:' | lineStart == 'MSG:' | lineStart == '*SRP')
     msgMaybeLength = length(msgMaybe)
     if(dataMaybeLength > 0){
       msgLines = spaceDelim(lines[msgMaybe])
@@ -494,7 +532,9 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
     }
     
     ##########  DEAL WITH OTHER
-    otherLines = which(lineStart != 'TAG:' & lineStart != 'ALM:' & lineStart != 'NRP:' & lineStart != 'SRP:' & lineStart != 'MSG:')
+    otherLines = which(lineStart != 'TAG:' & lineStart != '*TAG' & lineStart != 'ALM:' & 
+                         lineStart != 'NRP:' & lineStart != 'SRP:' & 
+                         lineStart != '*SRP' & lineStart != 'MSG:')
     otherLinesLength = length(otherLines)
     if(otherLinesLength > 0){
       otherVector = lines[otherLines] %>%
@@ -629,8 +669,8 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
   write_csv(logDF, lineLogFile, append=T)
   
   # move the file to the archive
-    file.rename(logFile, archiveFile)
-    file.remove(logFile)
+    # file.rename(logFile, archiveFile)
+    # file.remove(logFile)
 }
 
 
