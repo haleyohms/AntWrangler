@@ -44,6 +44,12 @@ spaceDelim = function(lines){
   return(dataLines)
 }
 
+commaDelim = function(lines){
+  dataLines = sub("\t", ",", lines) %>%
+    str_squish() %>%
+    str_split(',')
+  return(dataLines)
+}
 
 makeORFIDtagDF = function(tagDataDF, tz){
   date = as.Date(tagDataDF[,2])
@@ -54,13 +60,12 @@ makeORFIDtagDF = function(tagDataDF, tz){
   duration = period_to_seconds(hms(tagDataDF[,4]))
   tagtype = as.character(tagDataDF[,5])
   tagid = as.character(sub("_","",tagDataDF[,6]))
-  antnum = NA
   consdetc = as.numeric(tagDataDF[,7])
   arrint = as.character(tagDataDF[,8])
   arrint[arrint == '.'] = '65001'
   arrint = as.numeric(arrint)
 
-  return(data.frame(datetime, fracsec, duration, tagtype, tagid, antnum, consdetc, arrint, stringsAsFactors = F))
+  return(data.frame(datetime, fracsec, duration, tagtype, tagid, consdetc, arrint, stringsAsFactors = F))
   #return(data.frame(date, time, fracsec, datetime, duration, tagtype, tagid, antnum, consdetc, arrint, stringsAsFactors = F))
 }
 
@@ -85,18 +90,18 @@ makeORFIDmetaDF = function(metaDataDF, tz){
 }
 
 makeBiomarkDF = function(tagDataDF, tz){
-  date = as.Date(do.call("c", lapply(as.character(tagDataDF[,4]), getDate)))
-  time = as.character(str_sub(tagDataDF[,5], 1, 11))
+  date = as.Date(do.call("c", lapply(as.character(tagDataDF[,3]), getDate)))
+  time = as.character(str_sub(tagDataDF[,4], 1, 11))
   fracsec = round(as.numeric(str_sub(time, 9, 11)), 2)
   datetime = strftime(paste(date, time),format='%Y-%m-%d %H:%M:%S', tz=tz, usetz=FALSE)
   #datetime = strptime(paste(date, time),format='%Y-%m-%d %H:%M:%S', tz=tz)
   duration = NA
   tagtype = NA
-  tagid = as.character(str_replace(tagDataDF[,6], '[.]', '')) #str_replace(tagDataDF[,6], '[.]', '_')
-  antnum = as.numeric(tagDataDF[,3])
+  tagid = as.character(str_replace(tagDataDF[,5], '[.]', '')) 
+  #antnum = as.numeric(tagDataDF[,3])
   consdetc = NA
   arrint = NA
-  return(data.frame(datetime, fracsec, duration, tagtype, tagid, antnum, consdetc, arrint, stringsAsFactors = F))
+  return(data.frame(datetime, fracsec, duration, tagtype, tagid, consdetc, arrint, stringsAsFactors = F))
 }
 
 parseORFIDmsg = function(line){
@@ -107,8 +112,9 @@ parseORFIDmsg = function(line){
 }
 
 parseBiomarkMsg = function(line){
-  date = as.Date(getDate(line[4]))
-  time = as.character(str_sub(line[5], 1, 11))
+  date = as.Date(getDate(line[3]))
+  time = as.character(str_sub(line[4], 1, 11))
+#HERE, PARSE MSG PIECE BY COMMAS
   msg = str_c(line, collapse=' ')
   return(data.frame(date, time, msg, stringsAsFactors = F))
 }
@@ -139,7 +145,7 @@ isJunkTagFn = function(line){
 }
 
 isBMJunkTagFn = function(line){
-  tag<-str_squish(unlist(line)[6])
+  tag<-str_squish(unlist(line)[5])
   tag<-sub("\\.", "",tag)
   return(grepl("^[A-Za-z0-9]+$",tag))
 }
@@ -154,8 +160,8 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
   
   lines = read_lines(logFile)
   lineLen = length(lines)
-
   
+
 ### Is this file orfid or biomark? - need to get site name
   end = ifelse(lineLen < 150, lineLen, 150) #if ll is <150 use ll, if its greater, use only first 150 lines
   #end = ifelse(lineLen < 10, lineLen, 10)
@@ -359,7 +365,8 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
 #Biomark parsing starts here#################    
     
   } else { #TODO - check to see if this is a biomark reader - we are assuming it is right now
-    site = basename(dirname(dirname(logFile)))
+    #site = basename(dirname(dirname(logFile)))
+    site = unlist(str_split(basename(logFile),'_'))[1]
     reader = 'Biomark'
     print(str_glue('        Reader: ',reader))
     lineStart = substr(lines, 1, 4)
@@ -374,8 +381,8 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
                                dateadded=as.Date(character()),
                                stringsAsFactors=FALSE) 
     
-      #dataMaybe = which(lineStart == '*TAG' | lineStart == 'TAG:')
-      dataMaybe = which(lineStart == 'TAG:') 
+      dataMaybe = which(lineStart == '*TAG' | lineStart == 'TAG:')
+      #MCdat: dataMaybe = which(lineStart == 'TAG:') 
       dataMaybeLength = length(dataMaybe)
      
     if(dataMaybeLength > 0){
@@ -383,11 +390,13 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
       
       #...do a check on the date to make sure that its a proper date
       lens = lengths(dataLines)
-      date = unlist(lapply(dataLines, function(l) {unlist(l[4])}))
+      #MCdat: date = unlist(lapply(dataLines, function(l) {unlist(l[4])}))
+      date = unlist(lapply(dataLines, function(l) {unlist(l[3])}))
       dateCheck = do.call("c", lapply(date, getDate)) # need to use do.call('c') here to unlist because unlist reformats the date
       
       #... for dates that are good and the number of columns is correct, assume they are tags and put them in a DF
-      tagDataLines = dataMaybe[which(lens == 6 & !is.na(dateCheck))]
+      tagDataLines = dataMaybe[which(lens == 5 & !is.na(dateCheck))]
+      #MCdat: tagDataLines = dataMaybe[which(lens == 6 & !is.na(dateCheck))]
       tagDataLinesLength = length(tagDataLines)
       if(tagDataLinesLength > 0){
         tagDataList = spaceDelim(lines[tagDataLines])
@@ -438,7 +447,7 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
       
       #... for dates that are good but the number of columns is incorrect, assume they are 
       #... failed reads and put them in a separate DF
-      tagDataFailLines = dataMaybe[which(lens != 6 & !is.na(dateCheck))]
+      tagDataFailLines = dataMaybe[which(lens != 5 & !is.na(dateCheck))]
       tagDataFailLinesLength = length(tagDataFailLines)
       
       #make an empty df in case there are no bad tags
@@ -499,16 +508,20 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
     
       
       
-    ##########  DEAL WITH THE MESSAGE DATA (ALM, NRP, SRP AND MSG CODES)
-    msgMaybe = which(lineStart == 'ALM:' | lineStart == 'NRP:' | lineStart == 'SRP:' | lineStart == 'MSG:' | lineStart == '*SRP')
+    ##########  DEAL WITH THE STATUS REPORT DATA (*SRP AND SRP CODES)
+    msgMaybe = which(lineStart == 'SRP:' | lineStart == '*SRP')
     msgMaybeLength = length(msgMaybe)
     if(dataMaybeLength > 0){
       msgLines = spaceDelim(lines[msgMaybe])
       
       #...do a check on the date to make sure that its a proper date
       lens = lengths(msgLines)
-      date = unlist(lapply(msgLines, function(l) {unlist(l[4])}))
+      date = unlist(lapply(msgLines, function(l) {unlist(l[3])}))
       dateCheck = do.call("c", lapply(date, getDate)) # need to use do.call('c') here to unlist because unlist reformats the date
+      
+      #...do a check to make sure msg series in [5] has 20 pieces
+      #msgParts = unlist(lapply(msgLines, function(l) {unlist(l[5])}))
+      
       
       #... for dates that are good, assume they are messages and put them in a DF
       msgDataLines = msgMaybe[which(!is.na(dateCheck))]
@@ -519,7 +532,7 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
           addInfo(msgDataLines, archiveFile, site, reader)
       }
       
-      #... for ALM, NRP, SRP and MSG codes that have a bad date, put them in a separate DF
+      #... for SRP and *SRP codes that have a bad date, put them in a separate DF
       msgDataJunkLines = msgMaybe[which(is.na(dateCheck))]
       msgDataJunkLinesLength = length(msgDataJunkLines)
       if(msgDataJunkLinesLength > 0){
@@ -531,10 +544,10 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
       }
     }
     
-    ##########  DEAL WITH OTHER
-    otherLines = which(lineStart != 'TAG:' & lineStart != '*TAG' & lineStart != 'ALM:' & 
-                         lineStart != 'NRP:' & lineStart != 'SRP:' & 
-                         lineStart != '*SRP' & lineStart != 'MSG:')
+   ##########  DEAL WITH OTHER: Including ALM, NRP, MSG
+      ########    Note: NRP may be important in future and will need to parse it
+    otherLines = which(lineStart != 'TAG:' & lineStart != '*TAG' 
+                       & lineStart != 'SRP:' & lineStart != '*SRP')
     otherLinesLength = length(otherLines)
     if(otherLinesLength > 0){
       otherVector = lines[otherLines] %>%
@@ -668,15 +681,15 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
   
   write_csv(logDF, lineLogFile, append=T)
   
-  # move the file to the archive
-    # file.rename(logFile, archiveFile)
-    # file.remove(logFile)
+  #move the file to the archive
+  file.rename(logFile, archiveFile)
+  #file.remove(logFile)
 }
 
+?file.rename()
 
 PITcompile = function(dataDir, dbDir, timeZone){
   #logFile = "C:/Users/HaleyOhms/Documents/Carmel Project/Array data/BGS/downloads/BGS_JAN15.txt"
-  
   #dataDir = "C:/Users/HaleyOhms/Documents/Carmel Project/Array data"
   siteDirs = normalizePath(list.dirs(dataDir, recursive = F))
   tz = timeZone
