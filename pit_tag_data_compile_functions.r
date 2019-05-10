@@ -51,10 +51,15 @@ commaDelim = function(lines){
   return(dataLines)
 }
 
-makeORFIDtagDF = function(tagDataDF, tz){
+## Tells lubridate to include decimal seconds. Current settings are for no decimal seconds
+#options(digits.secs=2)
+
+#makeORFIDtagDF = function(tagDataDF, tz){
+makeORFIDtagDF = function(tagDataDF){
   date = as.Date(tagDataDF[,2])
   time = as.character(tagDataDF[,3])
-  datetime = strftime(paste(date, time),format='%Y-%m-%d %H:%M:%S', tz=tz, usetz=FALSE)
+  datetime = ymd_hms(paste(date, time), truncated = 3)
+  #datetime = strftime(paste(date, time),format='%Y-%m-%d %H:%M:%S', tz=tz, usetz=FALSE)
   #datetime = strptime(paste(date, time),format='%Y-%m-%d %H:%M:%S', tz=tz)
   fracsec = round(as.numeric(str_sub(time, 9, 11)), 2)
   duration = period_to_seconds(hms(tagDataDF[,4]))
@@ -65,16 +70,17 @@ makeORFIDtagDF = function(tagDataDF, tz){
   arrint[arrint == '.'] = '65001'
   arrint = as.numeric(arrint)
 
-  return(data.frame(datetime, fracsec, duration, tagtype, tagid, consdetc, arrint, stringsAsFactors = F))
-  #return(data.frame(date, time, fracsec, datetime, duration, tagtype, tagid, antnum, consdetc, arrint, stringsAsFactors = F))
+  #return(data.frame(datetime, fracsec, duration, tagtype, tagid, consdetc, arrint, stringsAsFactors = F))
+  return(data.frame(date, time, datetime, fracsec, duration, tagtype, tagid, consdetc, arrint, stringsAsFactors = F))
 }
 
-
-makeORFIDmetaDF = function(metaDataDF, tz){ 
+#makeORFIDmetaDF = function(metaDataDF, tz){ 
+makeORFIDmetaDF = function(metaDataDF){ 
   #print(metaDataDF[,1])
   date = as.Date(metaDataDF[,1])
   time = as.character(metaDataDF[,2])
-  datetime = strftime(paste(date, time),format='%Y-%m-%d %H:%M:%S', tz=tz, usetz=FALSE)
+  datetime = ymd_hm(paste(date, time))
+  #datetime = strftime(paste(date, time),format='%Y-%m-%d %H:%M:%S', tz=tz, usetz=FALSE)
   #datetime = strptime(paste(date, time),format='%Y-%m-%d %H:%M', tz=tz)
   power = as.numeric(sub("V", "", metaDataDF[,3]))  
   rx = as.numeric(sub("A", "",metaDataDF[,4]))
@@ -89,11 +95,13 @@ makeORFIDmetaDF = function(metaDataDF, tz){
   #return(data.frame(date, time, datetime, power, rx, tx, ea, charge, listen, temp, noise, stringsAsFactors = F))
 }
 
-makeBiomarkDF = function(tagDataDF, tz){
+#makeBiomarkDF = function(tagDataDF, tz){
+makeBiomarkDF = function(tagDataDF){
   date = as.Date(do.call("c", lapply(as.character(tagDataDF[,3]), getDate)))
   time = as.character(str_sub(tagDataDF[,4], 1, 11))
   fracsec = round(as.numeric(str_sub(time, 9, 11)), 2)
-  datetime = strftime(paste(date, time),format='%Y-%m-%d %H:%M:%S', tz=tz, usetz=FALSE)
+  datetime = ymd_hms(paste(date, time))
+  #datetime = strftime(paste(date, time),format='%Y-%m-%d %H:%M:%S', tz=tz, usetz=FALSE)
   #datetime = strptime(paste(date, time),format='%Y-%m-%d %H:%M:%S', tz=tz)
   duration = NA
   tagtype = NA
@@ -111,7 +119,7 @@ parseORFIDmsg = function(line){
   return(data.frame(date, time, msg, stringsAsFactors = F))
 }
 
-parseBiomarkMsg = function(line){
+parseBiomarkSrp = function(line){
   date = as.Date(getDate(line[3]))
   time = as.character(str_sub(line[4], 1, 11))
 #HERE, PARSE MSG PIECE BY COMMAS
@@ -150,7 +158,8 @@ isBMJunkTagFn = function(line){
   return(grepl("^[A-Za-z0-9]+$",tag))
 }
 
-parseScanLog = function(logFile, tz, dbDir, archiveDir){
+#parseScanLog = function(logFile, tz, dbDir, archiveDir){
+parseScanLog = function(logFile, dbDir, archiveDir){
   #logFile = logFiles[1]
   #logFile="C:/Users/HaleyOhms/Documents/Carmel Project/Array data/ALP/downloads/ALPDS_febmix_noise"
   
@@ -221,7 +230,8 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
           tagDataLinesGood = spaceDelim(lines[tagDataLines[tagDataGood]])
           tagDataMatrixGood = do.call(rbind, tagDataLinesGood)
           tagDataDF = as.data.frame(tagDataMatrixGood) %>%  #cbind(tagDataMatrix, tagDataLines)
-            makeORFIDtagDF(tz) %>%
+            makeORFIDtagDF() %>%
+            #makeORFIDtagDF(tz) %>%
             addInfo(dataMaybe[tagDataGood], archiveFile, site, reader)
         }
         
@@ -349,7 +359,8 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
     if(length(notJunkMetaLines) != 0){
       metaDataMatrix = do.call(rbind, metaDataList[notJunkMetaLines])
       metaDataDF = as.data.frame(metaDataMatrix) %>%  #cbind(tagDataMatrix, tagDataLines)
-        makeORFIDmetaDF(tz) %>%   
+        makeORFIDmetaDF() %>% 
+        #makeORFIDmetaDF(tz) %>%   
         addInfo(metaLines[notJunkMetaLines], archiveFile, site, reader)
     } 
     if(length(junkMetaLines) != 0){
@@ -408,7 +419,8 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
           tagDataLinesGood = spaceDelim(lines[tagDataLines[tagDataGood]])
           tagDataMatrixGood = do.call(rbind, tagDataLinesGood)
           tagDataDF = as.data.frame(tagDataMatrixGood) %>%  #cbind(tagDataMatrix, tagDataLines)
-            makeBiomarkDF(tz) %>%
+            makeBiomarkDF() %>%
+            #makeBiomarkDF(tz) %>%
             addInfo(dataMaybe[tagDataGood], archiveFile, site, reader)
         }
         
@@ -509,31 +521,30 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
       
       
     ##########  DEAL WITH THE STATUS REPORT DATA (*SRP AND SRP CODES)
-    msgMaybe = which(lineStart == 'SRP:' | lineStart == '*SRP')
-    msgMaybeLength = length(msgMaybe)
-    if(dataMaybeLength > 0){
-      msgLines = spaceDelim(lines[msgMaybe])
+    srpMaybe = which(lineStart == 'SRP:' | lineStart == '*SRP')
+    srpMaybeLength = length(srpMaybe)
+    if(srpMaybeLength > 0){
+      srpLines = spaceDelim(lines[srpMaybe])
       
       #...do a check on the date to make sure that its a proper date
-      lens = lengths(msgLines)
-      date = unlist(lapply(msgLines, function(l) {unlist(l[3])}))
+      lens = lengths(srpLines)
+      date = unlist(lapply(srpLines, function(l) {unlist(l[3])}))
       dateCheck = do.call("c", lapply(date, getDate)) # need to use do.call('c') here to unlist because unlist reformats the date
       
       #...do a check to make sure msg series in [5] has 20 pieces
       #msgParts = unlist(lapply(msgLines, function(l) {unlist(l[5])}))
       
-      
       #... for dates that are good, assume they are messages and put them in a DF
-      msgDataLines = msgMaybe[which(!is.na(dateCheck))]
-      msgDataLinesLength = length(msgDataLines)
-      if(msgDataLinesLength > 0){
-        msgDataList = spaceDelim(lines[msgDataLines])
-        msgDataDF = do.call("rbind", lapply(msgDataList, parseBiomarkMsg)) %>%
-          addInfo(msgDataLines, archiveFile, site, reader)
+      srpDataLines = srpMaybe[which(!is.na(dateCheck))]
+      srpDataLinesLength = length(srpDataLines)
+      if(srpDataLinesLength > 0){
+        srpDataList = spaceDelim(lines[srpDataLines])
+        srpDataDF = do.call("rbind", lapply(srpDataList, parseBiomarkSrp)) %>%
+          addInfo(srpDataLines, archiveFile, site, reader)
       }
       
-      #... for SRP and *SRP codes that have a bad date, put them in a separate DF
-      msgDataJunkLines = msgMaybe[which(is.na(dateCheck))]
+      #... for SRP and *SRP codes that have a bad date, put them into the msgJunk DF
+      msgDataJunkLines = srpMaybe[which(is.na(dateCheck))]
       msgDataJunkLinesLength = length(msgDataJunkLines)
       if(msgDataJunkLinesLength > 0){
         msgDataJunkVector = lines[msgDataJunkLines] %>%
@@ -564,11 +575,12 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
   tagDataDFfile = file.path(dbDir,'tagDB.csv')
   #tagDataFailDFfile = file.path(dbDir,'tagFailDB.csv')
   tagDataJunkDFfile = file.path(dbDir,'tagBadDB.csv')
-  msgDataDFfile = file.path(dbDir,'msgDB.csv')
+  msgDataDFfile = file.path(dbDir,'msgDB.csv')  
   msgDataJunkDFfile = file.path(dbDir,'msgBadDB.csv')
   otherDFfile = file.path(dbDir,'otherDB.csv')
   lineLogFile = file.path(dbDir,'logDB.csv')
-  metaDataDFfile = file.path(dbDir, 'metaDB.csv')
+  metaDataDFfile = file.path(dbDir, 'metaDB_OR.csv')
+  metaDataDFBMfile = file.path(dbDir,'metaDB_BM.csv')
   junkMetaDataDFfile = file.path(dbDir, 'metaBadDB.csv')
   
   
@@ -611,8 +623,9 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
     msgDataDFnrow = 0
     msgDataDFpercent = 0
   }
-  print(str_glue('        Message lines: ', as.character(msgDataDFpercent),'%'))
+  print(str_glue('       Message lines: ', as.character(msgDataDFpercent),'%'))
   
+
   if(exists('msgDataJunkDF')){
     writeDF(msgDataJunkDF, msgDataJunkDFfile)
     msgDataJunkDFnrow = nrow(msgDataJunkDF)
@@ -641,7 +654,17 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
     metaDataDFnrow = 0
     metaDataDFpercent = 0
   }
-  print(str_glue('        Metadata lines: ', as.character(metaDataDFpercent),'%'))
+  print(str_glue('       ORFID Metadata lines: ', as.character(metaDataDFpercent),'%'))
+  
+  if(exists('srpDataDF')){
+    writeDF(srpDataDF, metaDataDFBMfile)
+    srpDataDFnrow = nrow(srpDataDF)
+    srpDataDFpercent = round((srpDataDFnrow/lineLen)*100,2)
+  } else {
+    srpDataDFnrow = 0
+    srpDataDFpercent = 0
+  }
+  print(str_glue('       Biomark Meta lines: ', as.character(srpDataDFpercent),'%'))
   
   if(exists('junkMetaDataDF')){
     writeDF(junkMetaDataDF, junkMetaDataDFfile)
@@ -682,8 +705,8 @@ parseScanLog = function(logFile, tz, dbDir, archiveDir){
   write_csv(logDF, lineLogFile, append=T)
   
   #move the file to the archive
-  file.rename(logFile, archiveFile)
-  #file.remove(logFile)
+    #file.rename(logFile, archiveFile)
+    #file.remove(logFile)
 }
 
 ?file.rename()
@@ -692,7 +715,7 @@ PITcompile = function(dataDir, dbDir, timeZone){
   #logFile = "C:/Users/HaleyOhms/Documents/Carmel Project/Array data/BGS/downloads/BGS_JAN15.txt"
   #dataDir = "C:/Users/HaleyOhms/Documents/Carmel Project/Array data"
   siteDirs = normalizePath(list.dirs(dataDir, recursive = F))
-  tz = timeZone
+  #tz = timeZone
   
   for(dir in siteDirs){
     #dir = siteDirs[3]
@@ -702,7 +725,8 @@ PITcompile = function(dataDir, dbDir, timeZone){
     logFiles = normalizePath(list.files(downloadDir, '*', full.names = T))
     if(length(logFiles) != 0){
       for(logFile in logFiles){
-        parseScanLog(logFile, tz, dbDir, archiveDir)
+        parseScanLog(logFile, dbDir, archiveDir)
+        #parseScanLog(logFile, tz, dbDir, archiveDir)
       }
     } else {
       print(str_glue('    No log files for this site'))
