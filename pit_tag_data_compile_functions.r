@@ -39,6 +39,8 @@ getDate = function(dateChunk='thisisafillerdate'){
 
 spaceDelim = function(lines){
   dataLines = sub("\t", " ", lines) %>%
+    sub("ms/", " ", .) %>%   #dot is the output from the previous pipe
+    sub("ms", " ", .) %>%
     str_squish() %>%
     str_split(' ')
   return(dataLines)
@@ -70,8 +72,8 @@ makeORFIDtagDF = function(tagDataDF){
   arrint[arrint == '.'] = '65001'
   arrint = as.numeric(arrint)
 
-  #return(data.frame(datetime, fracsec, duration, tagtype, tagid, consdetc, arrint, stringsAsFactors = F))
-  return(data.frame(date, time, datetime, fracsec, duration, tagtype, tagid, consdetc, arrint, stringsAsFactors = F))
+  return(data.frame(datetime, fracsec, duration, tagtype, tagid, consdetc, arrint, stringsAsFactors = F))
+  #return(data.frame(date, time, datetime, fracsec, duration, tagtype, tagid, consdetc, arrint, stringsAsFactors = F))
 }
 
 #makeORFIDmetaDF = function(metaDataDF, tz){ 
@@ -86,8 +88,11 @@ makeORFIDmetaDF = function(metaDataDF){
   rx = as.numeric(sub("A", "",metaDataDF[,4]))
   tx = as.numeric(sub("A", "",metaDataDF[,5]))
   ea = as.numeric(sub("A", "",metaDataDF[,6]))
-  charge = as.numeric(sub("ms/", "",metaDataDF[,7]))
-  listen = as.numeric(sub("ms", "",metaDataDF[,8]))
+  charge = as.numeric(metaDataDF[,7])
+  listen = as.numeric(metaDataDF[,8])
+  # charge = as.numeric(sub("ms/", "",metaDataDF[,7]))
+  # listen = as.numeric(sub("ms", "",metaDataDF[,8]))
+  # 
   temp = as.numeric(sub("C", "",metaDataDF[,9]))
   noise = as.numeric(sub("N", "",metaDataDF[,10]))
   
@@ -123,8 +128,31 @@ parseBiomarkSrp = function(line){
   date = as.Date(getDate(line[3]))
   time = as.character(str_sub(line[4], 1, 11))
 #HERE, PARSE MSG PIECE BY COMMAS
-  msg = str_c(line, collapse=' ')
-  return(data.frame(date, time, msg, stringsAsFactors = F))
+  deets = unlist(strsplit(line[5], ","))
+  OpMo = deets[1]
+  NMo = deets[2]
+  EMo = deets[3]
+  Sync = deets[4]
+  ExVL = deets[5]
+  TunP = deets[6]
+  Caps = deets[7]
+  TMem = deets[8]
+  SMem = deets[9]
+  InV = deets[10]
+  ExV = deets[11]
+  AA = deets[12]
+  FDXsig = deets[13]
+  TPh = deets[14]
+  Temp = deets[15]
+  A1 = deets[16]
+  A2 = deets[17]
+  A3 = deets[18]
+  A4 = deets[19]
+  A5 = deets[20]
+  return(data.frame(date, time, OpMo, NMo, 
+                    EMo, Sync, ExVL, TunP, Caps, TMem, SMem,
+                    InV, ExV, AA, FDXsig, TPh, Temp, A1, A2, A3, A4, A5,
+                    stringsAsFactors = F))
 }
 
 addInfo = function(df, lineNumbers, archiveFile, site, reader){
@@ -348,13 +376,13 @@ parseScanLog = function(logFile, dbDir, archiveDir){
   metaLinesLength = length(metaLines)
   if(metaLinesLength > 0){
     metaDataList = spaceDelim(lines[metaLines])
-    isJunkMeta = do.call("c", lapply(metaDataList, isJunkMetaFn))
+    isJunkMeta = do.call("c", lapply(metaDataList, isJunkMetaFn)) 
     isJunkMetaNchar = nchar(isJunkMeta)
     isJunkMeta = substring(isJunkMeta, isJunkMetaNchar,isJunkMetaNchar) # condition on 5th character being an A
-    isJunkMeta = isJunkMeta != 'A' # true false - is thing junk
+    isJunkMeta = isJunkMeta != 'A' | is.na(isJunkMeta) # true false - is thing junk
     junkMetaLines = which(isJunkMeta == T)
     notJunkMetaLines = which(isJunkMeta == F)
-  
+
     #identify good and bad lines here; each need to go into a separate dataframe
     if(length(notJunkMetaLines) != 0){
       metaDataMatrix = do.call(rbind, metaDataList[notJunkMetaLines])
@@ -654,7 +682,7 @@ parseScanLog = function(logFile, dbDir, archiveDir){
     metaDataDFnrow = 0
     metaDataDFpercent = 0
   }
-  print(str_glue('       ORFID Metadata lines: ', as.character(metaDataDFpercent),'%'))
+  print(str_glue('       ORFID meta lines: ', as.character(metaDataDFpercent),'%'))
   
   if(exists('srpDataDF')){
     writeDF(srpDataDF, metaDataDFBMfile)
@@ -664,7 +692,7 @@ parseScanLog = function(logFile, dbDir, archiveDir){
     srpDataDFnrow = 0
     srpDataDFpercent = 0
   }
-  print(str_glue('       Biomark Meta lines: ', as.character(srpDataDFpercent),'%'))
+  print(str_glue('       Biomark meta lines: ', as.character(srpDataDFpercent),'%'))
   
   if(exists('junkMetaDataDF')){
     writeDF(junkMetaDataDF, junkMetaDataDFfile)
@@ -693,7 +721,8 @@ parseScanLog = function(logFile, dbDir, archiveDir){
     tagnrow=tagDataDFnrow,
     #tagfailnrow=tagDataFailDFnrow,
     tagbadnrow=tagDataJunkDFnrow,
-    metanrow=metaDataDFnrow,
+    metanrow_OR=metaDataDFnrow,
+    metanrow_BM=srpDataDFnrow,
     metabadnrow=metaDataBadDFnrow,
     msgnrow=msgDataDFnrow,
     msgbadnrow=msgDataJunkDFnrow,
@@ -705,7 +734,7 @@ parseScanLog = function(logFile, dbDir, archiveDir){
   write_csv(logDF, lineLogFile, append=T)
   
   #move the file to the archive
-    #file.rename(logFile, archiveFile)
+    file.rename(logFile, archiveFile)
     #file.remove(logFile)
 }
 
@@ -735,10 +764,38 @@ PITcompile = function(dataDir, dbDir, timeZone){
   }
 }
 
+########################################################
+# Check For Duplicates
+########################################################
 
-# tagdf<-read_csv(paste(dbDir,"/tagDB.csv", sep=""), col_names =FALSE)
-# tagdf<-tagdf[!duplicated(tagdf), ]
-# write_csv(tagdf, paste(dbDir,"/tagDB.csv", sep=""), append=FALSE, col_names=FALSE)
+rmdups = function(dbDir){
+  # make a list of file names and columns to use to check duplicates
+  rmDupInfo = list(
+   # list(fn='logDB.csv', cols=c(1:7)), 
+    list(fn='metaBadDB.csv', cols=c(1:3)),
+    list(fn='metaDB_BM.csv', cols=c(1:24)),
+    list(fn='metaDB_OR.csv', cols=c(1:11)),
+    list(fn='msgBadDB.csv', cols=c(1:3)),
+    list(fn='msgDB.csv', cols=c(1:5)),
+    list(fn='otherDB.csv', cols=c(1:3)),
+    list(fn='tagBadDB.csv', cols=c(1:3)),
+    list(fn='tagDB.csv', cols=c(1:9))
+  )
+  
+  # loop through all the files defined in above list and remove duplicates
+  for(i in 1:length(rmDupInfo)){
+    i = 8   # tester
+    path = file.path(dbDir, rmDupInfo[[i]]$fn)
+    if(exists(path)){
+      dat = read_csv(file=path, col_names=F)   # might need to set col_types parameter
+      path
+      dat = dat[!duplicated(dat[,rmDupInfo[[i]]$cols]),] 
+      write_csv(dat, path=path, col_names=F)
+    }
+  }
+}
+
+
 
 
 
