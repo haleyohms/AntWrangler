@@ -101,7 +101,7 @@ max(sh$datetime)
 ## Add in Rancho San Carlos
 tagcolnames_rsc <- c("datetime", "fracsec", "duration", "tagtype", "PITnum", "antnum", 
                      "consdetc", "arrint", "site", "manuf", "srcfile", "srcline", "compdate")
-dbDir_rsc<-"C:/Users/HaleyOhms/Documents/Carmel/ArrayData/RSC_Biomark"
+dbDir_rsc<-"C:/Users/HaleyOhms/Documents/Carmel/ArrayData/RSC_Biomark/CompiledData"
 tdat_rsc <- read_csv(paste(dbDir_rsc,"/tagDB.csv", sep=""), col_names=tagcolnames_rsc,
                      col_types = cols(datetime=col_datetime(format = "%Y-%m-%d %H:%M:%S"),
                                       fracsec="d", duration="d", tagtype="c", PITnum="c",
@@ -170,6 +170,37 @@ write_csv(mdat_BM, path="C:/Users/HaleyOhms/Documents/Carmel/Database/AntennaDat
 ################################################################################################
 
 
+#... Test if duplicates is working
+
+tagcolnames <- c("datetime", "fracsec", "duration", "tagtype", "PITnum", 
+                 "consdetc", "arrint", "site", "manuf", "srcfile", "srcline", "compdate")
+dbDir<-"C:/Users/HaleyOhms/Documents/Carmel/Database"
+mDups <- read_csv(paste(dbDir,"/tagDB_mDups.csv", sep=""), col_names=tagcolnames,
+                 col_types = cols(datetime=col_datetime(format = ""),
+                                  fracsec="d", duration="d", tagtype="c", PITnum="c",
+                                  consdetc="i", arrint="i", site="c", manuf="c",
+                                  srcfile="c", srcline="i", compdate=col_date(format = "%Y-%m-%d")))
+
+theDups <- read_csv(paste(dbDir,"/tagDupsTest.csv", sep=""), col_names=tagcolnames,
+                  col_types = cols(datetime=col_datetime(format = ""),
+                                   fracsec="d", duration="d", tagtype="c", PITnum="c",
+                                   consdetc="i", arrint="i", site="c", manuf="c",
+                                   srcfile="c", srcline="i", compdate=col_date(format = "%Y-%m-%d")))
+
+
+theDups<-distinct(theDups, datetime, fracsec, duration, tagtype, PITnum, consdetc, arrint, site, manuf)
+theDups1<-distinct(theDups, datetime, fracsec, duration, tagtype, PITnum, consdetc, arrint, site, manuf, .keep_all = T)
+
+t<-names(theDups)
+
+mDupsTest<-distinct(mDups, datetime, fracsec, duration, tagtype, PITnum, consdetc, arrint, site, manuf)
+
+as.character(expression(datetime, fracsec, duration, tagtype, PITnum, consdetc, arrint, site, manuf))
+
+anti_join(theDups, mDups, by="datetime","fracsec","duration",
+          "tagtype", "PITnum","consdetc", "arrint", "site","manuf")
+
+cs = c(datetime, fracsec, duration, tagtype, PITnum, consdetc, arrint, site, manuf)
 
 
 
@@ -177,19 +208,4 @@ write_csv(mdat_BM, path="C:/Users/HaleyOhms/Documents/Carmel/Database/AntennaDat
 
 
 
-
-
-
-
-
-
-## 5/11/19 changes
-  # BGS from Dec 20 to Jan 3 did not read properly
-    probs<-tdat[is.na(tdat$srcline) , ]
-    unique(date(probs$datetime))
-    unique(probs$arrint)
-    
-    #... remove the problems, save file, and recompile
-    tdat<-tdat[!is.na(tdat$srcline) , ]
-    
-    write.csv(tdat,"C:/Users/HaleyOhms/Documents/Carmel/Database/AntennaData/tagDB.csv")
+###########################################################
