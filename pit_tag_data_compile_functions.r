@@ -127,7 +127,6 @@ parseORFIDmsg = function(line){
 parseBiomarkSrp = function(line){
   date = as.Date(getDate(line[3]))
   time = as.character(str_sub(line[4], 1, 11))
-#HERE, PARSE MSG PIECE BY COMMAS
   deets = unlist(strsplit(line[5], ","))
   OpMo = deets[1]
   NMo = deets[2]
@@ -767,11 +766,13 @@ PITcompile = function(dataDir, dbDir, timeZone){
 ########################################################
 # Check For Duplicates
 ########################################################
+## NOTE: distinct is a faster package, may want to consider that in the future
+
+#dbDir = dbDir = "C:/Users/HaleyOhms/Documents/Carmel/Database"
 
 rmdups = function(dbDir){
   # make a list of file names and columns to use to check duplicates
   rmDupInfo = list(
-   # list(fn='logDB.csv', cols=c(1:7)), 
     list(fn='metaBadDB.csv', cols=c(1:3)),
     list(fn='metaDB_BM.csv', cols=c(1:24)),
     list(fn='metaDB_OR.csv', cols=c(1:11)),
@@ -780,20 +781,31 @@ rmdups = function(dbDir){
     list(fn='otherDB.csv', cols=c(1:3)),
     list(fn='tagBadDB.csv', cols=c(1:3)),
     list(fn='tagDB.csv', cols=c(1:9))
-  )
-  
+    #list(fn='tagDB_DupTest.csv', cols=c(1:9))
+    )
+
   # loop through all the files defined in above list and remove duplicates
+  #i=1
   for(i in 1:length(rmDupInfo)){
-    i = 8   # tester
     path = file.path(dbDir, rmDupInfo[[i]]$fn)
-    if(exists(path)){
+    if(file.exists(path)){
+      print(paste("Checking", rmDupInfo[[i]]$fn, "for duplicate rows"), quote = F)
       dat = read_csv(file=path, col_names=F)   # might need to set col_types parameter
-      path
-      dat = dat[!duplicated(dat[,rmDupInfo[[i]]$cols]),] 
-      write_csv(dat, path=path, col_names=F)
+      dups = duplicated(dat[,rmDupInfo[[i]]$cols])
+      ndups = length(which(dups == T))
+      print(paste("   Found", as.character(ndups), "duplicates"), quote = F)
+      if(ndups != 0){
+        dat = dat[!dups,]
+        write_csv(dat, path=path, col_names=F)
+        # singleDat = dat[!dups,]
+        # write_csv(singleDat, path="C:/Users/HaleyOhms/Documents/Carmel/Database/tagDB_mDups.csv", col_names=F)
+        # dupDat = dat[dups,]
+        # write_csv(dupDat, path="C:/Users/HaleyOhms/Documents/Carmel/Database/tagDupsTest.csv", col_names=F)
+      }
     }
   }
 }
+
 
 
 
