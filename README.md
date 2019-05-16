@@ -1,6 +1,8 @@
 # AntWrangler
 
-Automated PIT tag antenna data cleaning tool for Oregon RFID and Biomark readers
+AntWrangler is a tool to parse, organize, and clean PIT tag antenna data prior to analysis. It handles single (non multiplexed) Oregon RFID and Biomark IS1001 readers.
+AntWrangler is designed as an automated tool, so there is no need to manually edit or combine raw files. 
+One simply points AntWrangler to the raw data directories and lets it do the work. 
 
 
 ## Instructions
