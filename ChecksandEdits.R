@@ -23,8 +23,8 @@ unique(tdat$site)
 
 #... check for correct years 
 tyr <- tdat %>%
-  mutate(year = year(datetime)) %>%
-  group_by(site, year) %>%
+  mutate(year = year(datetime), month = month(datetime)) %>%
+  group_by(site, year, month) %>%
   summarise(n())
 
 tmin <- tdat %>% 
@@ -34,20 +34,70 @@ tmin <- tdat %>%
   slice(1) %>% # takes the first occurrence if there is a tie
   ungroup()
 
-odays<-ggplot(tmin, aes(datetime,site))+geom_point()+geom_jitter()
+(odays<-ggplot(tmin, aes(datetime,site))+geom_point()+geom_jitter())
 # odays<-ggplot(tmin, aes(datetime,site))+geom_point()+geom_jitter()+
 #   scale_x_datetime(limits = c(ymd_hm("2018-01-01 00:00","2019-05-01 00:00")))+
 #   labs(x = "Date", y = "Site")
-odays
+
 
 
 
 ########################################################
 # TagDB edits
 ########################################################
+# June 14, 2019
+
+#... BGS has a funky year
+tdat <- tdat[!(tdat$site=="BGS" & year(tdat$datetime)=="2023") , ] 
+# change ALP to ALPsolo
+tdat$site[which(tdat$site=="ALP")] <- "ALPsolo"
+write_csv(tdat, path="C:/Users/HaleyOhms/Documents/Carmel/Database/AntennaData/tagDB.csv", col_names=F)
+
+
+# May 24, 2019
+
+#... noticed some BLP dates were still not correct
+tdat <- tdat[!(tdat$site=="BLP" & year(tdat$datetime)=="2012") , ] 
+tdat <- tdat[!(tdat$site=="BLP" & year(tdat$datetime)=="2013") , ] 
+##... BLP date format incorrectly says 2018
+tdat$datetime[which(tdat$site=="BLP" & tdat$datetime<"2018-07-01 00:00")] <- 
+  tdat$datetime[which(tdat$site=="BLP" & tdat$datetime<"2018-07-01 00:00")] + years(x=1) 
+
+#... Remove any duplicates 
+tdat <- distinct(tdat, datetime, fracsec, duration, tagtype, PITnum, consdetc,
+                 arrint, site, manuf, .keep_all=T)
+
+#... Check BLP dates again
+check <- tdat %>%
+  filter(site==c("BLP", "BLP2", "BLPDS", "BLPUS")) %>% 
+  mutate(year = year(datetime), month = month(datetime)) %>%
+  group_by(site, year, month) %>%
+  summarise(n())
+
+write_csv(tdat, path="C:/Users/HaleyOhms/Documents/Carmel/Database/AntennaData/tagDB.csv", col_names=F)
+
+
 
 ################################################################################################
-# May 13, 2019
+# May 17, 2019
+
+#... Add in RSC Biomark data
+## Add in Rancho San Carlos
+tagcolnames_rsc <- c("datetime", "fracsec", "duration", "tagtype", "PITnum", "antnum", 
+                     "consdetc", "arrint", "site", "manuf", "srcfile", "srcline", "compdate")
+dbDir_rsc<-"C:/Users/HaleyOhms/Documents/Carmel/ArrayData/RSC_Biomark/CompiledData"
+tdat_rsc <- read_csv(paste(dbDir_rsc,"/tagDB.csv", sep=""), col_names=tagcolnames_rsc,
+                     col_types = cols(datetime=col_datetime(format = "%Y-%m-%d %H:%M:%S"),
+                                      fracsec="d", duration="d", tagtype="c", PITnum="c",
+                                      antnum = "i",
+                                      consdetc="i", arrint="i", site="c", manuf="c",
+                                      srcfile="c", srcline="i", compdate=col_date(format = "%Y-%m-%d")))
+
+tdat_rsc$antnum<-NULL  ## Remove antnum
+
+#... Merge tdat and tdat_rsc
+tdat<-rbind(tdat, tdat_rsc)
+
 #... Clean up site names
 tdat$site[which(tdat$site=="scarlett")] <- "SCAR"
 tdat$site[which(tdat$site=="scarlett1")] <- "SCAR1"
@@ -95,25 +145,12 @@ tdat$datetime[which(tdat$site=="CAWD2" & year(tdat$datetime)>"2019")] <-
   tdat$datetime[which(tdat$site=="CAWD2" & year(tdat$datetime)>"2019")] - years(x=7) #couldn't set date to 2018, so set to 2025
 
 sh<-tdat[(tdat$site=="SH1"  & year(tdat$datetime)=="2014") , ]
-max(sh$datetime)
 
-#... Add in RSC Biomark data
-## Add in Rancho San Carlos
-tagcolnames_rsc <- c("datetime", "fracsec", "duration", "tagtype", "PITnum", "antnum", 
-                     "consdetc", "arrint", "site", "manuf", "srcfile", "srcline", "compdate")
-dbDir_rsc<-"C:/Users/HaleyOhms/Documents/Carmel/ArrayData/RSC_Biomark/CompiledData"
-tdat_rsc <- read_csv(paste(dbDir_rsc,"/tagDB.csv", sep=""), col_names=tagcolnames_rsc,
-                     col_types = cols(datetime=col_datetime(format = "%Y-%m-%d %H:%M:%S"),
-                                      fracsec="d", duration="d", tagtype="c", PITnum="c",
-                                      antnum = "i",
-                                      consdetc="i", arrint="i", site="c", manuf="c",
-                                      srcfile="c", srcline="i", compdate=col_date(format = "%Y-%m-%d")))
+names(tdat)
 
-tdat_rsc$antnum<-NULL  ## Remove antnum
-
-## Merge tdat and tdat_rsc
-tdat<-rbind(tdat, tdat_rsc)
-
+#... Remove any duplicates that might have snuck in
+tdat <- distinct(tdat, datetime, fracsec, duration, tagtype, PITnum, consdetc,
+                 arrint, site, manuf, .keep_all=T)
 
 write_csv(tdat, path="C:/Users/HaleyOhms/Documents/Carmel/Database/AntennaData/tagDB.csv", col_names=F)
 ################################################################################################
@@ -123,7 +160,7 @@ write_csv(tdat, path="C:/Users/HaleyOhms/Documents/Carmel/Database/AntennaData/t
 ########################################################
 metaORcolNames <- c("datetime", "power", "rx", "tx", "ea", "charge", "listen", 
                   "temp", "noise", "site", "manuf", "srcfile", "srcline", "compdate")
-mdat_OR<- read_csv(paste(dbDir,"/metaDB_OR.csv", sep=""), col_names = metacolnames, 
+mdat_OR<- read_csv(paste(dbDir,"/metaDB_OR.csv", sep=""), col_names = metaORcolNames, 
                 col_types = cols(datetime = col_datetime(format = ""),
                                  power = "d", rx = "d", tx = "d", ea = "d", charge = "d", 
                                  listen = "d", temp = "d", noise = "d", site = "c",
@@ -171,22 +208,31 @@ write_csv(mdat_BM, path="C:/Users/HaleyOhms/Documents/Carmel/Database/AntennaDat
 
 
 #... Test if duplicates is working
+#...NOTE: tagDB_post and tagDB_pre have been deleted. 
 
 tagcolnames <- c("datetime", "fracsec", "duration", "tagtype", "PITnum", 
                  "consdetc", "arrint", "site", "manuf", "srcfile", "srcline", "compdate")
-dbDir<-"C:/Users/HaleyOhms/Documents/Carmel/Database"
-mDups <- read_csv(paste(dbDir,"/tagDB_mDups.csv", sep=""), col_names=tagcolnames,
+dbDir<-"C:/Users/HaleyOhms/Documents/Carmel/Database/AntennaData"
+postDupCodeFullRun <- read_csv(paste(dbDir,"/tagDB.csv", sep=""), col_names=tagcolnames,
+                             col_types = cols(datetime=col_datetime(format = ""),
+                                              fracsec="d", duration="d", tagtype="c", PITnum="c",
+                                              consdetc="i", arrint="i", site="c", manuf="c",
+                                              srcfile="c", srcline="i", compdate=col_date(format = "%Y-%m-%d")))
+
+postDupCodeAfter <- read_csv(paste(dbDir,"/tagDB_post.csv", sep=""), col_names=tagcolnames,
                  col_types = cols(datetime=col_datetime(format = ""),
                                   fracsec="d", duration="d", tagtype="c", PITnum="c",
                                   consdetc="i", arrint="i", site="c", manuf="c",
                                   srcfile="c", srcline="i", compdate=col_date(format = "%Y-%m-%d")))
 
-theDups <- read_csv(paste(dbDir,"/tagDupsTest.csv", sep=""), col_names=tagcolnames,
-                  col_types = cols(datetime=col_datetime(format = ""),
-                                   fracsec="d", duration="d", tagtype="c", PITnum="c",
-                                   consdetc="i", arrint="i", site="c", manuf="c",
-                                   srcfile="c", srcline="i", compdate=col_date(format = "%Y-%m-%d")))
+preDupCode <- read_csv(paste(dbDir,"/tagDB_pre.csv", sep=""), col_names=tagcolnames,
+                        col_types = cols(datetime=col_datetime(format = ""),
+                                         fracsec="d", duration="d", tagtype="c", PITnum="c",
+                                         consdetc="i", arrint="i", site="c", manuf="c",
+                                         srcfile="c", srcline="i", compdate=col_date(format = "%Y-%m-%d")))
+names(preDupCode)
 
+preWithDist <- distinct(preDupCode, datetime, fracsec, duration, tagtype, PITnum, consdetc, arrint, site, manuf, .keep_all = T)
 
 theDups<-distinct(theDups, datetime, fracsec, duration, tagtype, PITnum, consdetc, arrint, site, manuf)
 theDups1<-distinct(theDups, datetime, fracsec, duration, tagtype, PITnum, consdetc, arrint, site, manuf, .keep_all = T)
@@ -205,7 +251,19 @@ cs = c(datetime, fracsec, duration, tagtype, PITnum, consdetc, arrint, site, man
 
 
 
+################################################################
+# Check log
+################################################################
+#column names
+logcolnames <- c("site", "manuf", "srcfile", "compdate", "tagnrow", "tagbadnrow", 
+                 "metanrow_OR", "metanrow_BM", "metabadnrow", "msgnrow", "msgbadnrow", "othernrow", "totalnrow")
 
+read_csv(paste(dbDir,"/logDB.csv", sep=""), col_names=logcolnames, 
+         col_types = cols(site="c", manuf="c", srcfile="c", compdate="D", 
+                          tagnrow="i", tagbadnrow="i", metanrow_OR="i", metanrow_BM="i", 
+                          metabadnrow="i", msgnrow="i", 
+                          msgbadnrow="i", othernrow="i", totalnrow="i") )
 
+  
 
 ###########################################################

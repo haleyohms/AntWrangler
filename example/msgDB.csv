@@ -1,7 +1,77 @@
-2018-11-28,11:47:06.00,E 2018-11-28 11:47:06.00 upload 3 complete,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-10_BGS_dec3,12,2019-05-10
-2018-12-03,15:36:11.62,E 2018-12-03 15:36:11.62 supply power ok 13.0V,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-10_BGS_dec3,2568,2019-05-10
-2018-12-03,15:36:11.62,E 2018-12-03 15:36:11.62 database file opened,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-10_BGS_dec3,2569,2019-05-10
-2018-12-03,15:36:11.62,E 2018-12-03 15:36:11.62 starting reader after power up,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-10_BGS_dec3,2570,2019-05-10
-2018-12-03,15:38:32.28,E 2018-12-03 15:38:32.28 supply power ok 13.0V,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-10_BGS_dec3,2572,2019-05-10
-2018-12-03,15:38:32.28,E 2018-12-03 15:38:32.28 database file opened,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-10_BGS_dec3,2573,2019-05-10
-2018-12-03,15:38:32.28,E 2018-12-03 15:38:32.28 starting reader after power up,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-10_BGS_dec3,2574,2019-05-10
+2019-02-11,09:48:08.95,E 2019-02-11 09:48:08.95 upload 5 complete,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,8,2019-05-11
+2019-02-07,10:10:06.45,E 2019-02-07 10:10:06.45 upload 4 complete,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,25,2019-05-11
+2019-02-07,10:21:48.05,E 2019-02-07 10:21:48.05 parameter change: synch mode 'none',ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,26,2019-05-11
+2019-02-07,13:11:13.02,E 2019-02-07 13:11:13.02 supply power ok 13.9V,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,27,2019-05-11
+2019-02-07,13:11:13.02,E 2019-02-07 13:11:13.02 database file opened,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,28,2019-05-11
+2019-02-07,13:11:13.02,E 2019-02-07 13:11:13.02 starting reader after power up,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,29,2019-05-11
+2019-02-07,13:11:48.32,E 2019-02-07 13:11:48.32 supply power ok 13.9V,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,30,2019-05-11
+2019-02-07,13:11:48.32,E 2019-02-07 13:11:48.32 database file opened,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,31,2019-05-11
+2019-02-07,13:11:48.32,E 2019-02-07 13:11:48.32 starting reader after power up,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,32,2019-05-11
+2019-02-07,13:24:37.22,E 2019-02-07 13:24:37.22 supply power ok 13.9V,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,33,2019-05-11
+2019-02-07,13:24:37.22,E 2019-02-07 13:24:37.22 database file opened,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,34,2019-05-11
+2019-02-07,13:24:37.22,E 2019-02-07 13:24:37.22 starting reader after power up,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,35,2019-05-11
+2019-02-07,13:26:29.53,E 2019-02-07 13:26:29.53 supply power ok 13.8V,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,36,2019-05-11
+2019-02-07,13:26:29.54,E 2019-02-07 13:26:29.54 database file opened,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,37,2019-05-11
+2019-02-07,13:26:29.54,E 2019-02-07 13:26:29.54 starting reader after power up,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,38,2019-05-11
+2019-02-07,13:27:16.82,E 2019-02-07 13:27:16.82 supply power ok 13.9V,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,39,2019-05-11
+2019-02-07,13:27:16.82,E 2019-02-07 13:27:16.82 database file opened,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,40,2019-05-11
+2019-02-07,13:27:16.82,E 2019-02-07 13:27:16.82 starting reader after power up,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,41,2019-05-11
+2019-02-07,13:29:20.78,E 2019-02-07 13:29:20.78 supply power ok 13.9V,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,42,2019-05-11
+2019-02-07,13:29:20.79,E 2019-02-07 13:29:20.79 database file opened,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,43,2019-05-11
+2019-02-07,13:29:20.79,E 2019-02-07 13:29:20.79 starting reader after power up,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,44,2019-05-11
+2019-02-07,13:29:59.10,E 2019-02-07 13:29:59.10 supply power ok 13.9V,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,45,2019-05-11
+2019-02-07,13:29:59.11,E 2019-02-07 13:29:59.11 database file opened,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,46,2019-05-11
+2019-02-07,13:29:59.11,E 2019-02-07 13:29:59.11 starting reader after power up,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,47,2019-05-11
+2019-02-07,13:30:56.15,E 2019-02-07 13:30:56.15 supply power ok 13.9V,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,48,2019-05-11
+2019-02-07,13:30:56.15,E 2019-02-07 13:30:56.15 database file opened,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,49,2019-05-11
+2019-02-07,13:30:56.16,E 2019-02-07 13:30:56.16 starting reader after power up,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,50,2019-05-11
+2019-02-07,13:35:43.39,E 2019-02-07 13:35:43.39 supply power ok 13.9V,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,54,2019-05-11
+2019-02-07,13:35:43.39,E 2019-02-07 13:35:43.39 database file opened,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,55,2019-05-11
+2019-02-07,13:35:43.39,E 2019-02-07 13:35:43.39 starting reader after power up,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,56,2019-05-11
+2019-02-07,13:36:25.50,E 2019-02-07 13:36:25.50 supply power ok 14.0V,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,57,2019-05-11
+2019-02-07,13:36:25.50,E 2019-02-07 13:36:25.50 database file opened,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,58,2019-05-11
+2019-02-07,13:36:25.50,E 2019-02-07 13:36:25.50 starting reader after power up,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,59,2019-05-11
+2019-02-07,14:42:15.34,E 2019-02-07 14:42:15.34 supply power ok 14.0V,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,60,2019-05-11
+2019-02-07,14:42:15.34,E 2019-02-07 14:42:15.34 database file opened,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,61,2019-05-11
+2019-02-07,14:42:15.34,E 2019-02-07 14:42:15.34 starting reader after power up,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,62,2019-05-11
+2019-02-07,15:45:29.11,E 2019-02-07 15:45:29.11 supply power ok 13.9V,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,108,2019-05-11
+2019-02-07,15:45:29.11,E 2019-02-07 15:45:29.11 database file opened,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,109,2019-05-11
+2019-02-07,15:45:29.11,E 2019-02-07 15:45:29.11 starting reader after power up,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,110,2019-05-11
+2019-02-07,16:13:22.10,E 2019-02-07 16:13:22.10 supply power ok 14.1V,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,137,2019-05-11
+2019-02-07,16:13:22.10,E 2019-02-07 16:13:22.10 database file opened,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,138,2019-05-11
+2019-02-07,16:13:22.10,E 2019-02-07 16:13:22.10 starting reader after power up,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,139,2019-05-11
+2019-01-29,08:48:40.98,E 2019-01-29 08:48:40.98 upload 3 complete,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_feb2,5,2019-05-11
+2019-01-29,09:24:46.28,E 2019-01-29 09:24:46.28 supply power ok 12.9V,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_feb2,83,2019-05-11
+2019-01-29,09:24:46.28,E 2019-01-29 09:24:46.28 database file opened,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_feb2,84,2019-05-11
+2019-01-29,09:24:46.28,E 2019-01-29 09:24:46.28 starting reader after power up,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_feb2,85,2019-05-11
+2019-01-27,15:16:39.98,E 2019-01-27 15:16:39.98 upload 2 complete,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,27,2019-05-11
+2019-01-27,15:16:48.20,E 2019-01-27 15:16:48.20 reader not responding,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,28,2019-05-11
+2019-01-28,09:26:52.43,E 2019-01-28 09:26:52.43 supply power ok 14.8V,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,29,2019-05-11
+2019-01-28,09:26:52.43,E 2019-01-28 09:26:52.43 database file opened,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,30,2019-05-11
+2019-01-28,09:26:52.43,E 2019-01-28 09:26:52.43 starting reader after power up,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,31,2019-05-11
+2019-01-28,09:26:52.83,E 2019-01-28 09:26:52.83 cannot reset reader,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,32,2019-05-11
+2019-01-28,09:26:55.35,E 2019-01-28 09:26:55.35 Kick start -- not scanning,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,33,2019-05-11
+2019-01-28,09:26:55.75,E 2019-01-28 09:26:55.75 cannot reset reader,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,34,2019-05-11
+2019-01-28,11:48:22.94,E 2019-01-28 11:48:22.94 supply power ok 12.9V,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,35,2019-05-11
+2019-01-28,11:48:22.94,E 2019-01-28 11:48:22.94 database file opened,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,36,2019-05-11
+2019-01-28,11:48:22.94,E 2019-01-28 11:48:22.94 starting reader after power up,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,37,2019-05-11
+2019-01-28,11:48:56.28,E 2019-01-28 11:48:56.28 supply power ok 12.8V,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,38,2019-05-11
+2019-01-28,11:48:56.28,E 2019-01-28 11:48:56.28 database file opened,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,39,2019-05-11
+2019-01-28,11:48:56.28,E 2019-01-28 11:48:56.28 starting reader after power up,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,40,2019-05-11
+2019-01-28,12:12:12.71,E 2019-01-28 12:12:12.71 supply power ok 14.7V,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,110,2019-05-11
+2019-01-28,12:12:12.71,E 2019-01-28 12:12:12.71 database file opened,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,111,2019-05-11
+2019-01-28,12:12:12.71,E 2019-01-28 12:12:12.71 starting reader after power up,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,112,2019-05-11
+2019-01-28,12:46:44.48,E 2019-01-28 12:46:44.48 supply power ok 14.6V,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,178,2019-05-11
+2019-01-28,12:46:44.48,E 2019-01-28 12:46:44.48 database file opened,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,179,2019-05-11
+2019-01-28,12:46:44.48,E 2019-01-28 12:46:44.48 starting reader after power up,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,180,2019-05-11
+2019-01-28,12:46:44.88,E 2019-01-28 12:46:44.88 cannot reset reader,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,181,2019-05-11
+2019-01-28,12:46:47.35,E 2019-01-28 12:46:47.35 Kick start -- not scanning,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,182,2019-05-11
+2019-01-28,12:46:47.75,E 2019-01-28 12:46:47.75 cannot reset reader,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,183,2019-05-11
+2019-01-28,16:53:15.50,E 2019-01-28 16:53:15.50 supply power ok 12.8V,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,184,2019-05-11
+2019-01-28,16:53:15.51,E 2019-01-28 16:53:15.51 database file opened,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,185,2019-05-11
+2019-01-28,16:53:15.51,E 2019-01-28 16:53:15.51 starting reader after power up,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,186,2019-05-11
+2019-01-28,17:17:15.75,E 2019-01-28 17:17:15.75 supply power ok 12.8V,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,187,2019-05-11
+2019-01-28,17:17:15.75,E 2019-01-28 17:17:15.75 database file opened,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,188,2019-05-11
+2019-01-28,17:17:15.75,E 2019-01-28 17:17:15.75 starting reader after power up,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,189,2019-05-11
+2019-01-28,17:48:03.00,E 2019-01-28 17:48:03.00 Kick start -- not scanning,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,190,2019-05-11
+2019-01-29,08:48:00.00,E 2019-01-29 08:48:00.00 date/time changed. Was 2019-01-29 09:15:10.15,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,191,2019-05-11

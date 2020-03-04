@@ -3,12 +3,19 @@ tagcolnames <- c("datetime", "fracsec", "duration", "tagtype", "PITnum",
                  "consdetc", "arrint", "site", "manuf", "srcfile", "srcline", "compdate")
 dbDir<-"C:/Users/HaleyOhms/Documents/Carmel/Database/AntennaData"
 tdat <- read_csv(paste(dbDir,"/tagDB.csv", sep=""), col_names=tagcolnames,
-                 col_types = cols(datetime=col_datetime(format = "%Y-%m-%d %H:%M:%S"),
+                 col_types = cols(datetime=col_datetime(),
                                   fracsec="d", duration="d", tagtype="c", PITnum="c",
                                   consdetc="i", arrint="i", site="c", manuf="c",
                                   srcfile="c", srcline="i", compdate=col_date(format = "%Y-%m-%d")))
 
-tprob<-tdat[which(hour(tdat$datetime)=="0" & minute(tdat$datetime)=="0" & second(tdat$datetime)=="0" ) , ]
+
+tdat2<-tdat[!duplicated(tdat), ]
+
+probs<-tdat2[is.na(tdat2$srcline) , ]
+unique(date(probs$datetime))
+
+
+tdat2tprob<-tdat[which(hour(tdat$datetime)=="0" & minute(tdat$datetime)=="0" & second(tdat$datetime)=="0" ) , ]
 head(tprob$srcfile)
 
 #########################
@@ -25,17 +32,16 @@ tdat <- read_csv(paste(dbDir,"/tagDB.csv", sep=""), col_names=tagcolnames,
 head(tdat)
 unique(tdat$compdate)
 unique(date(tdat$datetime))
-unique(time(tdat$datetime))
+unique(tdat$PITnum)
   which(is.na(time(tdat$datetime))==F)
   
   
   
-  op <- options(digits.secs=2)
-  dmy_hms("20/2/06 11:16:16.683")
-  dmy_hm("20/2/06 11:16")
-  options(op)
-?options()
-  
+head(tagDataDF)
+  unique(date(tagDataDF$datetime))
+  unique(hour(tagDataDF$datetime))
+  unique(minute(tagDataDF$datetime))
+  which(is.na(hour(tagDataDF$datetime))==T)
 
 ##### Meta data
   metacolnames <- c("datetime", "power", "rx", "tx", "ea", "charge", "listen", 
@@ -54,3 +60,16 @@ tprob<-tdat[which(hour(tdat$datetime)=="0" & minute(tdat$datetime)=="0" & second
 
 tprob<-tdat[which(hour(tdat$datetime)=="0" & minute(tdat$datetime)=="0" & second(tdat$datetime)=="0" ) , ]
 head(tprob$srcfile)
+
+
+x<-"6,0,1,2,5,2,188,0,7,238,199,60,3,386,253,0,0,0,0,0"
+x2<-strsplit(x, ",")
+x2[1]
+x3<-as.numeric(unlist(strsplit(x, ",")))
+x3[1]
+str(x)
+
+
+
+
+

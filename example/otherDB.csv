@@ -1,504 +1,103 @@
-?,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,1,2019-05-10
-INF: Start Of List Of Commands,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,2,2019-05-10
-? Print List Of Commands,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,3,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,4,2019-05-10
-Alarms:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,5,2019-05-10
-ACL{0.0-9.0} Set Antenna Current Low Alarm Threshold in Amperes,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,6,2019-05-10
-ANH{0-100} Set Noise High Alarm Threshold Percent,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,7,2019-05-10
-ATH{512-1023} Set Tuning Capacitance High Alarm Threshold,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,8,2019-05-10
-ATL{0-511} Set Tuning Capacitance Low Alarm Threshold,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,9,2019-05-10
-AUD{0-3600} Set Alarms Unique Delay in Seconds,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,10,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,11,2019-05-10
-Reader:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,12,2019-05-10
-RIS{01-FF} Set Reader ID,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,13,2019-05-10
-RDS{MM/DD/YYYY} Set Reader Date,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,14,2019-05-10
-RTS{HH:MM:SS} Set Reader Time (24-hrs),BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,15,2019-05-10
-"RBS{1|0} Set Reader Beeper {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,16,2019-05-10
-"RDF{H|D} Set Reader Tag ID Display Format {H} Hex, {D} Dec",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,17,2019-05-10
-"RNM{S|M} Set Reader Network Mode {S} IS1001 Standalone, {M} MTS Node",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,18,2019-05-10
-"ROM{1|0|R} Set Reader Operation Mode {1} Scan, {0} Standby, {R} Reset",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,19,2019-05-10
-"RSM{1|2|3|0} Set Exciter Sync. Mode {1} Master, {2} Sec.Master, {3} Slave, {0} Standalone",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,20,2019-05-10
-"RID{1|0} Set Reader Initiation Delay {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,21,2019-05-10
-"RST{1|0} Set Reader As Source For Date/Time Synchronization {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,22,2019-05-10
-"RSV{VV,VV} Set Reader Automatic Standby Activation and Deactivation Voltages (16-24,17-25)",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,23,2019-05-10
-"RPS{SS,DD} Set Reader Periodic Standby: {Start Hours (00-23), Duration (00-23)}",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,24,2019-05-10
-RIT{0-10000} Set Reader Idling Time in Milliseconds,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,25,2019-05-10
-RDP Reset To Factory Default Parameters,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,26,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,27,2019-05-10
-Antenna/Tuning:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,28,2019-05-10
-AFT Perform Antenna Full Tune,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,29,2019-05-10
-AVE{1-5} Set Exciter Voltage Level,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,30,2019-05-10
-ATC{0-1023} Set Antenna Tuning Capacitors,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,31,2019-05-10
-"ADT{1|0} Set Dynamic Tuning {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,32,2019-05-10
-ATP{300-500} Set Dynamic Tuning Target Phase,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,33,2019-05-10
-ATS{2-63} Set Dynamic Tuning Target Phase Deviation Threshold,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,34,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,35,2019-05-10
-Measurements:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,36,2019-05-10
-MCG{0-200} Set Antenna Current Measurement Gain,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,37,2019-05-10
-MCO{0-200} Set Antenna Current Measurement Offset,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,38,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,39,2019-05-10
-Communication:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,40,2019-05-10
-CSL{bps} Set Local Communication Port Speed,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,41,2019-05-10
-"CTL{1|0} Set Tags Communication To Local Port {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,42,2019-05-10
-"CAL{1|0} Set Alarms Communication To Local Port {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,43,2019-05-10
-"CML{1|0} Set Messages Communication To Local Port {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,44,2019-05-10
-"CPR{A|M} Set Remote Comm. Port Protocol {A} ASCII, {M} MODEM",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,45,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,46,2019-05-10
-Detection:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,47,2019-05-10
-"DHT{1|0} Set HDX Tag Detection {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,48,2019-05-10
-"DFH{1|0} Set FDXB Fastag Detection {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,49,2019-05-10
-"DET{1|0} Set Detection Efficiency Test {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,50,2019-05-10
-"DCS{1|0|R} Set Detection Counter {1} On, {0} Off, {R} Reset",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,51,2019-05-10
-"DUM{5|1|0|D} Set Det. Unique Mode {5} Last 5, {1} Last 1, {0} Off, {D} Delay",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,52,2019-05-10
-DUD{1-43200} Set Detection Unique Delay in Seconds,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,53,2019-05-10
-DFT{45-500} Set FDXB Detection Scan Time in Milliseconds (5 ms Increments),BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,54,2019-05-10
-DTD{0-1440} Set Automatic Virtual Test Tag Single Shot Delay in Minutes,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,55,2019-05-10
-"DVT{1|0|S} Set Virtual Test Tag {1} On, {0} Off, {S} Single-Shot",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,56,2019-05-10
-DVL{0-255} Set Virtual Test Tag Level,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,57,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,58,2019-05-10
-Memory:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,59,2019-05-10
-MED Download Entire Memory,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,60,2019-05-10
-MTD Download Tags Memory,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,61,2019-05-10
-MSD Download Status Reports Memory,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,62,2019-05-10
-MEE Erase Entire Memory,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,63,2019-05-10
-"MTG{1|0} Store Tags To Memory {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,64,2019-05-10
-"MVT{1|0} Store Virtual Test Tags To Memory {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,65,2019-05-10
-"MSR{1|0} Store Status Reports To Memory {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,66,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,67,2019-05-10
-Reports:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,68,2019-05-10
-RFS Report Full Status,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,69,2019-05-10
-RFV Report Firmware Version,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,70,2019-05-10
-RDT Report Reader Date and Time,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,71,2019-05-10
-RNS Report Noise Status,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,72,2019-05-10
-RDD Report Diagnostic Data,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,73,2019-05-10
-RND{0-1440} Set Automatic Noise Report Delay in Minutes,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,74,2019-05-10
-RSD{0-1440} Set Automatic Status Report Delay in Minutes,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,75,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,76,2019-05-10
-INF: End Of List Of Commands,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,77,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,78,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,79,2019-05-10
-MED,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,80,2019-05-10
-INF: Tags Download Started,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,81,2019-05-10
-INF: Status Reports Download Started,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,181,2019-05-10
-INF: Download Complete,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,279,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,280,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,281,2019-05-10
-?,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,282,2019-05-10
-INF: Start Of List Of Commands,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,283,2019-05-10
-? Print List Of Commands,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,284,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,285,2019-05-10
-Alarms:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,286,2019-05-10
-ACL{0.0-9.0} Set Antenna Current Low Alarm Threshold in Amperes,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,287,2019-05-10
-ANH{0-100} Set Noise High Alarm Threshold Percent,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,288,2019-05-10
-ATH{512-1023} Set Tuning Capacitance High Alarm Threshold,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,289,2019-05-10
-ATL{0-511} Set Tuning Capacitance Low Alarm Threshold,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,290,2019-05-10
-AUD{0-3600} Set Alarms Unique Delay in Seconds,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,291,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,292,2019-05-10
-Reader:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,293,2019-05-10
-RIS{01-FF} Set Reader ID,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,294,2019-05-10
-RDS{MM/DD/YYYY} Set Reader Date,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,295,2019-05-10
-RTS{HH:MM:SS} Set Reader Time (24-hrs),BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,296,2019-05-10
-"RBS{1|0} Set Reader Beeper {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,297,2019-05-10
-"RDF{H|D} Set Reader Tag ID Display Format {H} Hex, {D} Dec",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,298,2019-05-10
-"RNM{S|M} Set Reader Network Mode {S} IS1001 Standalone, {M} MTS Node",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,299,2019-05-10
-"ROM{1|0|R} Set Reader Operation Mode {1} Scan, {0} Standby, {R} Reset",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,300,2019-05-10
-"RSM{1|2|3|0} Set Exciter Sync. Mode {1} Master, {2} Sec.Master, {3} Slave, {0} Standalone",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,301,2019-05-10
-"RID{1|0} Set Reader Initiation Delay {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,302,2019-05-10
-"RST{1|0} Set Reader As Source For Date/Time Synchronization {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,303,2019-05-10
-"RSV{VV,VV} Set Reader Automatic Standby Activation and Deactivation Voltages (16-24,17-25)",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,304,2019-05-10
-"RPS{SS,DD} Set Reader Periodic Standby: {Start Hours (00-23), Duration (00-23)}",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,305,2019-05-10
-RIT{0-10000} Set Reader Idling Time in Milliseconds,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,306,2019-05-10
-RDP Reset To Factory Default Parameters,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,307,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,308,2019-05-10
-Antenna/Tuning:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,309,2019-05-10
-AFT Perform Antenna Full Tune,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,310,2019-05-10
-AVE{1-5} Set Exciter Voltage Level,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,311,2019-05-10
-ATC{0-1023} Set Antenna Tuning Capacitors,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,312,2019-05-10
-"ADT{1|0} Set Dynamic Tuning {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,313,2019-05-10
-ATP{300-500} Set Dynamic Tuning Target Phase,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,314,2019-05-10
-ATS{2-63} Set Dynamic Tuning Target Phase Deviation Threshold,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,315,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,316,2019-05-10
-Measurements:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,317,2019-05-10
-MCG{0-200} Set Antenna Current Measurement Gain,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,318,2019-05-10
-MCO{0-200} Set Antenna Current Measurement Offset,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,319,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,320,2019-05-10
-Communication:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,321,2019-05-10
-CSL{bps} Set Local Communication Port Speed,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,322,2019-05-10
-"CTL{1|0} Set Tags Communication To Local Port {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,323,2019-05-10
-"CAL{1|0} Set Alarms Communication To Local Port {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,324,2019-05-10
-"CML{1|0} Set Messages Communication To Local Port {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,325,2019-05-10
-"CPR{A|M} Set Remote Comm. Port Protocol {A} ASCII, {M} MODEM",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,326,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,327,2019-05-10
-Detection:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,328,2019-05-10
-"DHT{1|0} Set HDX Tag Detection {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,329,2019-05-10
-"DFH{1|0} Set FDXB Fastag Detection {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,330,2019-05-10
-"DET{1|0} Set Detection Efficiency Test {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,331,2019-05-10
-"DCS{1|0|R} Set Detection Counter {1} On, {0} Off, {R} Reset",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,332,2019-05-10
-"DUM{5|1|0|D} Set Det. Unique Mode {5} Last 5, {1} Last 1, {0} Off, {D} Delay",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,333,2019-05-10
-DUD{1-43200} Set Detection Unique Delay in Seconds,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,334,2019-05-10
-DFT{45-500} Set FDXB Detection Scan Time in Milliseconds (5 ms Increments),BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,335,2019-05-10
-DTD{0-1440} Set Automatic Virtual Test Tag Single Shot Delay in Minutes,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,336,2019-05-10
-"DVT{1|0|S} Set Virtual Test Tag {1} On, {0} Off, {S} Single-Shot",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,337,2019-05-10
-DVL{0-255} Set Virtual Test Tag Level,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,338,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,339,2019-05-10
-Memory:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,340,2019-05-10
-MED Download Entire Memory,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,341,2019-05-10
-MTD Download Tags Memory,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,342,2019-05-10
-MSD Download Status Reports Memory,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,343,2019-05-10
-MEE Erase Entire Memory,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,344,2019-05-10
-"MTG{1|0} Store Tags To Memory {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,345,2019-05-10
-"MVT{1|0} Store Virtual Test Tags To Memory {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,346,2019-05-10
-"MSR{1|0} Store Status Reports To Memory {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,347,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,348,2019-05-10
-Reports:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,349,2019-05-10
-RFS Report Full Status,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,350,2019-05-10
-RFV Report Firmware Version,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,351,2019-05-10
-RDT Report Reader Date and Time,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,352,2019-05-10
-RNS Report Noise Status,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,353,2019-05-10
-RDD Report Diagnostic Data,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,354,2019-05-10
-RND{0-1440} Set Automatic Noise Report Delay in Minutes,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,355,2019-05-10
-RSD{0-1440} Set Automatic Status Report Delay in Minutes,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,356,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,357,2019-05-10
-INF: End Of List Of Commands,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,358,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,359,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,360,2019-05-10
-RFS,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,361,2019-05-10
-INF: Start Of Full Status Report,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,362,2019-05-10
-Reader:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,363,2019-05-10
-ID: 01,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,364,2019-05-10
-Model: IS1001,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,365,2019-05-10
-S/N: 1642.1698,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,366,2019-05-10
-Date: 04/01/2019,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,367,2019-05-10
-Time: 09:48:41,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,368,2019-05-10
-Application Firmware Version: 1.6.3,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,369,2019-05-10
-Operation Mode: Scan,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,370,2019-05-10
-Network Mode: IS1001 Standalone,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,371,2019-05-10
-Exciter Sync. Mode: Master,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,372,2019-05-10
-Date/Time Sync.: Disabled,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,373,2019-05-10
-Beeper: Disabled,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,374,2019-05-10
-Tag Display Format: DEC,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,375,2019-05-10
-Initiation Delay: Disabled,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,376,2019-05-10
-"Reader Auto Standby Voltages: 22 V, 24 V",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,377,2019-05-10
-Periodic Standby Start Time: 0:00,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,378,2019-05-10
-Periodic Standby Duration: Disabled,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,379,2019-05-10
-Idling Time: Disabled,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,380,2019-05-10
-Alarms:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,381,2019-05-10
-Antenna Current Low Alarm: 1.0 A,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,382,2019-05-10
-Noise High Alarm: 20%,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,383,2019-05-10
-Tuning Capacit. High Alarm: 970,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,384,2019-05-10
-Tuning Capacit. Low Alarm: 50,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,385,2019-05-10
-Alarms Unique Delay: 3600 sec,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,386,2019-05-10
-Antenna/Tuning:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,387,2019-05-10
-Exciter Voltage Level: 5,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,388,2019-05-10
-Dynamic Tuning: Enabled,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,389,2019-05-10
-Tuning Target Phase: 388,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,390,2019-05-10
-Tuning Target Phase Deviation Threshold: 4,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,391,2019-05-10
-Measurements:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,392,2019-05-10
-Antenna Current Gain: 103,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,393,2019-05-10
-Antenna Current Offset: 110,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,394,2019-05-10
-Communication:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,395,2019-05-10
-Local Port Speed: 115200,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,396,2019-05-10
-Tags To Local Port: Enabled,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,397,2019-05-10
-Alarms To Local Port: Enabled,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,398,2019-05-10
-Messages To Local Port: Enabled,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,399,2019-05-10
-Remote Port Protocol: ASCII,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,400,2019-05-10
-Detection:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,401,2019-05-10
-HDX Tag Detection: Enabled,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,402,2019-05-10
-Fastag Detection: Disabled,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,403,2019-05-10
-Detection Counter Enabled: Yes,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,404,2019-05-10
-Unique Mode: Disabled,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,405,2019-05-10
-Unique Delay: 60 sec,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,406,2019-05-10
-FDXB Detection Scan Time: 50 ms,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,407,2019-05-10
-VTT Level: 128,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,408,2019-05-10
-Auto VTT Delay: 60 min,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,409,2019-05-10
-Memory:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,410,2019-05-10
-Tags Memory Size: 100015,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,411,2019-05-10
-Status Reports Memory Size: 1023,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,412,2019-05-10
-Save Tags To Memory: Enabled,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,413,2019-05-10
-Save VTT To Memory: Enabled,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,414,2019-05-10
-Save Stat. Reports To Memory: Enabled,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,415,2019-05-10
-Reports:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,416,2019-05-10
-Auto Noise Report Delay: 60 min,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,417,2019-05-10
-Auto Status Report Delay: 60 min,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,418,2019-05-10
-Diagnostics:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,419,2019-05-10
-Detection Counter: 2,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,420,2019-05-10
-Tags In Memory: 99 (0%),BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,421,2019-05-10
-Status Reports In Memory: 97 (9%),BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,422,2019-05-10
-Input Voltage: 23.5 V,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,423,2019-05-10
-Exciter Voltage: 19.9 V,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,424,2019-05-10
-Antenna Tuning: Tuned,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,425,2019-05-10
-Antenna Current: 5.9 A,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,426,2019-05-10
-Tuning Capacitors: 178,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,427,2019-05-10
-Tuning Phase: 388,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,428,2019-05-10
-Tuning Relative Phase: 0,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,429,2019-05-10
-FDXB Signal Level: 34 mV (3%),BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,430,2019-05-10
-Temperature: 25.6 C,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,431,2019-05-10
-Sync. Input Present: N/A,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,432,2019-05-10
-Sec. Master Active: N/A,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,433,2019-05-10
-Active Alarms:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,434,2019-05-10
-No Active Alarms,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,435,2019-05-10
-INF: End Of Full Status Report,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,436,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,437,2019-05-10
-?,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,1,2019-05-10
-INF: Start Of List Of Commands,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,2,2019-05-10
-? Print List Of Commands,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,3,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,4,2019-05-10
-Alarms:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,5,2019-05-10
-ACL{0.0-9.0} Set Antenna Current Low Alarm Threshold in Amperes,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,6,2019-05-10
-ANH{0-100} Set Noise High Alarm Threshold Percent,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,7,2019-05-10
-ATH{512-1023} Set Tuning Capacitance High Alarm Threshold,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,8,2019-05-10
-ATL{0-511} Set Tuning Capacitance Low Alarm Threshold,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,9,2019-05-10
-AUD{0-3600} Set Alarms Unique Delay in Seconds,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,10,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,11,2019-05-10
-Reader:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,12,2019-05-10
-RIS{01-FF} Set Reader ID,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,13,2019-05-10
-RDS{MM/DD/YYYY} Set Reader Date,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,14,2019-05-10
-RTS{HH:MM:SS} Set Reader Time (24-hrs),BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,15,2019-05-10
-"RBS{1|0} Set Reader Beeper {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,16,2019-05-10
-"RDF{H|D} Set Reader Tag ID Display Format {H} Hex, {D} Dec",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,17,2019-05-10
-"RNM{S|M} Set Reader Network Mode {S} IS1001 Standalone, {M} MTS Node",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,18,2019-05-10
-"ROM{1|0|R} Set Reader Operation Mode {1} Scan, {0} Standby, {R} Reset",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,19,2019-05-10
-"RSM{1|2|3|0} Set Exciter Sync. Mode {1} Master, {2} Sec.Master, {3} Slave, {0} Standalone",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,20,2019-05-10
-"RID{1|0} Set Reader Initiation Delay {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,21,2019-05-10
-"RST{1|0} Set Reader As Source For Date/Time Synchronization {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,22,2019-05-10
-"RSV{VV,VV} Set Reader Automatic Standby Activation and Deactivation Voltages (16-24,17-25)",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,23,2019-05-10
-"RPS{SS,DD} Set Reader Periodic Standby: {Start Hours (00-23), Duration (00-23)}",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,24,2019-05-10
-RIT{0-10000} Set Reader Idling Time in Milliseconds,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,25,2019-05-10
-RDP Reset To Factory Default Parameters,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,26,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,27,2019-05-10
-Antenna/Tuning:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,28,2019-05-10
-AFT Perform Antenna Full Tune,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,29,2019-05-10
-AVE{1-5} Set Exciter Voltage Level,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,30,2019-05-10
-ATC{0-1023} Set Antenna Tuning Capacitors,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,31,2019-05-10
-"ADT{1|0} Set Dynamic Tuning {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,32,2019-05-10
-ATP{300-500} Set Dynamic Tuning Target Phase,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,33,2019-05-10
-ATS{2-63} Set Dynamic Tuning Target Phase Deviation Threshold,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,34,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,35,2019-05-10
-Measurements:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,36,2019-05-10
-MCG{0-200} Set Antenna Current Measurement Gain,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,37,2019-05-10
-MCO{0-200} Set Antenna Current Measurement Offset,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,38,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,39,2019-05-10
-Communication:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,40,2019-05-10
-CSL{bps} Set Local Communication Port Speed,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,41,2019-05-10
-"CTL{1|0} Set Tags Communication To Local Port {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,42,2019-05-10
-"CAL{1|0} Set Alarms Communication To Local Port {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,43,2019-05-10
-"CML{1|0} Set Messages Communication To Local Port {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,44,2019-05-10
-"CPR{A|M} Set Remote Comm. Port Protocol {A} ASCII, {M} MODEM",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,45,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,46,2019-05-10
-Detection:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,47,2019-05-10
-"DHT{1|0} Set HDX Tag Detection {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,48,2019-05-10
-"DFH{1|0} Set FDXB Fastag Detection {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,49,2019-05-10
-"DET{1|0} Set Detection Efficiency Test {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,50,2019-05-10
-"DCS{1|0|R} Set Detection Counter {1} On, {0} Off, {R} Reset",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,51,2019-05-10
-"DUM{5|1|0|D} Set Det. Unique Mode {5} Last 5, {1} Last 1, {0} Off, {D} Delay",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,52,2019-05-10
-DUD{1-43200} Set Detection Unique Delay in Seconds,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,53,2019-05-10
-DFT{45-500} Set FDXB Detection Scan Time in Milliseconds (5 ms Increments),BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,54,2019-05-10
-DTD{0-1440} Set Automatic Virtual Test Tag Single Shot Delay in Minutes,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,55,2019-05-10
-"DVT{1|0|S} Set Virtual Test Tag {1} On, {0} Off, {S} Single-Shot",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,56,2019-05-10
-DVL{0-255} Set Virtual Test Tag Level,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,57,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,58,2019-05-10
-Memory:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,59,2019-05-10
-MED Download Entire Memory,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,60,2019-05-10
-MTD Download Tags Memory,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,61,2019-05-10
-MSD Download Status Reports Memory,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,62,2019-05-10
-MEE Erase Entire Memory,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,63,2019-05-10
-"MTG{1|0} Store Tags To Memory {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,64,2019-05-10
-"MVT{1|0} Store Virtual Test Tags To Memory {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,65,2019-05-10
-"MSR{1|0} Store Status Reports To Memory {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,66,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,67,2019-05-10
-Reports:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,68,2019-05-10
-RFS Report Full Status,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,69,2019-05-10
-RFV Report Firmware Version,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,70,2019-05-10
-RDT Report Reader Date and Time,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,71,2019-05-10
-RNS Report Noise Status,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,72,2019-05-10
-RDD Report Diagnostic Data,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,73,2019-05-10
-RND{0-1440} Set Automatic Noise Report Delay in Minutes,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,74,2019-05-10
-RSD{0-1440} Set Automatic Status Report Delay in Minutes,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,75,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,76,2019-05-10
-INF: End Of List Of Commands,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,77,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,78,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,79,2019-05-10
-MED,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,80,2019-05-10
-INF: Tags Download Started,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,81,2019-05-10
-INF: Status Reports Download Started,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,181,2019-05-10
-INF: Download Complete,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,279,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,280,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,281,2019-05-10
-?,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,282,2019-05-10
-INF: Start Of List Of Commands,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,283,2019-05-10
-? Print List Of Commands,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,284,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,285,2019-05-10
-Alarms:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,286,2019-05-10
-ACL{0.0-9.0} Set Antenna Current Low Alarm Threshold in Amperes,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,287,2019-05-10
-ANH{0-100} Set Noise High Alarm Threshold Percent,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,288,2019-05-10
-ATH{512-1023} Set Tuning Capacitance High Alarm Threshold,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,289,2019-05-10
-ATL{0-511} Set Tuning Capacitance Low Alarm Threshold,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,290,2019-05-10
-AUD{0-3600} Set Alarms Unique Delay in Seconds,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,291,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,292,2019-05-10
-Reader:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,293,2019-05-10
-RIS{01-FF} Set Reader ID,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,294,2019-05-10
-RDS{MM/DD/YYYY} Set Reader Date,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,295,2019-05-10
-RTS{HH:MM:SS} Set Reader Time (24-hrs),BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,296,2019-05-10
-"RBS{1|0} Set Reader Beeper {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,297,2019-05-10
-"RDF{H|D} Set Reader Tag ID Display Format {H} Hex, {D} Dec",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,298,2019-05-10
-"RNM{S|M} Set Reader Network Mode {S} IS1001 Standalone, {M} MTS Node",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,299,2019-05-10
-"ROM{1|0|R} Set Reader Operation Mode {1} Scan, {0} Standby, {R} Reset",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,300,2019-05-10
-"RSM{1|2|3|0} Set Exciter Sync. Mode {1} Master, {2} Sec.Master, {3} Slave, {0} Standalone",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,301,2019-05-10
-"RID{1|0} Set Reader Initiation Delay {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,302,2019-05-10
-"RST{1|0} Set Reader As Source For Date/Time Synchronization {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,303,2019-05-10
-"RSV{VV,VV} Set Reader Automatic Standby Activation and Deactivation Voltages (16-24,17-25)",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,304,2019-05-10
-"RPS{SS,DD} Set Reader Periodic Standby: {Start Hours (00-23), Duration (00-23)}",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,305,2019-05-10
-RIT{0-10000} Set Reader Idling Time in Milliseconds,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,306,2019-05-10
-RDP Reset To Factory Default Parameters,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,307,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,308,2019-05-10
-Antenna/Tuning:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,309,2019-05-10
-AFT Perform Antenna Full Tune,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,310,2019-05-10
-AVE{1-5} Set Exciter Voltage Level,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,311,2019-05-10
-ATC{0-1023} Set Antenna Tuning Capacitors,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,312,2019-05-10
-"ADT{1|0} Set Dynamic Tuning {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,313,2019-05-10
-ATP{300-500} Set Dynamic Tuning Target Phase,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,314,2019-05-10
-ATS{2-63} Set Dynamic Tuning Target Phase Deviation Threshold,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,315,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,316,2019-05-10
-Measurements:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,317,2019-05-10
-MCG{0-200} Set Antenna Current Measurement Gain,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,318,2019-05-10
-MCO{0-200} Set Antenna Current Measurement Offset,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,319,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,320,2019-05-10
-Communication:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,321,2019-05-10
-CSL{bps} Set Local Communication Port Speed,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,322,2019-05-10
-"CTL{1|0} Set Tags Communication To Local Port {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,323,2019-05-10
-"CAL{1|0} Set Alarms Communication To Local Port {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,324,2019-05-10
-"CML{1|0} Set Messages Communication To Local Port {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,325,2019-05-10
-"CPR{A|M} Set Remote Comm. Port Protocol {A} ASCII, {M} MODEM",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,326,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,327,2019-05-10
-Detection:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,328,2019-05-10
-"DHT{1|0} Set HDX Tag Detection {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,329,2019-05-10
-"DFH{1|0} Set FDXB Fastag Detection {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,330,2019-05-10
-"DET{1|0} Set Detection Efficiency Test {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,331,2019-05-10
-"DCS{1|0|R} Set Detection Counter {1} On, {0} Off, {R} Reset",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,332,2019-05-10
-"DUM{5|1|0|D} Set Det. Unique Mode {5} Last 5, {1} Last 1, {0} Off, {D} Delay",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,333,2019-05-10
-DUD{1-43200} Set Detection Unique Delay in Seconds,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,334,2019-05-10
-DFT{45-500} Set FDXB Detection Scan Time in Milliseconds (5 ms Increments),BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,335,2019-05-10
-DTD{0-1440} Set Automatic Virtual Test Tag Single Shot Delay in Minutes,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,336,2019-05-10
-"DVT{1|0|S} Set Virtual Test Tag {1} On, {0} Off, {S} Single-Shot",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,337,2019-05-10
-DVL{0-255} Set Virtual Test Tag Level,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,338,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,339,2019-05-10
-Memory:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,340,2019-05-10
-MED Download Entire Memory,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,341,2019-05-10
-MTD Download Tags Memory,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,342,2019-05-10
-MSD Download Status Reports Memory,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,343,2019-05-10
-MEE Erase Entire Memory,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,344,2019-05-10
-"MTG{1|0} Store Tags To Memory {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,345,2019-05-10
-"MVT{1|0} Store Virtual Test Tags To Memory {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,346,2019-05-10
-"MSR{1|0} Store Status Reports To Memory {1} On, {0} Off",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,347,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,348,2019-05-10
-Reports:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,349,2019-05-10
-RFS Report Full Status,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,350,2019-05-10
-RFV Report Firmware Version,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,351,2019-05-10
-RDT Report Reader Date and Time,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,352,2019-05-10
-RNS Report Noise Status,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,353,2019-05-10
-RDD Report Diagnostic Data,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,354,2019-05-10
-RND{0-1440} Set Automatic Noise Report Delay in Minutes,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,355,2019-05-10
-RSD{0-1440} Set Automatic Status Report Delay in Minutes,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,356,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,357,2019-05-10
-INF: End Of List Of Commands,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,358,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,359,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,360,2019-05-10
-RFS,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,361,2019-05-10
-INF: Start Of Full Status Report,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,362,2019-05-10
-Reader:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,363,2019-05-10
-ID: 01,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,364,2019-05-10
-Model: IS1001,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,365,2019-05-10
-S/N: 1642.1698,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,366,2019-05-10
-Date: 04/01/2019,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,367,2019-05-10
-Time: 09:48:41,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,368,2019-05-10
-Application Firmware Version: 1.6.3,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,369,2019-05-10
-Operation Mode: Scan,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,370,2019-05-10
-Network Mode: IS1001 Standalone,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,371,2019-05-10
-Exciter Sync. Mode: Master,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,372,2019-05-10
-Date/Time Sync.: Disabled,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,373,2019-05-10
-Beeper: Disabled,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,374,2019-05-10
-Tag Display Format: DEC,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,375,2019-05-10
-Initiation Delay: Disabled,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,376,2019-05-10
-"Reader Auto Standby Voltages: 22 V, 24 V",BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,377,2019-05-10
-Periodic Standby Start Time: 0:00,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,378,2019-05-10
-Periodic Standby Duration: Disabled,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,379,2019-05-10
-Idling Time: Disabled,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,380,2019-05-10
-Alarms:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,381,2019-05-10
-Antenna Current Low Alarm: 1.0 A,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,382,2019-05-10
-Noise High Alarm: 20%,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,383,2019-05-10
-Tuning Capacit. High Alarm: 970,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,384,2019-05-10
-Tuning Capacit. Low Alarm: 50,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,385,2019-05-10
-Alarms Unique Delay: 3600 sec,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,386,2019-05-10
-Antenna/Tuning:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,387,2019-05-10
-Exciter Voltage Level: 5,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,388,2019-05-10
-Dynamic Tuning: Enabled,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,389,2019-05-10
-Tuning Target Phase: 388,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,390,2019-05-10
-Tuning Target Phase Deviation Threshold: 4,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,391,2019-05-10
-Measurements:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,392,2019-05-10
-Antenna Current Gain: 103,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,393,2019-05-10
-Antenna Current Offset: 110,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,394,2019-05-10
-Communication:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,395,2019-05-10
-Local Port Speed: 115200,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,396,2019-05-10
-Tags To Local Port: Enabled,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,397,2019-05-10
-Alarms To Local Port: Enabled,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,398,2019-05-10
-Messages To Local Port: Enabled,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,399,2019-05-10
-Remote Port Protocol: ASCII,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,400,2019-05-10
-Detection:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,401,2019-05-10
-HDX Tag Detection: Enabled,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,402,2019-05-10
-Fastag Detection: Disabled,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,403,2019-05-10
-Detection Counter Enabled: Yes,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,404,2019-05-10
-Unique Mode: Disabled,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,405,2019-05-10
-Unique Delay: 60 sec,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,406,2019-05-10
-FDXB Detection Scan Time: 50 ms,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,407,2019-05-10
-VTT Level: 128,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,408,2019-05-10
-Auto VTT Delay: 60 min,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,409,2019-05-10
-Memory:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,410,2019-05-10
-Tags Memory Size: 100015,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,411,2019-05-10
-Status Reports Memory Size: 1023,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,412,2019-05-10
-Save Tags To Memory: Enabled,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,413,2019-05-10
-Save VTT To Memory: Enabled,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,414,2019-05-10
-Save Stat. Reports To Memory: Enabled,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,415,2019-05-10
-Reports:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,416,2019-05-10
-Auto Noise Report Delay: 60 min,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,417,2019-05-10
-Auto Status Report Delay: 60 min,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,418,2019-05-10
-Diagnostics:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,419,2019-05-10
-Detection Counter: 2,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,420,2019-05-10
-Tags In Memory: 99 (0%),BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,421,2019-05-10
-Status Reports In Memory: 97 (9%),BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,422,2019-05-10
-Input Voltage: 23.5 V,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,423,2019-05-10
-Exciter Voltage: 19.9 V,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,424,2019-05-10
-Antenna Tuning: Tuned,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,425,2019-05-10
-Antenna Current: 5.9 A,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,426,2019-05-10
-Tuning Capacitors: 178,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,427,2019-05-10
-Tuning Phase: 388,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,428,2019-05-10
-Tuning Relative Phase: 0,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,429,2019-05-10
-FDXB Signal Level: 34 mV (3%),BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,430,2019-05-10
-Temperature: 25.6 C,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,431,2019-05-10
-Sync. Input Present: N/A,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,432,2019-05-10
-Sec. Master Active: N/A,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,433,2019-05-10
-Active Alarms:,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,434,2019-05-10
-No Active Alarms,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,435,2019-05-10
-INF: End Of Full Status Report,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,436,2019-05-10
-,BGSC,Biomark,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\BiomExs\archive\2019-05-10_BGSC_April1.txt,437,2019-05-10
-^,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-10_BGS_dec3,1,2019-05-10
-Oregon RFID Datalogger Version 5.06,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-10_BGS_dec3,2,2019-05-10
-,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-10_BGS_dec3,4,2019-05-10
->supply power ok 13.0V,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-10_BGS_dec3,5,2019-05-10
-database file opened,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-10_BGS_dec3,6,2019-05-10
-starting reader after power up,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-10_BGS_dec3,7,2019-05-10
-up,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-10_BGS_dec3,8,2019-05-10
-Upload #4,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-10_BGS_dec3,9,2019-05-10
-Reader: 2018-07-011 Site: BYP,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-10_BGS_dec3,10,2019-05-10
---------- upload 4 start ---------,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-10_BGS_dec3,11,2019-05-10
---------- upload 4 done ---------,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-10_BGS_dec3,2575,2019-05-10
-2563 records,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-10_BGS_dec3,2576,2019-05-10
-,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-10_BGS_dec3,2577,2019-05-10
->ut,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-10_BGS_dec3,2578,2019-05-10
-supply RX TX EA charge/listen Temp noise,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-10_BGS_dec3,2579,2019-05-10
------------ end of time records #5 ----------,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-10_BGS_dec3,2581,2019-05-10
-,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-10_BGS_dec3,2582,2019-05-10
->ut4,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-10_BGS_dec3,2583,2019-05-10
-supply RX TX EA charge/listen Temp noise,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-10_BGS_dec3,2584,2019-05-10
------------ end of time records #4 ----------,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-10_BGS_dec3,10021,2019-05-10
-,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-10_BGS_dec3,10022,2019-05-10
->,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-10_BGS_dec3,10023,2019-05-10
+,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,1,2019-05-11
+ype 'HE' for help,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,2,2019-05-11
+,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,3,2019-05-11
+>upupasdf,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,4,2019-05-11
+Upload #6,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,5,2019-05-11
+Reader: 2018-07-009 Site: ALPDS,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,6,2019-05-11
+--------- upload 6 start ---------,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,7,2019-05-11
+--------- upload 6 done ---------,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,9,2019-05-11
+1 records,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,10,2019-05-11
+,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,11,2019-05-11
+>d,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,12,2019-05-11
+Type 'HE' for help,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,13,2019-05-11
+,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,14,2019-05-11
+>,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,15,2019-05-11
+,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,16,2019-05-11
+>,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,17,2019-05-11
+,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,18,2019-05-11
+>,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,19,2019-05-11
+,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,20,2019-05-11
+>up5,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,21,2019-05-11
+"Upload #5, 273 records",ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,22,2019-05-11
+Reader: 2018-07-009 Site: ALPDS,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,23,2019-05-11
+--------- upload 5 start ---------,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,24,2019-05-11
+--------- upload 5 done ---------,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,298,2019-05-11
+273 records,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,299,2019-05-11
+,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,300,2019-05-11
+>ut5,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,301,2019-05-11
+supply RX TX EA charge/listen Temp noise,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,302,2019-05-11
+[no data],ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,315,2019-05-11
+*,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,316,2019-05-11
+[no data],ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,321,2019-05-11
+[no data],ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,326,2019-05-11
+[no data],ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,330,2019-05-11
+[no data],ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,333,2019-05-11
+[no data],ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,339,2019-05-11
+[no data],ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,355,2019-05-11
+----------- end of time records #5 ----------,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,5732,2019-05-11
+,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,5733,2019-05-11
+>,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Feb11,5734,2019-05-11
+up4,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_feb2,1,2019-05-11
+"Upload #4, 96 records",ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_feb2,2,2019-05-11
+Reader: 2018-07-009 Site: ALPDS,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_feb2,3,2019-05-11
+--------- upload 4 start ---------,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_feb2,4,2019-05-11
+--------- upload 4 done ---------,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_feb2,101,2019-05-11
+96 records,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_feb2,102,2019-05-11
+,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_feb2,103,2019-05-11
+>,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_feb2,104,2019-05-11
+,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,1,2019-05-11
+reader settings,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,2,2019-05-11
+CGA0 single reader,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,3,2019-05-11
+CGC50 charge period 50ms,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,4,2019-05-11
+CGP50 duty cycle pause 50ms,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,5,2019-05-11
+"CGS5 synch mode: slave [0=none,1=wireless,2=wired,3=wired/wireless,4=master,5=slave]",ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,6,2019-05-11
+,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,7,2019-05-11
+>dt,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,8,2019-05-11
+current: 2019-01-29 09:14:41.62,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,9,2019-05-11
+,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,10,2019-05-11
+>dt 2019-01-29 08:48:00,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,11,2019-05-11
+,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,13,2019-05-11
+>dt,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,14,2019-05-11
+current: 2019-01-29 08:48:01.76,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,15,2019-05-11
+,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,16,2019-05-11
+>sc ALPDS,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,17,2019-05-11
+Site code: ALPDS,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,18,2019-05-11
+,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,19,2019-05-11
+>rn 2018-07-009,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,20,2019-05-11
+Reader name: 2018-07-009,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,21,2019-05-11
+,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,22,2019-05-11
+>up,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,23,2019-05-11
+Upload #3,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,24,2019-05-11
+Reader: 2018-07-009 Site: ALPDS,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,25,2019-05-11
+--------- upload 3 start ---------,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,26,2019-05-11
+--------- upload 3 done ---------,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,192,2019-05-11
+165 records,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,193,2019-05-11
+,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,194,2019-05-11
+>ut,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,195,2019-05-11
+supply RX TX EA charge/listen Temp noise,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,196,2019-05-11
+----------- end of time records #4 ----------,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,198,2019-05-11
+,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,199,2019-05-11
+>ut3,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,200,2019-05-11
+supply RX TX EA charge/listen Temp noise,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,201,2019-05-11
+[no data],ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,204,2019-05-11
+**,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,205,2019-05-11
+[no data],ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,207,2019-05-11
+[no data],ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,209,2019-05-11
+[no data],ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,211,2019-05-11
+*,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,212,2019-05-11
+[no data],ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,214,2019-05-11
+[no data],ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,216,2019-05-11
+[no data],ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,218,2019-05-11
+***,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,219,2019-05-11
+[no data],ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,222,2019-05-11
+*,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,223,2019-05-11
+[no data],ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,244,2019-05-11
+[no data],ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,257,2019-05-11
+[no data],ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,260,2019-05-11
+**,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,261,2019-05-11
+[no data],ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,270,2019-05-11
+----------- end of time records #3 ----------,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_Jan29,1203,2019-05-11
+.44A 49ms/ 50ms 36C 5N,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_JFeb7,1,2019-05-11
+----------- end of time records #4 ----------,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_JFeb7,11253,2019-05-11
+,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_JFeb7,11254,2019-05-11
+>,ALPDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\example\Scarlett\archive\2019-05-11_ALPDS_JFeb7,11255,2019-05-11

@@ -781,7 +781,6 @@ rmdups = function(dbDir){
     list(fn='otherDB.csv', cols=c(1:3)),
     list(fn='tagBadDB.csv', cols=c(1:3)),
     list(fn='tagDB.csv', cols=c(1:9))
-    #list(fn='tagDB_DupTest.csv', cols=c(1:9))
     )
 
   # loop through all the files defined in above list and remove duplicates
