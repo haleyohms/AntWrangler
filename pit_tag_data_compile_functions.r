@@ -166,9 +166,18 @@ isJunkMetaFn = function(line){
 isJunkTagFn = function(line){
   tag<-str_squish(unlist(line)[6])
   tag<-sub("_", "",tag)
-  return(grepl("^[0-9]+$",tag))
+  return(grepl("^[0-9]+$",tag)) #Returns T or F on whether tag is numeric
 }
 
+# #ID junk ORFID tags. Remove both underscore and . in tag number
+# isJunkTagFn = function(line){
+#   tag<-str_squish(unlist(line)[6])
+#   tag<-sub("_", "",tag)
+#   #tag<-sub("\\.", "",tag)
+#   return(grepl("^[0-9]+$",tag))
+# }
+
+#ID junk Biomark tags. Remove . in tag number
 isBMJunkTagFn = function(line){
   tag<-str_squish(unlist(line)[5])
   tag<-sub("\\.", "",tag)
@@ -184,10 +193,14 @@ rmNewColFn = function(line){
 
 parseScanLog = function(logFile, dbDir, archiveDir){
   #logFile = logFiles[1]
-  #logFile="C:/Users/HaleyOhms/Documents/Carmel Project/Array data/ALP/downloads/ALPDS_febmix_noise"
-  logFile="C:/Users/HaleyOhms/Documents/GitHub/AntWrangler/example/NewORFIDformat/RSC_Downstream_20190719"
-  archiveDir="C:/Users/HaleyOhms/Documents/GitHub/AntWrangler/example/NewORFIDformat"
-  dbDir="C:/Users/HaleyOhms/Documents/GitHub/AntWrangler/example/NewORFIDformat"
+  # logFile="C:/Users/HaleyOhms/Documents/GitHub/AntWrangler/example/NewORFIDformat/RSC_Downstream_20190719"
+  # archiveDir="C:/Users/HaleyOhms/Documents/GitHub/AntWrangler/example/NewORFIDformat"
+  # dbDir="C:/Users/HaleyOhms/Documents/GitHub/AntWrangler/example/NewORFIDformat"
+  # 
+  # logFile="C:/Users/HaleyOhms/Documents/GitHub/AntWrangler/NewFormTest/RSC/downloads/RSCDS_test2"
+  # dbDir="C:/Users/HaleyOhms/Documents/GitHub/AntWrangler/NewFormTest/RSC"
+  # archiveDir="C:/Users/HaleyOhms/Documents/GitHub/AntWrangler/NewFormTest/RSC"
+  
   
   print(str_glue('    File: ', logFile))
   bname = basename(logFile)

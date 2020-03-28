@@ -1,0 +1,77 @@
+up
+Reader: RSC downstream  Site: AAA
+--------- Upload #10, 14 records ---------
+DTY          ARR                 DUR       TCHTTY         TAG           NCD     EMP 
+E  2019-12-20 11:18:48.356 G End of upload #9
+S  2019-12-20 11:20:30.200    00:00:00.200 HDX  W  0000_000000000881        3     0 
+S  2019-12-20 11:21:39.400    00:00:01.500 HDX  A   982_000362724424       16     0 
+S  2019-12-20 11:21:47.700    00:00:01.300 HDX  A   982_000362724424       14     0 
+S  2019-12-20 11:22:07.800    00:00:01.400 HDX  A   982_000362724424       15     0 
+S  2019-12-20 11:22:12.600    00:00:00.600 HDX  A   982_000362724424        7     0 
+S  2019-12-20 11:51:09.099    00:00:00.100 HDX  W  0000_000000000881        2     0 
+S  2019-12-20 11:56:18.400    00:00:01.600 HDX  A   982_000362724424       17     0 
+S  2019-12-20 11:56:22.000    00:00:05.100 HDX  A   982_000362724424       48     0 
+S  2019-12-20 11:56:31.900    00:00:01.900 HDX  A   982_000362724424       20     0 
+S  2019-12-20 11:56:35.400    00:00:01.300 HDX  A   982_000362724424       14     0 
+S  2019-12-20 11:56:41.200    00:00:00.900 HDX  A   982_000362724424       10     0 
+S  2019-12-20 12:11:40.300    00:00:01.500 HDX  W  0000_000000000881       16     0 
+S  2019-12-20 12:42:20.700    00:00:00.100 HDX  W  0000_000000000881        2     0 
+----------------------------------------
+
+HSG*> 
+HRG*> dt
+2019-12-20 13:10:14.759 G (UT-8)
+
+HRGB> I  2019-12-20 13:13:00.100    00:00:00.000 HDX  W  0000_000000000881        2     0 
+I  2019-12-20 13:13:00.100    00:00:00.100 HDX  W  0000_000000000881        2     0 
+S  2019-12-20 13:13:00.100    00:00:00.100 HDX  W  0000_000000000881        2     0 
+he
+Oregon RFID HDX Single Antenna Reader V1.41
+ON Reader power on
+ST Reader standby
+OF Reader power off
+UH Show upload history
+UP Upload records since last
+UD Upload records by date
+UT Upload records by tag number
+TL Show list of tags
+TC Show tag class names
+OV Override with GNSS (OVG) or NET (OVN)
+FM View or change record field names
+FN Display list of database field names
+DM Display mode (ICFEA)
+CS Column separator S=space, C=comma, T=tab
+TF Tag format (D=decimal, H=hex, B=bi hex)
+HD HDX scan speed settings
+RE Range extender (1=on, 0=off)
+MG Max delay gap
+FS Fast scan mode (1=on, 0=off)
+NO Display noise levels
+RN Reader name
+SC Site code - 3 letters
+MV Minimum voltage before shutdown
+RB Restart
+TU Tune antenna
+MT Modify autotuner setting
+DT Show date
+TZ Set time zone (hours from UT)
+LO Show location
+BP Beeper (0=off, 1=on, 2=proximity)
+BR LED brightness levels (1=dim 2=medium 3=bright)
+DK Minutes before display goes dark (0=never)
+SY Display system status
+BD Baud rate
+AB About memory, copyright
+WE Write every detection record (Ted mode) (1=on, 0=off)
+FRD Factory reset the database file
+FRR Factory reset the reader settings
+FRA Factory reset all FRD+FRR
+CV Convert tag number
+QU Explain prompt codes
+LA Show last tag seen
+BT Bluetooth power (1=on, 0=off)
+PH Display phantom tags (1=on, 0=off)
+PF Phantom tag filter (1=on, 0=0ff)
+RD Rebuild database
+
+HRGB> 

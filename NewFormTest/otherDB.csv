@@ -1,0 +1,373 @@
+^,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,1,2020-03-28
+Oregon RFID Datalogger Version 5.06,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,2,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,4,2020-03-28
+>supply power ok 12.7V,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,5,2020-03-28
+database file opened,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,6,2020-03-28
+starting reader after power up,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,7,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,8,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,9,2020-03-28
+>,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,10,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,11,2020-03-28
+>up,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,12,2020-03-28
+Upload #90,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,13,2020-03-28
+Reader: SH1 Site: BGS,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,14,2020-03-28
+--------- upload 90 start ---------,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,15,2020-03-28
+Date Time Duration Type Tag ID Count Gap,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,16,2020-03-28
+--------- upload 90 done ---------,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,30,2020-03-28
+13 records,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,31,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,32,2020-03-28
+>ut,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,33,2020-03-28
+supply RX TX EA charge/listen Temp noise,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,34,2020-03-28
+----------- end of time records #91 ----------,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,37,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,38,2020-03-28
+>up89,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,39,2020-03-28
+"Upload #89, 110 records",BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,40,2020-03-28
+Reader: SH1 Site: BGS,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,41,2020-03-28
+--------- upload 89 start ---------,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,42,2020-03-28
+Date Time Duration Type Tag ID Count Gap,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,43,2020-03-28
+--------- upload 89 done ---------,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,154,2020-03-28
+110 records,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,155,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,156,2020-03-28
+>ut89,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,157,2020-03-28
+supply RX TX EA charge/listen Temp noise,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,158,2020-03-28
+----------- end of time records #89 ----------,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,7528,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,7529,2020-03-28
+>,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,7530,2020-03-28
+^,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,7531,2020-03-28
+Oregon RFID Datalogger Version 5.06,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,7532,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,7534,2020-03-28
+>supply power ok 12.7V,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,7535,2020-03-28
+database file opened,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,7536,2020-03-28
+starting reader after power up,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,7537,2020-03-28
+^,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,7538,2020-03-28
+Oregon RFID Datalogger Version 5.06,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,7539,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,7541,2020-03-28
+>supply power ok 12.7V,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,7542,2020-03-28
+database file opened,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,7543,2020-03-28
+starting reader after power up,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,7544,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,7545,2020-03-28
+Oregon RFID Datalogger Version 5.06,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,7546,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,7548,2020-03-28
+>supply power ok 12.7V,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,7549,2020-03-28
+database file opened,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,7550,2020-03-28
+starting reader after power up,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_1,7551,2020-03-28
+UP,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_2,1,2020-03-28
+Upload #91,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_2,2,2020-03-28
+Reader: SH1 Site: BGS,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_2,3,2020-03-28
+--------- upload 91 start ---------,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_2,4,2020-03-28
+Date Time Duration Type Tag ID Count Gap,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_2,5,2020-03-28
+--------- upload 91 done ---------,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_2,106,2020-03-28
+100 records,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_2,107,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_2,108,2020-03-28
+>,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_2,109,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_2,110,2020-03-28
+>,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_2,111,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_2,112,2020-03-28
+>UT,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_2,113,2020-03-28
+supply RX TX EA charge/listen Temp noise,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_2,114,2020-03-28
+----------- end of time records #92 ----------,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_2,116,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_2,117,2020-03-28
+>,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01082020_2,118,2020-03-28
+^,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,1,2020-03-28
+Oregon RFID Datalogger Version 5.06,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,2,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,4,2020-03-28
+>supply power ok 12.7V,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,5,2020-03-28
+database file opened,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,6,2020-03-28
+starting reader after power up,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,7,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,8,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,9,2020-03-28
+>,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,10,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,11,2020-03-28
+>up,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,12,2020-03-28
+Upload #92,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,13,2020-03-28
+Reader: SH1 Site: BGS,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,14,2020-03-28
+--------- upload 92 start ---------,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,15,2020-03-28
+Date Time Duration Type Tag ID Count Gap,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,16,2020-03-28
+--------- upload 92 done ---------,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,186,2020-03-28
+169 records,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,187,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,188,2020-03-28
+>ut,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,189,2020-03-28
+supply RX TX EA charge/listen Temp noise,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,190,2020-03-28
+----------- end of time records #93 ----------,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,193,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,194,2020-03-28
+>ut92,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,195,2020-03-28
+supply RX TX EA charge/listen Temp noise,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,196,2020-03-28
+[no data],BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,8655,2020-03-28
+----------- end of time records #92 ----------,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,8658,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,8659,2020-03-28
+>^,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,8660,2020-03-28
+Oregon RFID Datalogger Version 5.06,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,8661,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,8663,2020-03-28
+>supply power ok 12.5V,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,8664,2020-03-28
+database file opened,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,8665,2020-03-28
+starting reader after power up,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,8666,2020-03-28
+^,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,8667,2020-03-28
+Oregon RFID Datalogger Version 5.06,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,8668,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,8670,2020-03-28
+>Cannot read SD card - make sure in slot ***,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,8671,2020-03-28
+supply power ok 14.9V,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,8672,2020-03-28
+problem opening database file,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,8673,2020-03-28
+starting reader after power up,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,8674,2020-03-28
+^,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,8675,2020-03-28
+Oregon RFID Datalogger Version 5.06,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,8676,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,8678,2020-03-28
+>Cannot read SD card - make sure in slot ***,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,8679,2020-03-28
+supply power ok 14.9V,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,8680,2020-03-28
+problem opening database file,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,8681,2020-03-28
+starting reader after power up,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_01142020,8682,2020-03-28
+up97,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb11.txt,1,2020-03-28
+"Upload #97, 102 records",BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb11.txt,2,2020-03-28
+Reader: SH1 Site: BGS,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb11.txt,3,2020-03-28
+--------- upload 97 start ---------,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb11.txt,4,2020-03-28
+Date Time Duration Type Tag ID Count Gap,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb11.txt,5,2020-03-28
+--------- upload 97 done ---------,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb11.txt,108,2020-03-28
+102 records,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb11.txt,109,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb11.txt,110,2020-03-28
+>,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb11.txt,111,2020-03-28
+maximum is 96,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb3.txt,1,2020-03-28
+up96 96,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb3.txt,2,2020-03-28
+"Upload #96, 268 records",BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb3.txt,3,2020-03-28
+Reader: SH1 Site: BGS,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb3.txt,4,2020-03-28
+--------- upload 96 start ---------,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb3.txt,5,2020-03-28
+Date Time Duration Type Tag ID Count Gap,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb3.txt,6,2020-03-28
+--------- upload 96 done ---------,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb3.txt,275,2020-03-28
+268 records,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb3.txt,276,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb3.txt,277,2020-03-28
+>ut,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb3.txt,278,2020-03-28
+supply RX TX EA charge/listen Temp noise,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb3.txt,279,2020-03-28
+----------- end of time records #97 ----------,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb3.txt,282,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb3.txt,283,2020-03-28
+>ut96,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb3.txt,284,2020-03-28
+supply RX TX EA charge/listen Temp noise,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb3.txt,285,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb3.txt,12394,2020-03-28
+Type 'HE' for help,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb3.txt,12395,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb3.txt,12396,2020-03-28
+>ut,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb3.txt,12397,2020-03-28
+supply RX TX EA charge/listen Temp noise,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb3.txt,12398,2020-03-28
+----------- end of time records #97 ----------,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb3.txt,12414,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb3.txt,12415,2020-03-28
+>dt,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb3.txt,12416,2020-03-28
+current: 2020-02-03 14:42:56.43,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb3.txt,12417,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb3.txt,12418,2020-03-28
+>dt 2020-02-03 15:10:00,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb3.txt,12419,2020-03-28
+,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb3.txt,12421,2020-03-28
+>,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_Feb3.txt,12422,2020-03-28
+up100,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_March17.txt,1,2020-03-28
+maximum is 99,BGS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\BGS\archive\2020-03-28_BGS_March17.txt,2,2020-03-28
+up,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20190708,1,2020-03-28
+Reader: RSC downstream Site: AAA,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20190708,2,2020-03-28
+"--------- Upload #3, 37 records ---------",RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20190708,3,2020-03-28
+DTY ARR DUR TCHTTY TAG NCD EMP,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20190708,4,2020-03-28
+----------------------------------------,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20190708,42,2020-03-28
+,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20190708,43,2020-03-28
+HSG*> ph f,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20190708,44,2020-03-28
+Phantom filter off,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20190708,45,2020-03-28
+,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20190708,46,2020-03-28
+HSG*> pf1,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20190708,47,2020-03-28
+Phantom filter on,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20190708,48,2020-03-28
+,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20190708,49,2020-03-28
+HSG*>,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20190708,50,2020-03-28
+up,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20190819,1,2020-03-28
+Reader: RSC downstream Site: AAA,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20190819,2,2020-03-28
+"--------- Upload #5, 1432 records ---------",RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20190819,3,2020-03-28
+DTY ARR DUR TCHTTY TAG NCD EMP,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20190819,4,2020-03-28
+----------------------------------------,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20190819,1437,2020-03-28
+,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20190819,1438,2020-03-28
+HSG*>,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20190819,1439,2020-03-28
+up,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20190917,1,2020-03-28
+Reader: RSC downstream Site: AAA,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20190917,2,2020-03-28
+"--------- Upload #6, 1188 records ---------",RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20190917,3,2020-03-28
+DTY ARR DUR TCHTTY TAG NCD EMP,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20190917,4,2020-03-28
+----------------------------------------,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20190917,1193,2020-03-28
+,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20190917,1194,2020-03-28
+HSG*>,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20190917,1195,2020-03-28
+up,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191118,1,2020-03-28
+Reader: RSC downstream Site: AAA,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191118,2,2020-03-28
+"--------- Upload #7, 2631 records ---------",RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191118,3,2020-03-28
+DTY ARR DUR TCHTTY TAG NCD EMP,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191118,4,2020-03-28
+----------------------------------------,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191118,2636,2020-03-28
+,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191118,2637,2020-03-28
+HSG*>,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191118,2638,2020-03-28
+,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191212,1,2020-03-28
+HSG*> up,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191212,2,2020-03-28
+Reader: RSC downstream Site: AAA,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191212,3,2020-03-28
+"--------- Upload #8, 1572 records ---------",RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191212,4,2020-03-28
+DTY ARR DUR TCHTTY TAG NCD EMP,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191212,5,2020-03-28
+----------------------------------------,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191212,1578,2020-03-28
+,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191212,1579,2020-03-28
+HSG*>,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191212,1580,2020-03-28
+up,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,1,2020-03-28
+Reader: RSC downstream Site: AAA,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,2,2020-03-28
+"--------- Upload #10, 14 records ---------",RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,3,2020-03-28
+DTY ARR DUR TCHTTY TAG NCD EMP,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,4,2020-03-28
+----------------------------------------,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,19,2020-03-28
+,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,20,2020-03-28
+HSG*>,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,21,2020-03-28
+HRG*> dt,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,22,2020-03-28
+,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,24,2020-03-28
+HRGB> I 2019-12-20 13:13:00.100 00:00:00.000 HDX W 0000_000000000881 2 0,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,25,2020-03-28
+I 2019-12-20 13:13:00.100 00:00:00.100 HDX W 0000_000000000881 2 0,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,26,2020-03-28
+he,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,28,2020-03-28
+Oregon RFID HDX Single Antenna Reader V1.41,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,29,2020-03-28
+ON Reader power on,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,30,2020-03-28
+ST Reader standby,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,31,2020-03-28
+OF Reader power off,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,32,2020-03-28
+UH Show upload history,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,33,2020-03-28
+UP Upload records since last,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,34,2020-03-28
+UD Upload records by date,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,35,2020-03-28
+UT Upload records by tag number,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,36,2020-03-28
+TL Show list of tags,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,37,2020-03-28
+TC Show tag class names,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,38,2020-03-28
+OV Override with GNSS (OVG) or NET (OVN),RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,39,2020-03-28
+FM View or change record field names,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,40,2020-03-28
+FN Display list of database field names,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,41,2020-03-28
+DM Display mode (ICFEA),RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,42,2020-03-28
+"CS Column separator S=space, C=comma, T=tab",RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,43,2020-03-28
+"TF Tag format (D=decimal, H=hex, B=bi hex)",RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,44,2020-03-28
+HD HDX scan speed settings,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,45,2020-03-28
+"RE Range extender (1=on, 0=off)",RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,46,2020-03-28
+MG Max delay gap,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,47,2020-03-28
+"FS Fast scan mode (1=on, 0=off)",RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,48,2020-03-28
+NO Display noise levels,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,49,2020-03-28
+RN Reader name,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,50,2020-03-28
+SC Site code - 3 letters,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,51,2020-03-28
+MV Minimum voltage before shutdown,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,52,2020-03-28
+RB Restart,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,53,2020-03-28
+TU Tune antenna,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,54,2020-03-28
+MT Modify autotuner setting,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,55,2020-03-28
+DT Show date,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,56,2020-03-28
+TZ Set time zone (hours from UT),RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,57,2020-03-28
+LO Show location,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,58,2020-03-28
+"BP Beeper (0=off, 1=on, 2=proximity)",RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,59,2020-03-28
+BR LED brightness levels (1=dim 2=medium 3=bright),RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,60,2020-03-28
+DK Minutes before display goes dark (0=never),RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,61,2020-03-28
+SY Display system status,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,62,2020-03-28
+BD Baud rate,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,63,2020-03-28
+"AB About memory, copyright",RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,64,2020-03-28
+"WE Write every detection record (Ted mode) (1=on, 0=off)",RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,65,2020-03-28
+FRD Factory reset the database file,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,66,2020-03-28
+FRR Factory reset the reader settings,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,67,2020-03-28
+FRA Factory reset all FRD+FRR,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,68,2020-03-28
+CV Convert tag number,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,69,2020-03-28
+QU Explain prompt codes,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,70,2020-03-28
+LA Show last tag seen,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,71,2020-03-28
+"BT Bluetooth power (1=on, 0=off)",RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,72,2020-03-28
+"PH Display phantom tags (1=on, 0=off)",RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,73,2020-03-28
+"PF Phantom tag filter (1=on, 0=0ff)",RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,74,2020-03-28
+RD Rebuild database,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,75,2020-03-28
+,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,76,2020-03-28
+HRGB>,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20191220afternoon,77,2020-03-28
+�up,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200127,1,2020-03-28
+Reader: RSC downstream Site: AAA,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200127,2,2020-03-28
+"--------- Upload #11, 12155 records ---------",RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200127,3,2020-03-28
+DTY ARR DUR TCHTTY TAG NCD EMP,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200127,4,2020-03-28
+----------------------------------------,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200127,12160,2020-03-28
+,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200127,12161,2020-03-28
+HSG*>,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200127,12162,2020-03-28
+up,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200206,1,2020-03-28
+Reader: RSC downstream Site: AAA,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200206,2,2020-03-28
+"--------- Upload #12, 443 records ---------",RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200206,3,2020-03-28
+DTY ARR DUR TCHTTY TAG NCD EMP,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200206,4,2020-03-28
+----------------------------------------,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200206,448,2020-03-28
+,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200206,449,2020-03-28
+HSG*>,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200206,450,2020-03-28
+HRG*>,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200206,451,2020-03-28
+up,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200211,1,2020-03-28
+Reader: RSC downstream Site: AAA,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200211,2,2020-03-28
+"--------- Upload #13, 232 records ---------",RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200211,3,2020-03-28
+DTY ARR DUR TCHTTY TAG NCD EMP,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200211,4,2020-03-28
+----------------------------------------,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200211,237,2020-03-28
+,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200211,238,2020-03-28
+HSG*>,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200211,239,2020-03-28
+up,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200218,1,2020-03-28
+Reader: RSC downstream Site: AAA,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200218,2,2020-03-28
+"--------- Upload #14, 303 records ---------",RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200218,3,2020-03-28
+DTY ARR DUR TCHTTY TAG NCD EMP,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200218,4,2020-03-28
+----------------------------------------,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200218,308,2020-03-28
+,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200218,309,2020-03-28
+HSG*>,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200218,310,2020-03-28
+UP,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200226,1,2020-03-28
+Reader: RSC downstream Site: AAA,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200226,2,2020-03-28
+"--------- Upload #15, 360 records ---------",RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200226,3,2020-03-28
+DTY ARR DUR TCHTTY TAG NCD EMP,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200226,4,2020-03-28
+----------------------------------------,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200226,365,2020-03-28
+,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200226,366,2020-03-28
+HSG*>,RSCDS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCDS_20200226,367,2020-03-28
+up,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20190719,1,2020-03-28
+Reader: RSC upstream Site: AAA,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20190719,2,2020-03-28
+"--------- Upload #3, 131 records ---------",RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20190719,3,2020-03-28
+DTY ARR DUR TCHTTY TAG NCD EMP,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20190719,4,2020-03-28
+----------------------------------------,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20190719,136,2020-03-28
+,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20190719,137,2020-03-28
+HSG*> ad,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20190719,138,2020-03-28
+Type HE for help,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20190719,139,2020-03-28
+ad,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20190719,140,2020-03-28
+HSG*>,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20190719,141,2020-03-28
+up,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_201908190,1,2020-03-28
+Reader: RSC upstream Site: AAA,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_201908190,2,2020-03-28
+"--------- Upload #4, 966 records ---------",RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_201908190,3,2020-03-28
+DTY ARR DUR TCHTTY TAG NCD EMP,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_201908190,4,2020-03-28
+----------------------------------------,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_201908190,971,2020-03-28
+,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_201908190,972,2020-03-28
+HSG*>,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_201908190,973,2020-03-28
+up,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20190917,1,2020-03-28
+Reader: RSC upstream Site: AAA,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20190917,2,2020-03-28
+"--------- Upload #5, 559 records ---------",RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20190917,3,2020-03-28
+DTY ARR DUR TCHTTY TAG NCD EMP,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20190917,4,2020-03-28
+----------------------------------------,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20190917,564,2020-03-28
+,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20190917,565,2020-03-28
+HSG*>,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20190917,566,2020-03-28
+,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20191118,1,2020-03-28
+HSG*> up,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20191118,2,2020-03-28
+Reader: RSC upstream Site: AAA,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20191118,3,2020-03-28
+"--------- Upload #6, 6675 records ---------",RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20191118,4,2020-03-28
+DTY ARR DUR TCHTTY TAG NCD EMP,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20191118,5,2020-03-28
+----------------------------------------,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20191118,6681,2020-03-28
+,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20191118,6682,2020-03-28
+HSG*>,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20191118,6683,2020-03-28
+"b"";������������������������������",RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200127,1,2020-03-28
+Type HE for help,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200127,2,2020-03-28
+?�����������������������,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200127,3,2020-03-28
+HSG*>,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200127,4,2020-03-28
+HSG*> up,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200127,5,2020-03-28
+Reader: RSC upstream Site: AAA,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200127,6,2020-03-28
+"--------- Upload #8, 1903 records ---------",RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200127,7,2020-03-28
+DTY ARR DUR TCHTTY TAG NCD EMP,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200127,8,2020-03-28
+----------------------------------------,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200127,1912,2020-03-28
+,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200127,1913,2020-03-28
+HSG*>,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200127,1914,2020-03-28
+up,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200206,1,2020-03-28
+Reader: RSC upstream Site: AAA,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200206,2,2020-03-28
+"--------- Upload #9, 340 records ---------",RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200206,3,2020-03-28
+DTY ARR DUR TCHTTY TAG NCD EMP,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200206,4,2020-03-28
+----------------------------------------,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200206,345,2020-03-28
+,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200206,346,2020-03-28
+HSG*>,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200206,347,2020-03-28
+up,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200211,1,2020-03-28
+Nothing to upload,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200211,2,2020-03-28
+,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200211,3,2020-03-28
+HSG*> uph,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200211,4,2020-03-28
+Nothing to upload,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200211,5,2020-03-28
+,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200211,6,2020-03-28
+HSG*>,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200211,7,2020-03-28
+HSG*> up10,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200211,8,2020-03-28
+Reader: RSC upstream Site: AAA,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200211,9,2020-03-28
+"--------- Upload #10, 42 records ---------",RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200211,10,2020-03-28
+DTY ARR DUR TCHTTY TAG NCD EMP,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200211,11,2020-03-28
+----------------------------------------,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200211,54,2020-03-28
+,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200211,55,2020-03-28
+HSG*>,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200211,56,2020-03-28
+up,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200218,1,2020-03-28
+Reader: RSC upstream Site: AAA,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200218,2,2020-03-28
+"--------- Upload #11, 3444 records ---------",RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200218,3,2020-03-28
+DTY ARR DUR TCHTTY TAG NCD EMP,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200218,4,2020-03-28
+----------------------------------------,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200218,3449,2020-03-28
+,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200218,3450,2020-03-28
+HSG*>,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200218,3451,2020-03-28
+UP,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200226,1,2020-03-28
+Reader: RSC upstream Site: AAA,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200226,2,2020-03-28
+"--------- Upload #12, 127 records ---------",RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200226,3,2020-03-28
+DTY ARR DUR TCHTTY TAG NCD EMP,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200226,4,2020-03-28
+----------------------------------------,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200226,132,2020-03-28
+,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200226,133,2020-03-28
+HSG*>,RSCUS,ORFID,C:\Users\HaleyOhms\Documents\GitHub\AntWrangler\NewFormTest\RSC\archive\2020-03-28_RSCUS_20200226,134,2020-03-28

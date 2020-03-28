@@ -1,0 +1,437 @@
+?
+INF: Start Of List Of Commands
+  ?               Print List Of Commands
+
+Alarms:
+  ACL{0.0-9.0}    Set Antenna Current Low Alarm Threshold in Amperes
+  ANH{0-100}      Set Noise High Alarm Threshold Percent
+  ATH{512-1023}   Set Tuning Capacitance High Alarm Threshold
+  ATL{0-511}      Set Tuning Capacitance Low Alarm Threshold
+  AUD{0-3600}     Set Alarms Unique Delay in Seconds
+
+Reader:
+  RIS{01-FF}      Set Reader ID
+  RDS{MM/DD/YYYY} Set Reader Date
+  RTS{HH:MM:SS}   Set Reader Time (24-hrs)
+  RBS{1|0}        Set Reader Beeper {1} On, {0} Off
+  RDF{H|D}        Set Reader Tag ID Display Format {H} Hex, {D} Dec
+  RNM{S|M}        Set Reader Network Mode {S} IS1001 Standalone, {M} MTS Node
+  ROM{1|0|R}      Set Reader Operation Mode {1} Scan, {0} Standby, {R} Reset
+  RSM{1|2|3|0}    Set Exciter Sync. Mode {1} Master, {2} Sec.Master, {3} Slave, {0} Standalone
+  RID{1|0}        Set Reader Initiation Delay {1} On, {0} Off
+  RST{1|0}        Set Reader As Source For Date/Time Synchronization {1} On, {0} Off
+  RSV{VV,VV}      Set Reader Automatic Standby Activation and Deactivation Voltages (16-24,17-25)
+  RPS{SS,DD}      Set Reader Periodic Standby: {Start Hours (00-23), Duration (00-23)}
+  RIT{0-10000}    Set Reader Idling Time in Milliseconds
+  RDP             Reset To Factory Default Parameters
+
+Antenna/Tuning:
+  AFT             Perform Antenna Full Tune
+  AVE{1-5}        Set Exciter Voltage Level
+  ATC{0-1023}     Set Antenna Tuning Capacitors
+  ADT{1|0}        Set Dynamic Tuning {1} On, {0} Off
+  ATP{300-500}    Set Dynamic Tuning Target Phase
+  ATS{2-63}       Set Dynamic Tuning Target Phase Deviation Threshold
+
+Measurements:
+  MCG{0-200}      Set Antenna Current Measurement Gain
+  MCO{0-200}      Set Antenna Current Measurement Offset
+
+Communication:
+  CSL{bps}        Set Local Communication Port Speed
+  CTL{1|0}        Set Tags Communication To Local Port {1} On, {0} Off
+  CAL{1|0}        Set Alarms Communication To Local Port {1} On, {0} Off
+  CML{1|0}        Set Messages Communication To Local Port {1} On, {0} Off
+  CPR{A|M}        Set Remote Comm. Port Protocol {A} ASCII, {M} MODEM
+
+Detection:
+  DHT{1|0}        Set HDX Tag Detection {1} On, {0} Off
+  DFH{1|0}        Set FDXB Fastag Detection {1} On, {0} Off
+  DET{1|0}        Set Detection Efficiency Test {1} On, {0} Off
+  DCS{1|0|R}      Set Detection Counter {1} On, {0} Off, {R} Reset
+  DUM{5|1|0|D}    Set Det. Unique Mode {5} Last 5, {1} Last 1, {0} Off, {D} Delay
+  DUD{1-43200}    Set Detection Unique Delay in Seconds
+  DFT{45-500}     Set FDXB Detection Scan Time in Milliseconds (5 ms Increments)
+  DTD{0-1440}     Set Automatic Virtual Test Tag Single Shot Delay in Minutes
+  DVT{1|0|S}      Set Virtual Test Tag {1} On, {0} Off, {S} Single-Shot
+  DVL{0-255}      Set Virtual Test Tag Level
+
+Memory:
+  MED             Download Entire Memory
+  MTD             Download Tags Memory
+  MSD             Download Status Reports Memory
+  MEE             Erase Entire Memory
+  MTG{1|0}        Store Tags To Memory {1} On, {0} Off
+  MVT{1|0}        Store Virtual Test Tags To Memory {1} On, {0} Off
+  MSR{1|0}        Store Status Reports To Memory {1} On, {0} Off
+
+Reports:
+  RFS             Report Full Status
+  RFV             Report Firmware Version
+  RDT             Report Reader Date and Time
+  RNS             Report Noise Status
+  RDD             Report Diagnostic Data
+  RND{0-1440}     Set Automatic Noise Report Delay in Minutes
+  RSD{0-1440}     Set Automatic Status Report Delay in Minutes
+
+INF: End Of List Of Commands
+
+
+MED
+INF: Tags Download Started
+*TAG: 01 03/28/2019 09:37:53.140 999.000000007425
+*TAG: 01 03/28/2019 10:37:53.130 999.000000007425
+*TAG: 01 03/28/2019 11:37:53.130 999.000000007425
+*TAG: 01 03/28/2019 12:37:53.130 999.000000007425
+*TAG: 01 03/28/2019 13:37:53.130 999.000000007425
+*TAG: 01 03/28/2019 14:37:53.130 999.000000007425
+*TAG: 01 03/28/2019 15:37:53.130 999.000000007425
+*TAG: 01 03/28/2019 16:37:53.130 999.000000007425
+*TAG: 01 03/28/2019 17:37:53.130 999.000000007425
+*TAG: 01 03/28/2019 18:37:53.130 999.000000007425
+*TAG: 01 03/28/2019 19:37:53.130 999.000000007425
+*TAG: 01 03/28/2019 20:37:53.130 999.000000007425
+*TAG: 01 03/28/2019 21:37:53.130 999.000000007425
+*TAG: 01 03/28/2019 22:37:53.130 999.000000007425
+*TAG: 01 03/28/2019 23:37:53.130 999.000000007425
+*TAG: 01 03/29/2019 00:37:53.130 999.000000007425
+*TAG: 01 03/29/2019 01:37:53.130 999.000000007425
+*TAG: 01 03/29/2019 02:37:53.130 999.000000007425
+*TAG: 01 03/29/2019 03:03:41.770 982.126053984694
+*TAG: 01 03/29/2019 03:03:41.840 982.126053984694
+*TAG: 01 03/29/2019 03:37:53.130 999.000000007425
+*TAG: 01 03/29/2019 04:37:53.130 999.000000007425
+*TAG: 01 03/29/2019 05:37:53.130 999.000000007425
+*TAG: 01 03/29/2019 06:37:53.130 999.000000007425
+*TAG: 01 03/29/2019 07:37:53.130 999.000000007425
+*TAG: 01 03/29/2019 08:37:53.130 999.000000007425
+*TAG: 01 03/29/2019 09:37:53.140 999.000000007425
+*TAG: 01 03/29/2019 10:37:53.130 999.000000007425
+*TAG: 01 03/29/2019 11:37:53.140 999.000000007425
+*TAG: 01 03/29/2019 12:37:53.130 999.000000007425
+*TAG: 01 03/29/2019 13:37:53.130 999.000000007425
+*TAG: 01 03/29/2019 14:37:53.130 999.000000007425
+*TAG: 01 03/29/2019 15:37:53.130 999.000000007425
+*TAG: 01 03/29/2019 16:37:53.130 999.000000007425
+*TAG: 01 03/29/2019 17:37:53.130 999.000000007425
+*TAG: 01 03/29/2019 18:37:53.130 999.000000007425
+*TAG: 01 03/29/2019 19:37:53.140 999.000000007425
+*TAG: 01 03/29/2019 20:37:53.130 999.000000007425
+*TAG: 01 03/29/2019 21:37:53.130 999.000000007425
+*TAG: 01 03/29/2019 22:37:53.140 999.000000007425
+*TAG: 01 03/29/2019 23:37:53.130 999.000000007425
+*TAG: 01 03/30/2019 00:37:53.130 999.000000007425
+*TAG: 01 03/30/2019 01:37:53.130 999.000000007425
+*TAG: 01 03/30/2019 02:37:53.130 999.000000007425
+*TAG: 01 03/30/2019 03:37:53.130 999.000000007425
+*TAG: 01 03/30/2019 04:37:53.130 999.000000007425
+*TAG: 01 03/30/2019 05:37:53.140 999.000000007425
+*TAG: 01 03/30/2019 06:37:53.130 999.000000007425
+*TAG: 01 03/30/2019 07:37:53.130 999.000000007425
+*TAG: 01 03/30/2019 08:37:53.130 999.000000007425
+*TAG: 01 03/30/2019 09:37:53.130 999.000000007425
+*TAG: 01 03/30/2019 10:37:53.130 999.000000007425
+*TAG: 01 03/30/2019 11:37:53.130 999.000000007425
+*TAG: 01 03/30/2019 12:37:53.130 999.000000007425
+*TAG: 01 03/30/2019 13:37:53.130 999.000000007425
+*TAG: 01 03/30/2019 14:37:53.130 999.000000007425
+*TAG: 01 03/30/2019 15:37:53.130 999.000000007425
+*TAG: 01 03/30/2019 16:37:53.130 999.000000007425
+*TAG: 01 03/30/2019 17:37:53.130 999.000000007425
+*TAG: 01 03/30/2019 18:37:53.130 999.000000007425
+*TAG: 01 03/30/2019 19:37:53.130 999.000000007425
+*TAG: 01 03/30/2019 20:37:53.130 999.000000007425
+*TAG: 01 03/30/2019 21:37:53.130 999.000000007425
+*TAG: 01 03/30/2019 22:37:53.130 999.000000007425
+*TAG: 01 03/30/2019 23:37:53.130 999.000000007425
+*TAG: 01 03/31/2019 00:37:53.130 999.000000007425
+*TAG: 01 03/31/2019 01:37:53.130 999.000000007425
+*TAG: 01 03/31/2019 02:37:53.130 999.000000007425
+*TAG: 01 03/31/2019 03:37:53.130 999.000000007425
+*TAG: 01 03/31/2019 04:37:53.130 999.000000007425
+*TAG: 01 03/31/2019 05:37:53.130 999.000000007425
+*TAG: 01 03/31/2019 06:37:53.130 999.000000007425
+*TAG: 01 03/31/2019 07:37:53.130 999.000000007425
+*TAG: 01 03/31/2019 08:37:53.130 999.000000007425
+*TAG: 01 03/31/2019 09:37:53.130 999.000000007425
+*TAG: 01 03/31/2019 10:37:53.140 999.000000007425
+*TAG: 01 03/31/2019 11:37:53.130 999.000000007425
+*TAG: 01 03/31/2019 12:37:53.130 999.000000007425
+*TAG: 01 03/31/2019 13:37:53.130 999.000000007425
+*TAG: 01 03/31/2019 14:37:53.130 999.000000007425
+*TAG: 01 03/31/2019 15:37:53.130 999.000000007425
+*TAG: 01 03/31/2019 16:37:53.130 999.000000007425
+*TAG: 01 03/31/2019 17:37:53.130 999.000000007425
+*TAG: 01 03/31/2019 18:37:53.130 999.000000007425
+*TAG: 01 03/31/2019 19:37:53.130 999.000000007425
+*TAG: 01 03/31/2019 20:37:53.130 999.000000007425
+*TAG: 01 03/31/2019 21:37:53.130 999.000000007425
+*TAG: 01 03/31/2019 22:37:53.130 999.000000007425
+*TAG: 01 03/31/2019 23:37:53.130 999.000000007425
+*TAG: 01 04/01/2019 00:37:53.130 999.000000007425
+*TAG: 01 04/01/2019 01:37:53.140 999.000000007425
+*TAG: 01 04/01/2019 02:37:53.130 999.000000007425
+*TAG: 01 04/01/2019 03:37:53.130 999.000000007425
+*TAG: 01 04/01/2019 04:37:53.130 999.000000007425
+*TAG: 01 04/01/2019 05:37:53.130 999.000000007425
+*TAG: 01 04/01/2019 06:37:53.130 999.000000007425
+*TAG: 01 04/01/2019 07:37:53.130 999.000000007425
+*TAG: 01 04/01/2019 08:37:53.130 999.000000007425
+*TAG: 01 04/01/2019 09:37:53.130 999.000000007425
+INF: Status Reports Download Started
+*SRP: 01 03/28/2019 09:38:03.100 16,0,1,2,5,2,185,0,0,250,199,55,4,386,181,0,0,0,0,0
+*SRP: 01 03/28/2019 10:38:03.100 16,0,1,2,5,-1,175,0,0,249,199,54,5,389,186,0,0,0,0,0
+*SRP: 01 03/28/2019 11:38:03.100 16,0,1,2,5,0,177,0,0,249,199,53,5,388,207,0,0,0,0,0
+*SRP: 01 03/28/2019 12:38:03.100 16,0,1,2,5,-3,180,0,0,249,199,52,5,391,227,0,0,0,0,0
+*SRP: 01 03/28/2019 13:38:03.100 16,0,1,2,5,3,182,0,0,249,199,55,5,385,212,0,0,0,0,0
+*SRP: 01 03/28/2019 14:38:03.100 16,0,1,2,5,0,184,0,0,248,199,57,5,388,202,0,0,0,0,0
+*SRP: 01 03/28/2019 15:38:03.100 16,0,1,2,5,4,184,0,0,248,199,58,6,384,186,0,0,0,0,0
+*SRP: 01 03/28/2019 16:38:03.100 16,0,1,2,5,0,185,0,0,248,199,58,6,388,171,0,0,0,0,0
+*SRP: 01 03/28/2019 17:38:03.100 16,0,1,2,5,-1,185,0,0,248,199,58,0,389,156,0,0,0,0,0
+*SRP: 01 03/28/2019 18:38:03.100 16,0,1,2,5,-2,185,0,0,247,199,58,0,390,139,0,0,0,0,0
+*SRP: 01 03/28/2019 19:38:03.100 16,0,1,2,5,-2,185,0,0,247,199,58,0,390,130,0,0,0,0,0
+*SRP: 01 03/28/2019 20:38:03.100 16,0,1,2,5,-2,185,0,1,247,199,58,3,390,130,0,0,0,0,0
+*SRP: 01 03/28/2019 21:38:03.100 16,0,1,2,5,0,185,0,1,246,199,58,0,388,125,0,0,0,0,0
+*SRP: 01 03/28/2019 22:38:03.100 16,0,1,2,5,-1,185,0,1,246,199,58,0,389,114,0,0,0,0,0
+*SRP: 01 03/28/2019 23:38:03.100 16,0,1,2,5,-1,185,0,1,246,199,58,0,389,104,0,0,0,0,0
+*SRP: 01 03/29/2019 00:38:03.100 16,0,1,2,5,0,185,0,1,246,199,58,0,388,94,0,0,0,0,0
+*SRP: 01 03/29/2019 01:38:03.100 16,0,1,2,5,0,185,0,1,246,199,58,0,388,89,0,0,0,0,0
+*SRP: 01 03/29/2019 02:38:03.100 16,0,1,2,5,1,185,0,1,246,199,58,0,387,99,0,0,0,0,0
+*SRP: 01 03/29/2019 03:38:03.100 16,0,1,2,5,2,185,0,1,245,199,58,0,386,97,0,0,0,0,0
+*SRP: 01 03/29/2019 04:38:03.100 16,0,1,2,5,2,185,0,1,245,199,59,0,386,93,0,0,0,0,0
+*SRP: 01 03/29/2019 05:38:03.100 16,0,1,2,5,1,185,0,1,245,199,59,0,387,84,0,0,0,0,0
+*SRP: 01 03/29/2019 06:38:03.100 16,0,1,2,5,2,185,0,2,245,200,59,0,386,79,0,0,0,0,0
+*SRP: 01 03/29/2019 07:38:03.100 16,0,1,2,5,2,185,0,2,245,200,59,0,386,83,0,0,0,0,0
+*SRP: 01 03/29/2019 08:38:03.100 16,0,1,2,5,3,186,0,2,245,199,59,0,385,139,0,0,0,0,0
+*SRP: 01 03/29/2019 09:38:03.100 16,0,1,2,5,-3,188,0,2,245,199,59,6,391,179,0,0,0,0,0
+*SRP: 01 03/29/2019 10:38:03.100 16,0,1,2,5,1,188,0,2,245,199,60,6,387,194,0,0,0,0,0
+*SRP: 01 03/29/2019 11:38:03.100 16,0,1,2,5,4,189,0,2,244,199,63,5,384,208,0,0,0,0,0
+*SRP: 01 03/29/2019 12:38:03.100 16,0,1,2,5,0,191,0,2,244,199,64,5,388,222,0,0,0,0,0
+*SRP: 01 03/29/2019 13:38:03.100 16,0,1,2,5,3,205,0,2,244,199,69,5,385,207,0,0,0,0,0
+*SRP: 01 03/29/2019 14:38:03.100 16,0,1,2,5,-4,207,0,2,244,199,72,10,392,202,0,0,0,0,0
+*SRP: 01 03/29/2019 15:38:03.100 16,0,1,2,5,-3,207,0,2,244,199,72,5,391,191,0,0,0,0,0
+*SRP: 01 03/29/2019 16:38:03.100 16,0,1,2,5,2,206,0,3,244,199,72,4,386,175,0,0,0,0,0
+*SRP: 01 03/29/2019 17:38:03.100 16,0,1,2,5,-3,206,0,3,244,199,71,0,391,156,0,0,0,0,0
+*SRP: 01 03/29/2019 18:38:03.100 16,0,1,2,5,-1,205,0,3,244,199,71,3,389,145,0,0,0,0,0
+*SRP: 01 03/29/2019 19:38:03.100 16,0,1,2,5,-3,205,0,3,243,199,71,0,391,131,0,0,0,0,0
+*SRP: 01 03/29/2019 20:38:03.100 16,0,1,2,5,2,204,0,3,243,199,71,0,386,121,0,0,0,0,0
+*SRP: 01 03/29/2019 21:38:03.100 16,0,1,2,5,0,204,0,3,243,200,70,0,388,111,0,0,0,0,0
+*SRP: 01 03/29/2019 22:38:03.100 16,0,1,2,5,-2,204,0,3,243,200,70,0,390,104,0,0,0,0,0
+*SRP: 01 03/29/2019 23:38:03.100 16,0,1,2,5,-4,204,0,3,242,200,69,0,392,94,0,0,0,0,0
+*SRP: 01 03/30/2019 00:38:03.100 16,0,1,2,5,3,203,0,3,242,200,69,0,385,89,0,0,0,0,0
+*SRP: 01 03/30/2019 01:38:03.100 16,0,1,2,5,2,203,0,3,242,200,69,0,386,84,0,0,0,0,0
+*SRP: 01 03/30/2019 02:38:03.100 16,0,1,2,5,1,203,0,4,242,200,69,0,387,79,0,0,0,0,0
+*SRP: 01 03/30/2019 03:38:03.100 16,0,1,2,5,1,203,0,4,241,200,69,0,387,78,0,0,0,0,0
+*SRP: 01 03/30/2019 04:38:03.100 16,0,1,2,5,0,203,0,4,241,200,69,0,388,73,0,0,0,0,0
+*SRP: 01 03/30/2019 05:38:03.100 16,0,1,2,5,0,203,0,4,241,200,69,0,388,69,0,0,0,0,0
+*SRP: 01 03/30/2019 06:38:03.100 16,0,1,2,5,0,203,0,4,241,200,69,0,388,69,0,0,0,0,0
+*SRP: 01 03/30/2019 07:38:03.100 16,0,1,2,5,0,203,0,4,240,200,69,0,388,74,0,0,0,0,0
+*SRP: 01 03/30/2019 08:38:03.100 16,0,1,2,5,-2,204,0,4,240,200,68,0,390,132,0,0,0,0,0
+*SRP: 01 03/30/2019 09:38:03.100 16,0,1,2,5,0,205,0,4,240,199,68,6,388,191,0,0,0,0,0
+*SRP: 01 03/30/2019 10:38:03.100 16,0,1,2,5,1,206,0,4,240,199,70,5,387,207,0,0,0,0,0
+*SRP: 01 03/30/2019 11:38:03.100 16,0,1,2,5,-4,171,0,4,240,199,62,8,392,231,0,0,0,0,0
+*SRP: 01 03/30/2019 12:38:03.100 16,0,1,2,5,2,178,0,4,241,199,51,5,386,227,0,0,0,0,0
+*SRP: 01 03/30/2019 13:38:03.100 16,0,1,2,5,-2,181,0,5,241,199,52,5,390,227,0,0,0,0,0
+*SRP: 01 03/30/2019 14:38:03.100 16,0,1,2,5,-1,183,0,5,241,199,55,5,389,217,0,0,0,0,0
+*SRP: 01 03/30/2019 15:38:03.100 16,0,1,2,5,-1,184,0,5,241,199,56,6,389,201,0,0,0,0,0
+*SRP: 01 03/30/2019 16:38:03.100 16,0,1,2,5,-3,184,0,5,240,199,56,6,391,183,0,0,0,0,0
+*SRP: 01 03/30/2019 17:38:03.100 16,0,1,2,5,1,183,0,5,240,199,56,1,387,165,0,0,0,0,0
+*SRP: 01 03/30/2019 18:38:03.100 16,0,1,2,5,3,183,0,5,240,199,56,0,385,151,0,0,0,0,0
+*SRP: 01 03/30/2019 19:38:03.100 16,0,1,2,5,4,183,0,5,240,199,57,3,384,140,0,0,0,0,0
+*SRP: 01 03/30/2019 20:38:03.100 16,0,1,2,5,3,183,0,5,240,200,56,0,385,130,0,0,0,0,0
+*SRP: 01 03/30/2019 21:38:03.100 16,0,1,2,5,4,183,0,5,240,200,57,0,384,120,0,0,0,0,0
+*SRP: 01 03/30/2019 22:38:03.100 16,0,1,2,5,-2,184,0,5,240,199,57,0,390,112,0,0,0,0,0
+*SRP: 01 03/30/2019 23:38:03.100 16,0,1,2,5,-2,184,0,6,239,199,57,0,390,104,0,0,0,0,0
+*SRP: 01 03/31/2019 00:38:03.100 16,0,1,2,5,-1,184,0,6,239,199,57,0,389,100,0,0,0,0,0
+*SRP: 01 03/31/2019 01:38:03.100 16,0,1,2,5,-1,184,0,6,239,199,57,0,389,94,0,0,0,0,0
+*SRP: 01 03/31/2019 02:38:03.100 16,0,1,2,5,0,184,0,6,239,200,57,0,388,90,0,0,0,0,0
+*SRP: 01 03/31/2019 03:38:03.100 16,0,1,2,5,0,184,0,6,239,199,58,0,388,86,0,0,0,0,0
+*SRP: 01 03/31/2019 04:38:03.100 16,0,1,2,5,1,184,0,6,238,199,58,0,387,80,0,0,0,0,0
+*SRP: 01 03/31/2019 05:38:03.100 16,0,1,2,5,1,184,0,6,238,200,58,0,387,79,0,0,0,0,0
+*SRP: 01 03/31/2019 06:38:03.100 16,0,1,2,5,2,184,0,6,238,200,58,0,386,76,0,0,0,0,0
+*SRP: 01 03/31/2019 07:38:03.100 16,0,1,2,5,3,184,0,6,238,199,58,0,385,81,0,0,0,0,0
+*SRP: 01 03/31/2019 08:38:03.100 16,0,1,2,5,0,185,0,6,238,199,57,3,388,140,0,0,0,0,0
+*SRP: 01 03/31/2019 09:38:03.100 16,0,1,2,5,2,186,0,7,238,199,57,5,386,206,0,0,0,0,0
+*SRP: 01 03/31/2019 10:38:03.100 16,0,1,2,5,-1,187,0,7,238,199,58,5,389,234,0,0,0,0,0
+*SRP: 01 03/31/2019 11:38:03.100 16,0,1,2,5,2,188,0,7,238,199,60,3,386,253,0,0,0,0,0
+*SRP: 01 03/31/2019 12:38:03.100 16,0,1,2,5,0,190,0,7,238,199,62,6,388,265,0,0,0,0,0
+*SRP: 01 03/31/2019 13:38:03.100 16,0,1,2,5,0,191,0,7,238,199,64,6,388,263,0,0,0,0,0
+*SRP: 01 03/31/2019 14:38:03.100 16,0,1,2,5,2,202,0,7,238,199,65,3,386,251,0,0,0,0,0
+*SRP: 01 03/31/2019 15:38:03.100 16,0,1,2,5,-1,203,0,7,238,199,66,5,389,232,0,0,0,0,0
+*SRP: 01 03/31/2019 16:38:03.100 16,0,1,2,5,-1,203,0,7,238,199,66,5,389,215,0,0,0,0,0
+*SRP: 01 03/31/2019 17:38:03.100 16,0,1,2,5,-4,203,0,7,238,199,66,5,392,200,0,0,0,0,0
+*SRP: 01 03/31/2019 18:38:03.100 16,0,1,2,5,0,202,0,7,238,199,66,5,388,181,0,0,0,0,0
+*SRP: 01 03/31/2019 19:38:03.100 16,0,1,2,5,-2,202,0,8,237,199,66,5,390,166,0,0,0,0,0
+*SRP: 01 03/31/2019 20:38:03.100 16,0,1,2,5,1,201,0,8,237,199,66,0,387,161,0,0,0,0,0
+*SRP: 01 03/31/2019 21:38:03.100 16,0,1,2,5,0,201,0,8,237,199,66,0,388,151,0,0,0,0,0
+*SRP: 01 03/31/2019 22:38:03.100 16,0,1,2,5,-1,201,0,8,237,200,66,0,389,145,0,0,0,0,0
+*SRP: 01 03/31/2019 23:38:03.100 16,0,1,2,5,-3,201,0,8,237,200,66,0,391,135,0,0,0,0,0
+*SRP: 01 04/01/2019 00:38:03.100 16,0,1,2,5,3,200,0,8,236,199,66,0,385,127,0,0,0,0,0
+*SRP: 01 04/01/2019 01:38:03.100 16,0,1,2,5,2,200,0,8,236,199,66,0,386,120,0,0,0,0,0
+*SRP: 01 04/01/2019 02:38:03.100 16,0,1,2,5,1,200,0,8,236,199,66,0,387,115,0,0,0,0,0
+*SRP: 01 04/01/2019 03:38:03.100 16,0,1,2,5,0,200,0,8,236,200,66,0,388,112,0,0,0,0,0
+*SRP: 01 04/01/2019 04:38:03.100 16,0,1,2,5,0,200,0,8,236,199,65,0,388,110,0,0,0,0,0
+*SRP: 01 04/01/2019 05:38:03.100 16,0,1,2,5,0,200,0,8,236,199,65,0,388,110,0,0,0,0,0
+*SRP: 01 04/01/2019 06:38:03.100 16,0,1,2,5,0,200,0,9,235,200,65,0,388,110,0,0,0,0,0
+*SRP: 01 04/01/2019 07:38:03.100 16,0,1,2,5,2,200,0,9,235,199,65,0,386,130,0,0,0,0,0
+*SRP: 01 04/01/2019 08:38:03.100 16,0,1,2,5,-1,201,0,9,235,199,65,4,389,171,0,0,0,0,0
+*SRP: 01 04/01/2019 09:38:03.100 16,0,1,2,5,3,201,0,9,235,199,65,5,385,202,0,0,0,0,0
+INF: Download Complete
+
+
+?
+INF: Start Of List Of Commands
+  ?               Print List Of Commands
+
+Alarms:
+  ACL{0.0-9.0}    Set Antenna Current Low Alarm Threshold in Amperes
+  ANH{0-100}      Set Noise High Alarm Threshold Percent
+  ATH{512-1023}   Set Tuning Capacitance High Alarm Threshold
+  ATL{0-511}      Set Tuning Capacitance Low Alarm Threshold
+  AUD{0-3600}     Set Alarms Unique Delay in Seconds
+
+Reader:
+  RIS{01-FF}      Set Reader ID
+  RDS{MM/DD/YYYY} Set Reader Date
+  RTS{HH:MM:SS}   Set Reader Time (24-hrs)
+  RBS{1|0}        Set Reader Beeper {1} On, {0} Off
+  RDF{H|D}        Set Reader Tag ID Display Format {H} Hex, {D} Dec
+  RNM{S|M}        Set Reader Network Mode {S} IS1001 Standalone, {M} MTS Node
+  ROM{1|0|R}      Set Reader Operation Mode {1} Scan, {0} Standby, {R} Reset
+  RSM{1|2|3|0}    Set Exciter Sync. Mode {1} Master, {2} Sec.Master, {3} Slave, {0} Standalone
+  RID{1|0}        Set Reader Initiation Delay {1} On, {0} Off
+  RST{1|0}        Set Reader As Source For Date/Time Synchronization {1} On, {0} Off
+  RSV{VV,VV}      Set Reader Automatic Standby Activation and Deactivation Voltages (16-24,17-25)
+  RPS{SS,DD}      Set Reader Periodic Standby: {Start Hours (00-23), Duration (00-23)}
+  RIT{0-10000}    Set Reader Idling Time in Milliseconds
+  RDP             Reset To Factory Default Parameters
+
+Antenna/Tuning:
+  AFT             Perform Antenna Full Tune
+  AVE{1-5}        Set Exciter Voltage Level
+  ATC{0-1023}     Set Antenna Tuning Capacitors
+  ADT{1|0}        Set Dynamic Tuning {1} On, {0} Off
+  ATP{300-500}    Set Dynamic Tuning Target Phase
+  ATS{2-63}       Set Dynamic Tuning Target Phase Deviation Threshold
+
+Measurements:
+  MCG{0-200}      Set Antenna Current Measurement Gain
+  MCO{0-200}      Set Antenna Current Measurement Offset
+
+Communication:
+  CSL{bps}        Set Local Communication Port Speed
+  CTL{1|0}        Set Tags Communication To Local Port {1} On, {0} Off
+  CAL{1|0}        Set Alarms Communication To Local Port {1} On, {0} Off
+  CML{1|0}        Set Messages Communication To Local Port {1} On, {0} Off
+  CPR{A|M}        Set Remote Comm. Port Protocol {A} ASCII, {M} MODEM
+
+Detection:
+  DHT{1|0}        Set HDX Tag Detection {1} On, {0} Off
+  DFH{1|0}        Set FDXB Fastag Detection {1} On, {0} Off
+  DET{1|0}        Set Detection Efficiency Test {1} On, {0} Off
+  DCS{1|0|R}      Set Detection Counter {1} On, {0} Off, {R} Reset
+  DUM{5|1|0|D}    Set Det. Unique Mode {5} Last 5, {1} Last 1, {0} Off, {D} Delay
+  DUD{1-43200}    Set Detection Unique Delay in Seconds
+  DFT{45-500}     Set FDXB Detection Scan Time in Milliseconds (5 ms Increments)
+  DTD{0-1440}     Set Automatic Virtual Test Tag Single Shot Delay in Minutes
+  DVT{1|0|S}      Set Virtual Test Tag {1} On, {0} Off, {S} Single-Shot
+  DVL{0-255}      Set Virtual Test Tag Level
+
+Memory:
+  MED             Download Entire Memory
+  MTD             Download Tags Memory
+  MSD             Download Status Reports Memory
+  MEE             Erase Entire Memory
+  MTG{1|0}        Store Tags To Memory {1} On, {0} Off
+  MVT{1|0}        Store Virtual Test Tags To Memory {1} On, {0} Off
+  MSR{1|0}        Store Status Reports To Memory {1} On, {0} Off
+
+Reports:
+  RFS             Report Full Status
+  RFV             Report Firmware Version
+  RDT             Report Reader Date and Time
+  RNS             Report Noise Status
+  RDD             Report Diagnostic Data
+  RND{0-1440}     Set Automatic Noise Report Delay in Minutes
+  RSD{0-1440}     Set Automatic Status Report Delay in Minutes
+
+INF: End Of List Of Commands
+
+
+RFS
+INF: Start Of Full Status Report
+ Reader:
+  ID:                                         01
+  Model:                                  IS1001
+  S/N:                                 1642.1698
+  Date:                               04/01/2019
+  Time:                                 09:48:41
+  Application Firmware Version:            1.6.3
+  Operation Mode:                           Scan
+  Network Mode:                IS1001 Standalone
+  Exciter Sync. Mode:                     Master
+  Date/Time Sync.:                      Disabled
+  Beeper:                               Disabled
+  Tag Display Format:                        DEC
+  Initiation Delay:                     Disabled
+  Reader Auto Standby Voltages:       22 V, 24 V
+  Periodic Standby Start Time:              0:00
+  Periodic Standby Duration:            Disabled
+  Idling Time:                          Disabled
+ Alarms:
+  Antenna Current Low Alarm:               1.0 A
+  Noise High Alarm:                          20%
+  Tuning Capacit. High Alarm:                970
+  Tuning Capacit. Low Alarm:                  50
+  Alarms Unique Delay:                  3600 sec
+ Antenna/Tuning:
+  Exciter Voltage Level:                       5
+  Dynamic Tuning:                        Enabled
+  Tuning Target Phase:                       388
+  Tuning Target Phase Deviation Threshold:     4
+ Measurements:
+  Antenna Current Gain:                      103
+  Antenna Current Offset:                    110
+ Communication:
+  Local Port Speed:                       115200
+  Tags To Local Port:                    Enabled
+  Alarms To Local Port:                  Enabled
+  Messages To Local Port:                Enabled
+  Remote Port Protocol:                    ASCII
+ Detection:
+  HDX Tag Detection:                     Enabled
+  Fastag Detection:                     Disabled
+  Detection Counter Enabled:                 Yes
+  Unique Mode:                          Disabled
+  Unique Delay:                           60 sec
+  FDXB Detection Scan Time:                50 ms
+  VTT Level:                                 128
+  Auto VTT Delay:                         60 min
+ Memory:
+  Tags Memory Size:                       100015
+  Status Reports Memory Size:               1023
+  Save Tags To Memory:                   Enabled
+  Save VTT To Memory:                    Enabled
+  Save Stat. Reports To Memory:          Enabled
+ Reports:
+  Auto Noise Report Delay:                60 min
+  Auto Status Report Delay:               60 min
+ Diagnostics:
+  Detection Counter:                           2
+  Tags In Memory:                        99 (0%)
+  Status Reports In Memory:              97 (9%)
+  Input Voltage:                          23.5 V
+  Exciter Voltage:                        19.9 V
+  Antenna Tuning:                          Tuned
+  Antenna Current:                         5.9 A
+  Tuning Capacitors:                         178
+  Tuning Phase:                              388
+  Tuning Relative Phase:                       0
+  FDXB Signal Level:                  34 mV (3%)
+  Temperature:                            25.6 C
+  Sync. Input Present:                       N/A
+  Sec. Master Active:                        N/A
+ Active Alarms:
+  No Active Alarms
+INF: End Of Full Status Report
+
