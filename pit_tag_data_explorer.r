@@ -8,7 +8,6 @@ inFile = "D:\\work\\proj\\pittag\\all_pit_data\\tagDBclean.csv"
 
 
 
-
 # read in the date
 df = read_csv(inFile, col_names = F)
 

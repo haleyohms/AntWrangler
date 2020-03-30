@@ -163,25 +163,25 @@ isJunkMetaFn = function(line){
   return(str_squish(unlist(line)[5]))
 }
 
-isJunkTagFn = function(line){
-  tag<-str_squish(unlist(line)[6])
-  tag<-sub("_", "",tag)
-  return(grepl("^[0-9]+$",tag)) #Returns T or F on whether tag is numeric
-}
-
-# #ID junk ORFID tags. Remove both underscore and . in tag number
 # isJunkTagFn = function(line){
 #   tag<-str_squish(unlist(line)[6])
 #   tag<-sub("_", "",tag)
-#   #tag<-sub("\\.", "",tag)
-#   return(grepl("^[0-9]+$",tag))
+#   return(grepl("^[0-9]+$",tag)) #Returns T or F on whether tag is numeric
 # }
+
+#Find junk ORFID tags. Fails on non-numeric characters and tag prefixes that are not listed
+isJunkTagFn = function(line){
+  tag<-str_squish(unlist(line)[6])
+  tag<-sub("_", "",tag)
+  pre = substr(tag, start = 1, stop = 3)
+  return(grepl("^[0-9]+$",tag) &
+           grepl("000|900|982|985|999", pre))}
 
 #ID junk Biomark tags. Remove . in tag number
 isBMJunkTagFn = function(line){
   tag<-str_squish(unlist(line)[5])
   tag<-sub("\\.", "",tag)
-  return(grepl("^[A-Za-z0-9]+$",tag))
+  return(grepl("^[A-Za-z0-9]+$",tag)) #Returns T or F on whether tag is alpha or numeric (Hex dec is OK)
 }
 
 #Remove column (HDX) from new ORFID format
