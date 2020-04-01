@@ -124,7 +124,6 @@ The date of inclusion in the compliation files will be prepended to the original
 
 
 
-
 #### The example files
 
 There is an ***example*** folder that contain all files needed to perform a test of the scripts.
@@ -132,30 +131,30 @@ There is an ***example*** folder that contain all files needed to perform a test
 ```
 \---example
 	|
-    +---OregonRFIDEx
+    +---SiteORFID
     |   +---archive
     |   \---downloads
-    |           BGS_nov21
+    |           BGS_Dec3
+	|			RSC_July9
     |
-    +---BiomarkEx
+    +---SiteBiomark
 	|   +---archive
     |   \---downloads
     |           01_00006
 ```
 
 ***An important note on site names:*** 
-There is no consistent way in which a site ID is included in the raw data files for either ORFID or Biomark. 
-Because of this, we assign the `site` field in the compiled data based on the names in the file structures.
-For ORFID data, `site` is the name of each raw data file. In the example above, `site` is BGS.
-For Biomark data, `site` is the name of the data folder. In the example above, `site` is BiomarkEx. 
-It is set up this way because the Biomark data can be downloaded in different ways, some of which lead to names like the one in the example. Rather than renaming all of those files, we assign `site` based on the folder name. 
+Site names are not consistenly included in the raw data files for either ORFID or Biomark. 
+As a result, we assign the `site` field in the compiled data based on the names in the file structures.
+
+For ORFID data, `site` is the name preceeding the underscore of each raw data file. 
+In the example above, `site` in the compiled data is BGS.
+
+For Biomark data, `site` is the name of the data folder. In the example above, `site` in the compiled data is SiteBiomark.
+The reason for the difference is because when Biomark data is saved to a USB, each day is saved as a separate file with the format like the example. 
+Rather than renaming all of those files, we assign `site` based on the folder name. 
 
 
-The `site` name assigned in the compiled data differs for ORFID and Biomark data.
-
-for OregonRFID data files, each file should be labeled with the site name first and followed with an underscore (i.e., BGS_nov21). 
-The parser code will use the first entry of the file name (i.e., "BGS") as the site name in the compilation data. 
-The site name here will *not* be used for the site designation in the compilation data. Instead, site will come from the downloaded file name (see download below)
 
 ### Running the program
 
@@ -211,7 +210,13 @@ The fields are:
 + `othernrow`: the number of lines in raw data file that could not be parsed into either a tag, metadata or message 
 + `totalnrow`: the total number of lines in the raw data file
   
-**tagDB.csv**: these are successful tag readings where data acquired from the reader is formatted correctly
+**tagDB.csv**: these are successful tag readings where data acquired from the reader is formatted correctly. 
+For ORFID data, only tags that are numeric and have the prefixes "000", "900", "982", "985", and "999" will make it into tagdb.
+All other tag lines (including hexadecimal formatted tags) will go to the tagbadDB. 
+
+There are fewer conditions on tags that go to tagDB for Biomark data. Both decimal and hexadecimal (i.e., both numeric and alpha characters) 
+are allowed and there are no prefix conditions. Any non-alpha or numeric characters in the tag will go to tagBadDB. 
+
 
 Here is my recommended way to open this file in RStudio with correct formatting and headers 
 
@@ -241,6 +246,11 @@ tdat <- read_csv(paste(dbDir,"/tagDB.csv", sep=""), col_names=tagcolnames,
 + `srcfile`: the raw PIT tag data source file path
 + `srcline`: the raw PIT tag data source file line
 + `compdate`: the date this entry was compiled
+
+***Note***: if you open tagDB.csv in excel, the PITnum column will be a 
+'general' format and will display the tag numbers in scientific notation (i.e., 435 x 10^16). If you 
+change the tag column to 'number' format, excel will display the full tag number.
+Excel is not my recommended way to view tagDB.csv, or any of the output files. I recommend directly importing into R, or using Notepad++.
 
 **metaDB_OR.csv**: these are metadata from OregonRFID readers
 
