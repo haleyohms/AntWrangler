@@ -1,20 +1,95 @@
 # AntWrangler
 
 AntWrangler is a tool to parse, organize, and clean PIT tag antenna data prior to analysis. It handles single (non multiplexed) Oregon RFID and Biomark IS1001 readers.
-AntWrangler is designed as an automated tool, so there is no need to manually edit or combine raw files. 
+AntWrangler is designed as an automated tool, so there is no need to manually edit out headers or commands in the raw data, or combine raw files. 
 One simply points AntWrangler to the raw data directories and lets it do the work. 
+
+## Supported data formats 
+AntWrangler currently works with two Oregon RFID data formats and one Biomark format. Only data formats from single reader sites are currently supported. 
+
+The ORFID formats include data from single readers prior to \2018 and the new readers that came out in \2018. The 'old style' data format looks like this:
+
+```
+Oregon RFID Datalogger Version 5.06  
+2018-12-03 15:38:26.00
+
+>supply power ok 13.0V
+database file opened
+starting reader after power up
+up
+Upload #4
+Reader: 2018-07-011  Site: BYP
+--------- upload 4 start ---------
+E 2018-11-28 11:47:06.00 upload 3 complete
+D 2018-11-28 11:47:43.13 00:00:00.80 HW 0000_0000000000001283    9   496
+D 2018-11-28 11:50:42.15 00:00:00.10 HW 0000_0000000000001283    2  1768
+D 2018-11-28 11:50:42.45 00:00:00.10 HW 0000_0000000000001283    2     1
+D 2018-11-28 11:50:42.75 00:00:00.20 HW 0000_0000000000001283    3     1
+D 2018-11-28 11:53:41.14 00:00:00.80 HW 0000_0000000000001283    9  1768
+--------- upload 4 done ---------
+2563 records
+
+>ut4
+                supply  RX    TX    EA  charge/listen Temp noise
+2018-11-28 11:47 13.4V 0.15A 0.69A 0.42A  50ms/ 50ms  26C  0N
+2018-11-28 11:48 13.3V 0.13A 0.68A 0.40A  49ms/ 50ms  26C  0N
+2018-11-28 11:49 13.3V 0.13A 0.67A 0.39A  49ms/ 50ms  26C  0N
+2018-11-28 11:50 13.3V 0.13A 0.67A 0.39A  49ms/ 50ms  26C  2N
+----------- end of time records #4 ----------
+
+```
+
+The 'new style' readers can be customized to for a variety of data formats. We programmed ours to 
+look as similar to the 'old style' format as possible.
+
+```
+up
+Reader: RSC downstream  Site: AAA
+--------- Upload #7, 2631 records ---------
+DTY          ARR                 DUR       TCHTTY         TAG           NCD     EMP 
+E  2019-09-17 10:56:48.553 G End of upload #6
+S  2019-09-17 11:46:54.400    00:00:00.100 HDX  W  0000_000000000881        2     0 
+S  2019-09-17 12:17:36.500    00:00:00.100 HDX  W  0000_000000000881        2     0 
+S  2019-09-17 12:48:18.700    00:00:00.100 HDX  W  0000_000000000881        2     0 
+S  2019-09-17 13:19:00.800    00:00:00.100 HDX  W  0000_000000000881        2     0 
+
+```
+
+
+The supported Biomark data format looks like this: 
+```
+med
+INF: Tags Download Started
+*TAG: 01 03/20/2020 13:13:22.130 999.000000007425
+*TAG: 01 03/20/2020 14:13:22.130 999.000000007425
+*TAG: 01 03/20/2020 15:13:22.140 999.000000007425
+TAG: 01 03/26/2020 08:28:47.690 900.226001118697
+INF: Status Reports Download Started
+*SRP: 01 03/20/2020 13:13:32.100 16,0,0,2,5,4,92,0,0,267,200,26,33,391,345,0,0,0,0,0
+*SRP: 01 03/20/2020 14:13:32.100 16,0,0,2,5,0,93,0,0,267,200,26,22,395,335,0,0,0,0,0
+*SRP: 01 03/20/2020 15:13:32.100 16,0,0,2,5,0,97,0,0,267,199,26,30,395,330,0,0,0,0,0
+*SRP: 01 03/20/2020 16:13:32.100 16,0,0,2,5,0,95,0,0,267,200,26,22,395,319,0,0,0,0,0
+MSG: 01 03/26/2020 02:40:49.760 Set Caps = 84, I = 2.3 A, PH = 403, dPH = -8
+MSG: 01 03/26/2020 02:40:53.970 Set Caps = 83, I = 2.3 A, PH = 407, dPH = -12
+MSG: 01 03/26/2020 02:41:29.150 Set Caps = 82, I = 2.3 A, PH = 404, dPH = -9
+
+```
+
+Note that all of the commands, intro text, and other miscellaneous text in the raw files does not need to be deleted prior to processing. 
+Similarly, the metadata lines and message lines do not need to be separated from the tag lines. 
+AntWrangler will parse everything into separate files.
 
 
 ## Instructions
 
-### Get the files
+### Get the code from GitHub
 
-Click the ***Clone or download button*** and select ***Download zip*** - a zipped directory containing all files will be downloaded.
+To get the R code from GitHub, click the ***Clone or download button*** and select ***Download zip***. A zipped directory containing all files will be downloaded.
 Unzip the directory and move the folder to a script directory on your system.
 
 #### The R files
 
-There are three R files included:
+There are three R files included in the GitHub download:
 
 + **pit_tag_data_compile_functions.r**: a function file to be sourced in the *pit_tag_data_compile_run.r* file
 + **pit_tag_data_compile_run.r**: a file that runs the PIT tag data compiling program  
@@ -24,29 +99,30 @@ We will come back to these files in a minute. First, you need to set up your dat
 
 ### Directory Setup
 
-AntWrangler is expecting a certain directory structure so that it can find data files to parse, clean and incorporate, and then move them to an archive.
+AntWrangler is expecting a certain directory structure on your computer so that it can find data files to parse, clean and incorporate, and then move them to an archive.
 
-Here is the structure you need to create per site:
+Here is the directory structure you need to create on your computer:
 
 ```
 \---sites
 	|
-    +---site1
+    +---siteX
     |   +---archive
     |   \---downloads
     |
-    +---site2
+    +---siteY
     |   +---archive
     |   \---downloads
 ```
 
-`site`: will hold the data files for an individual site. This will *not* be used for the site designation in the compilation data. Instead, site will come from the downloaded file name (see download below)
+`sitei`: will hold the data files for an individual site. 
 
-`archive`: is where files that have been parsed and incorporated into the compilation files will be moved to - the date of inclusion in the compliation files will be prepended to the original file name
+`archive`: is where files that have been parsed and incorporated into the compilation files will be moved to. 
+The date of inclusion in the compliation files will be prepended to the original file name. 
 
-`download` is where you should place data files that you want parsed and incorporated into the compilation files. 
+`downloads` is where you should place data files that you want parsed and incorporated into the compilation files. 
 
-***An important note:*** for OregonRFID data files, each file should be labeled with the site name first and followed with an underscore (i.e., BGS_nov21). The parser code will use the first entry of the file name (i.e., "BGS") as the site name in the compilation data. 
+
 
 #### The example files
 
@@ -55,16 +131,29 @@ There is an ***example*** folder that contain all files needed to perform a test
 ```
 \---example
 	|
-    +---BiomarkEx
+    +---SiteORFID
     |   +---archive
     |   \---downloads
-    |           BGS_nov21
+    |           BGS_Dec3
+	|			RSC_July9
     |
-    +---OregonRFIDEx
-    |   +---archive
+    +---SiteBiomark
+	|   +---archive
     |   \---downloads
     |           01_00006
 ```
+
+***An important note on site names:*** 
+Site names are not consistenly included in the raw data files for either ORFID or Biomark. 
+As a result, we assign the `site` field in the compiled data based on the names in the file structures.
+
+For ORFID data, `site` is the name preceeding the underscore of each raw data file. 
+In the example above, `site` in the compiled data is BGS.
+
+For Biomark data, `site` is the name of the data folder. In the example above, `site` in the compiled data is SiteBiomark.
+The reason for the difference is because when Biomark data is saved to a USB, each day is saved as a separate file with the format like the example. 
+Rather than renaming all of those files, we assign `site` based on the folder name. 
+
 
 
 ### Running the program
@@ -121,7 +210,13 @@ The fields are:
 + `othernrow`: the number of lines in raw data file that could not be parsed into either a tag, metadata or message 
 + `totalnrow`: the total number of lines in the raw data file
   
-**tagDB.csv**: these are successful tag readings where data acquired from the reader is formatted correctly
+**tagDB.csv**: these are successful tag readings where data acquired from the reader is formatted correctly. 
+For ORFID data, only tags that are numeric and have the prefixes "000", "900", "982", "985", and "999" will make it into tagdb.
+All other tag lines (including hexadecimal formatted tags) will go to the tagbadDB. 
+
+There are fewer conditions on tags that go to tagDB for Biomark data. Both decimal and hexadecimal (i.e., both numeric and alpha characters) 
+are allowed and there are no prefix conditions. Any non-alpha or numeric characters in the tag will go to tagBadDB. 
+
 
 Here is my recommended way to open this file in RStudio with correct formatting and headers 
 
@@ -151,6 +246,11 @@ tdat <- read_csv(paste(dbDir,"/tagDB.csv", sep=""), col_names=tagcolnames,
 + `srcfile`: the raw PIT tag data source file path
 + `srcline`: the raw PIT tag data source file line
 + `compdate`: the date this entry was compiled
+
+***Note***: if you open tagDB.csv in excel, the PITnum column will be a 
+'general' format and will display the tag numbers in scientific notation (i.e., 435 x 10^16). If you 
+change the tag column to 'number' format, excel will display the full tag number.
+Excel is not my recommended way to view tagDB.csv, or any of the output files. I recommend directly importing into R, or using Notepad++.
 
 **metaDB_OR.csv**: these are metadata from OregonRFID readers
 

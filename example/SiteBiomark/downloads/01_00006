@@ -1,0 +1,114 @@
+
+ALM: 01 05/01/2019 09:04:32.710 Noise High
+MSG: 01 05/01/2019 09:04:34.110 Noise In Spec.
+
+med
+INF: Tags Download Started
+*TAG: 01 04/12/2019 09:16:21.030 999.000000007425
+*TAG: 01 04/12/2019 09:17:22.040 999.000000007425
+*TAG: 01 04/12/2019 10:17:22.140 999.000000007425
+*TAG: 01 04/12/2019 11:17:22.140 999.000000007425
+*TAG: 01 04/12/2019 12:17:22.130 999.000000007425
+*TAG: 01 04/12/2019 13:17:22.130 999.000000007425
+*TAG: 01 04/12/2019 14:17:22.130 999.000000007425
+*TAG: 01 04/12/2019 15:17:22.140 982.126053984694
+*TAG: 01 04/12/2019 16:17:22.130 999.000000007425
+*TAG: 01 04/12/2019 17:17:22.130 999.000000007425
+*TAG: 01 04/12/2019 18:17:22.130 982.678840563254
+*TAG: 01 04/12/2019 19:17:22.130 999.000000007425
+*TAG: 01 04/12/2019 21:17:22.140 999.000000007425
+*TAG: 01 04/12/2019 22:17:22.130 999.000000007425
+*TAG: 01 04/12/2019 23:17:22.130 999.000000007425
+*TAG: 01 04/13/2019 00:17:22.130 999.000000007425
+*TAG: 01 04/13/2019 01:17:22.130 999.000000007425
+*TAG: 01 04/13/2019 02:17:22.130 999.000000007425
+
+
+
+INF: Status Reports Download Started
+*SRP: 01 04/12/2019 09:17:32.000 16,0,1,2,5,2,199,0,0,260,199,57,65,387,350,8,0,0,0,0
+*SRP: 01 04/12/2019 10:17:32.100 16,0,1,2,5,4,203,0,0,250,199,57,7,385,330,0,0,0,0,0
+*SRP: 01 04/12/2019 11:17:32.100 16,0,1,2,5,4,206,0,0,250,199,60,7,385,364,0,0,0,0,0
+*SRP: 01 04/12/2019 12:17:32.100 16,0,1,2,5,4,210,0,0,249,199,65,7,385,384,0,0,0,0,0
+*SRP: 01 04/12/2019 13:17:32.100 16,0,1,2,5,-2,212,0,0,249,199,68,7,391,361,0,0,0,0,0
+*SRP: 01 04/12/2019 14:17:32.100 16,0,1,2,5,-2,212,0,0,248,199,70,8,391,309,0,0,0,0,0
+*SRP: 01 04/12/2019 15:17:32.100 16,0,1,2,5,-1,212,0,0,248,199,72,7,390,293,0,0,0,0,0
+
+
+INF: Start Of Full Status Report
+ Reader:
+  ID:                                         01
+  Model:                                  IS1001
+  S/N:                                 1642.1698
+  Date:                               05/01/2019
+  Time:                                 09:04:49
+  Application Firmware Version:            1.6.3
+  Operation Mode:                           Scan
+  Network Mode:                IS1001 Standalone
+  Exciter Sync. Mode:                     Master
+  Date/Time Sync.:                      Disabled
+  Beeper:                               Disabled
+  Tag Display Format:                        DEC
+  Initiation Delay:                     Disabled
+  Reader Auto Standby Voltages:       22 V, 24 V
+  Periodic Standby Start Time:              0:00
+  Periodic Standby Duration:            Disabled
+  Idling Time:                          Disabled
+ Alarms:
+  Antenna Current Low Alarm:               1.0 A
+  Noise High Alarm:                          20%
+  Tuning Capacit. High Alarm:                970
+  Tuning Capacit. Low Alarm:                  50
+  Alarms Unique Delay:                  3600 sec
+ Antenna/Tuning:
+  Exciter Voltage Level:                       5
+  Dynamic Tuning:                        Enabled
+  Tuning Target Phase:                       389
+  Tuning Target Phase Deviation Threshold:     5
+ Measurements:
+  Antenna Current Gain:                      103
+  Antenna Current Offset:                    110
+ Communication:
+  Local Port Speed:                       115200
+  Tags To Local Port:                    Enabled
+  Alarms To Local Port:                  Enabled
+  Messages To Local Port:                Enabled
+  Remote Port Protocol:                    ASCII
+ Detection:
+  HDX Tag Detection:                     Enabled
+  Fastag Detection:                     Disabled
+  Detection Counter Enabled:                 Yes
+  Unique Mode:                          Disabled
+  Unique Delay:                           60 sec
+  FDXB Detection Scan Time:                50 ms
+  VTT Level:                                 128
+  Auto VTT Delay:                         60 min
+ Memory:
+  Tags Memory Size:                       100015
+  Status Reports Memory Size:               1023
+  Save Tags To Memory:                   Enabled
+  Save VTT To Memory:                    Enabled
+  Save Stat. Reports To Memory:          Enabled
+ Reports:
+  Auto Noise Report Delay:                60 min
+  Auto Status Report Delay:               60 min
+ Diagnostics:
+  Detection Counter:                           0
+  Tags In Memory:                       452 (0%)
+  Status Reports In Memory:            460 (44%)
+  Input Voltage:                          24.1 V
+  Exciter Voltage:                        19.9 V
+  Antenna Tuning:                          Tuned
+  Antenna Current:                         6.7 A
+  Tuning Capacitors:                         208
+  Tuning Phase:                              388
+  Tuning Relative Phase:                       1
+  FDXB Signal Level:                217 mV (24%)
+  Temperature:                            31.9 C
+  Sync. Input Present:                       N/A
+  Sec. Master Active:                        N/A
+ Active Alarms:
+  No Active Alarms
+INF: End Of Full Status Report
+ALM: 01 05/01/2019 09:04:55.130 Noise High
+MSG: 01 05/01/2019 09:04:59.960 Noise In Spec.

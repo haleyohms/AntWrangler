@@ -2,11 +2,6 @@ library(tidyverse)
 library(lubridate)
 readr.show_progress = F
 
-# list of time zones
-#https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
-# timeZone = "America/Los_Angeles"
-
 
 getDate = function(dateChunk='thisisafillerdate'){
   #dateChunk = "03/03/2018"
@@ -56,7 +51,6 @@ commaDelim = function(lines){
 ## Tells lubridate to include decimal seconds. Current settings are for no decimal seconds
 #options(digits.secs=2)
 
-#makeORFIDtagDF = function(tagDataDF, tz){
 makeORFIDtagDF = function(tagDataDF){
   date = as.Date(tagDataDF[,2])
   time = as.character(tagDataDF[,3])
@@ -73,10 +67,8 @@ makeORFIDtagDF = function(tagDataDF){
   arrint = as.numeric(arrint)
 
   return(data.frame(datetime, fracsec, duration, tagtype, tagid, consdetc, arrint, stringsAsFactors = F))
-  #return(data.frame(date, time, datetime, fracsec, duration, tagtype, tagid, consdetc, arrint, stringsAsFactors = F))
 }
 
-#makeORFIDmetaDF = function(metaDataDF, tz){ 
 makeORFIDmetaDF = function(metaDataDF){ 
   #print(metaDataDF[,1])
   date = as.Date(metaDataDF[,1])
@@ -92,7 +84,6 @@ makeORFIDmetaDF = function(metaDataDF){
   listen = as.numeric(metaDataDF[,8])
   # charge = as.numeric(sub("ms/", "",metaDataDF[,7]))
   # listen = as.numeric(sub("ms", "",metaDataDF[,8]))
-  # 
   temp = as.numeric(sub("C", "",metaDataDF[,9]))
   noise = as.numeric(sub("N", "",metaDataDF[,10]))
   
@@ -100,7 +91,6 @@ makeORFIDmetaDF = function(metaDataDF){
   #return(data.frame(date, time, datetime, power, rx, tx, ea, charge, listen, temp, noise, stringsAsFactors = F))
 }
 
-#makeBiomarkDF = function(tagDataDF, tz){
 makeBiomarkDF = function(tagDataDF){
   date = as.Date(do.call("c", lapply(as.character(tagDataDF[,3]), getDate)))
   time = as.character(str_sub(tagDataDF[,4], 1, 11))
@@ -173,22 +163,44 @@ isJunkMetaFn = function(line){
   return(str_squish(unlist(line)[5]))
 }
 
+# isJunkTagFn = function(line){
+#   tag<-str_squish(unlist(line)[6])
+#   tag<-sub("_", "",tag)
+#   return(grepl("^[0-9]+$",tag)) #Returns T or F on whether tag is numeric
+# }
+
+#Find junk ORFID tags. Fails on non-numeric characters and tag prefixes that are not listed
 isJunkTagFn = function(line){
   tag<-str_squish(unlist(line)[6])
   tag<-sub("_", "",tag)
-  return(grepl("^[0-9]+$",tag))
-}
+  pre = substr(tag, start = 1, stop = 3)
+  return(grepl("^[0-9]+$",tag) &
+           grepl("000|900|982|985|999", pre))}
 
+#ID junk Biomark tags. Remove . in tag number
 isBMJunkTagFn = function(line){
   tag<-str_squish(unlist(line)[5])
   tag<-sub("\\.", "",tag)
-  return(grepl("^[A-Za-z0-9]+$",tag))
+  return(grepl("^[A-Za-z0-9]+$",tag)) #Returns T or F on whether tag is alpha or numeric (Hex dec is OK)
 }
 
-#parseScanLog = function(logFile, tz, dbDir, archiveDir){
+#Remove column (HDX) from new ORFID format
+  ## Could also add HDX to W here if wanted to preserve HDX
+rmNewColFn = function(line){
+  newline <- unlist(line)[-5] # remove the 5th element of the line
+  return(newline)
+}
+
 parseScanLog = function(logFile, dbDir, archiveDir){
   #logFile = logFiles[1]
-  #logFile="C:/Users/HaleyOhms/Documents/Carmel Project/Array data/ALP/downloads/ALPDS_febmix_noise"
+  # logFile="C:/Users/HaleyOhms/Documents/GitHub/AntWrangler/example/NewORFIDformat/RSC_Downstream_20190719"
+  # archiveDir="C:/Users/HaleyOhms/Documents/GitHub/AntWrangler/example/NewORFIDformat"
+  # dbDir="C:/Users/HaleyOhms/Documents/GitHub/AntWrangler/example/NewORFIDformat"
+  # 
+  # logFile="C:/Users/HaleyOhms/Documents/GitHub/AntWrangler/NewFormTest/RSC/downloads/RSCDS_test2"
+  # dbDir="C:/Users/HaleyOhms/Documents/GitHub/AntWrangler/NewFormTest/RSC"
+  # archiveDir="C:/Users/HaleyOhms/Documents/GitHub/AntWrangler/NewFormTest/RSC"
+  
   
   print(str_glue('    File: ', logFile))
   bname = basename(logFile)
@@ -200,7 +212,6 @@ parseScanLog = function(logFile, dbDir, archiveDir){
 
 ### Is this file orfid or biomark? - need to get site name
   end = ifelse(lineLen < 150, lineLen, 150) #if ll is <150 use ll, if its greater, use only first 150 lines
-  #end = ifelse(lineLen < 10, lineLen, 10)
   readerTestLines = spaceDelim(lines[1:end])
   biomark = c()
   for(i in 1:length(readerTestLines)){
@@ -221,7 +232,10 @@ parseScanLog = function(logFile, dbDir, archiveDir){
     dateCheck = do.call("c", lapply(date, getDate))
     isDate = !is.na(dateCheck)
     
-    ########## DEAL WITH THE TAG DATA (D CODE)
+    #####################################################################################
+    
+    ########## OLD ORFID READER DATA FORMAT ####################
+    ########## PULL OUT THE TAG DATA (D CODE) 
     dataMaybe = which(lineStart == 'D ') 
     dataMaybeLength = length(dataMaybe)
     
@@ -279,7 +293,7 @@ parseScanLog = function(logFile, dbDir, archiveDir){
       tagDataFailLines = dataMaybe[which(lens != 8 & !is.na(dateCheck))]
       tagDataFailLinesLength = length(tagDataFailLines)
   
-        #make an empty df in case there are no bad tags
+      #make an empty df in case there are no bad tags
       tagDataFailDF <- data.frame(msg=character(),
                                    site=character(),
                                    reader=character(), 
@@ -323,8 +337,114 @@ parseScanLog = function(logFile, dbDir, archiveDir){
       
     }
     
-     
-    ##########  DEAL WITH THE MESSAGE DATA (E AND B CODES)
+    #####################################################################################
+    ########## NEW ORFID READER DATA FORMAT #################### Thanks, not.
+    
+    #... Pull out the tag data (S code) 
+    newDataMaybe = which(lineStart == 'S ') 
+    newDataMaybeLength = length(newDataMaybe)
+    
+    #make an empty df in case there are no bad tags (as a holder for rbind below)
+    tagDataBadDF <- data.frame(msg=character(),
+                               site=character(),
+                               reader=character(), 
+                               fname=character(), 
+                               line=integer(), 
+                               dateadded=as.Date(character()),
+                               stringsAsFactors=FALSE) 
+    
+    if(newDataMaybeLength > 0){
+      newdataLines = spaceDelim(lines[newDataMaybe])
+      
+      #...do a check on the date to make sure that its a proper date
+      newLens = lengths(newdataLines)
+      newDate = unlist(lapply(newdataLines, function(l) {unlist(l[2])}))
+      dateCheck = do.call("c", lapply(newDate, getDate)) # need to use do.call('c') here to unlist because unlist reformats the date
+      
+      #... for dates that are good and the number of columns is correct, assume they are tags and put them in a DF
+      newTagDataLines = newDataMaybe[which(newLens == 9 & !is.na(dateCheck))] 
+      newTagDataLinesLength = length(newTagDataLines)
+      if(newTagDataLinesLength > 0){
+        newTagDataList = spaceDelim(lines[newTagDataLines])
+        newTagDataList2 = lapply(newTagDataList,rmNewColFn) #Remove new 5th column
+        newisGoodTag = lapply(newTagDataList2,isJunkTagFn) #Remove underscore, test for numeric
+        newTagDataGood = which(newisGoodTag==T) 
+        newTagDataGoodLength = length(newTagDataGood)
+        
+        if(newTagDataGoodLength>0){
+          newTagDataLinesGood = spaceDelim(lines[newTagDataLines[newTagDataGood]])
+          newTagDataMatrixGood = do.call(rbind, newTagDataLinesGood)
+          newTagDataMatrixGood = newTagDataMatrixGood[,-5]  #Remove new 5th column
+          tagDataDF = as.data.frame(newTagDataMatrixGood) %>%  #cbind(tagDataMatrix, newTagDataLines) #NOTE: leaving tagDataDF name for now, may need to change
+            makeORFIDtagDF() %>%
+            addInfo(newDataMaybe[newTagDataGood], archiveFile, site, reader)
+        }
+        
+        tagDataBad = which(newisGoodTag==F) # any tags that have non-numeric characters
+        tagDataBadLength = length(tagDataBad)
+        if(tagDataBadLength > 0){
+          tagDataBadVector = lines[newDataMaybe[tagDataBad]] %>% 
+            sub("\t", " ", .) %>%
+            str_squish()
+          tagDataBadDF = data.frame(msg=tagDataBadVector, stringsAsFactors = F) %>%
+            addInfo(newDataMaybe[tagDataBad], archiveFile, site, reader)
+        }
+        
+      }
+      
+      #... for dates that are good but the number of columns is incorrect, assume they are 
+      #... failed reads and put them in a separate DF
+      tagDataFailLines = newDataMaybe[which(newLens != 9 & !is.na(dateCheck))]
+      tagDataFailLinesLength = length(tagDataFailLines)
+      
+      #make an empty df in case there are no bad tags
+      tagDataFailDF <- data.frame(msg=character(),
+                                  site=character(),
+                                  reader=character(), 
+                                  fname=character(), 
+                                  line=integer(), 
+                                  dateadded=as.Date(character()),
+                                  stringsAsFactors=FALSE) 
+      
+      
+      if(tagDataFailLinesLength > 0){
+        tagDataFailVector = lines[tagDataFailLines] %>% 
+          sub("\t", " ", .) %>%
+          str_squish()
+        tagDataFailDF = data.frame(msg=tagDataFailVector, stringsAsFactors = F) %>%
+          addInfo(tagDataFailLines, archiveFile, site, reader)
+      }
+      
+      #... for D codes that have a bad date, put them in a separate DF
+      tagDataJunkLines = newDataMaybe[which(is.na(dateCheck))]
+      tagDataJunkLinesLength = length(tagDataJunkLines)
+      
+      #make an empty df in case there are no bad tags
+      tagDataJunkieDF <- data.frame(msg=character(),
+                                    site=character(),
+                                    reader=character(), 
+                                    fname=character(), 
+                                    line=integer(), 
+                                    dateadded=as.Date(character()),
+                                    stringsAsFactors=FALSE) 
+      
+      if(tagDataJunkLinesLength > 0){
+        tagDataJunkVector = lines[tagDataJunkLines] %>%
+          sub("\t", " ", .) %>%
+          str_squish()
+        tagDataJunkieDF = data.frame(msg = tagDataJunkVector, stringsAsFactors = F) %>%
+          addInfo(tagDataJunkLines, archiveFile, site, reader)
+      }
+      
+      tagDataJunkDF <- rbind(tagDataJunkieDF, tagDataFailDF, tagDataBadDF) #bind the junk data together
+      #tagDataJunkDF <- tagDataJunkDF[complete.cases(tagDataJunkDF),]
+      
+    }
+    
+    
+    #####################################################################################
+    
+    ##########  DEAL WITH THE MESSAGE DATA (E AND B CODES) #Kept the same for old and new ORFID data formats; may need to change
     msgMaybe = which(lineStart == 'E ' | lineStart == 'B ')
     msgMaybeLength = length(msgMaybe)
     if(msgMaybeLength > 0){
@@ -357,7 +477,8 @@ parseScanLog = function(logFile, dbDir, archiveDir){
     
     
     ##########  DEAL WITH OTHER
-    otherLines = which(lineStart != 'D ' & lineStart != 'E ' & lineStart != 'B ' & isDate != T) #and not date
+    otherLines = which(lineStart != 'D ' & lineStart != 'E ' & lineStart != 'B ' 
+                       & lineStart != 'S ' & isDate != T) #and not date
     otherLinesLength = length(otherLines)
     if(otherLinesLength > 0){
       otherVector = lines[otherLines] %>%
@@ -399,8 +520,9 @@ parseScanLog = function(logFile, dbDir, archiveDir){
     }
   }
     
-  
-#Biomark parsing starts here#################    
+  #############################################  
+# Biomark parsing starts here  #################
+  #############################################
     
   } else { #TODO - check to see if this is a biomark reader - we are assuming it is right now
     #site = basename(dirname(dirname(logFile)))
