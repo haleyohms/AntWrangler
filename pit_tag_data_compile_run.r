@@ -14,6 +14,7 @@ timeZone = "America/Los_Angeles"
 
 source(functionsPath)  
 PITcompile(dataDir, dbDir, timeZone)
+rmdups(dbDir)
 
 
 
