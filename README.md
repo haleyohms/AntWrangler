@@ -186,14 +186,12 @@ logcolnames <- c("site", "manuf", "srcfile", "compdate", "tagnrow", "tagbadnrow"
                  "metanrow_OR", "metanrow_BM", "metabadnrow", "msgnrow", "msgbadnrow", "othernrow", "totalnrow")
 
 #read the file into R with correct column formats (see readr documentation here: https://readr.tidyverse.org/articles/readr.html)
-read_csv(paste(dbDir,"/logDB.csv", sep=""), col_names=logcolnames, 
+logdat <- read_csv(paste(dbDir,"/logDB.csv", sep=""), col_names=logcolnames, 
          col_types = cols(site="c", manuf="c", srcfile="c", compdate="D", 
                           tagnrow="i", tagbadnrow="i", metanrow_OR="i", metanrow_BM="i", 
                           metabadnrow="i", msgnrow="i", 
                           msgbadnrow="i", othernrow="i", totalnrow="i") )
 
-logcolnames <- c("site", "manuf", "srcfile", "compdate", "tagnrow", "tagbadnrow", 
-                 "metanrow", "metabadnrow", "msgnrow", "msgbadnrow", "othernrow", "totalnrow")
 ```
 The fields are: 
 + `site`: the site or antenna name

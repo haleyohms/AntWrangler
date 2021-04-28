@@ -859,8 +859,6 @@ parseScanLog = function(logFile, dbDir, archiveDir){
     #file.remove(logFile)
 }
 
-?file.rename()
-
 PITcompile = function(dataDir, dbDir, timeZone){
   #logFile = "C:/Users/HaleyOhms/Documents/Carmel Project/Array data/BGS/downloads/BGS_JAN15.txt"
   #dataDir = "C:/Users/HaleyOhms/Documents/Carmel Project/Array data"
