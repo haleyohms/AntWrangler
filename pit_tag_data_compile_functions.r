@@ -2,6 +2,21 @@ library(tidyverse)
 library(lubridate)
 readr.show_progress = F
 
+### TESTING JUNK
+#logFile = logFiles[1]
+# logFile="C:/Users/HaleyOhms/Documents/GitHub/AntWrangler/example/NewORFIDformat/RSC_Downstream_20190719"
+# archiveDir="C:/Users/HaleyOhms/Documents/GitHub/AntWrangler/example/NewORFIDformat"
+# dbDir="C:/Users/HaleyOhms/Documents/GitHub/AntWrangler/example/NewORFIDformat"
+# 
+# logFile="C:/Users/HaleyOhms/Documents/GitHub/AntWrangler/NewFormTest/RSC/downloads/RSCDS_test2"
+# dbDir="C:/Users/HaleyOhms/Documents/GitHub/AntWrangler/NewFormTest/RSC"
+# archiveDir="C:/Users/HaleyOhms/Documents/GitHub/AntWrangler/NewFormTest/RSC"
+
+# logFile = "C:/Users/HaleyOhms/Documents/Carmel/Code_notGit/BiomarkFormatTest_Feb2022/LT/downloads/LT_test"
+# dbDir = "C:/Users/HaleyOhms/Documents/Carmel/Code_notGit/BiomarkFormatTest_Feb2022"
+# archiveDir ="C:/Users/HaleyOhms/Documents/Carmel/Code_notGit/BiomarkFormatTest_Feb2022"
+####################
+
 
 getDate = function(dateChunk='thisisafillerdate'){
   #dateChunk = "03/03/2018"
@@ -192,16 +207,6 @@ rmNewColFn = function(line){
 }
 
 parseScanLog = function(logFile, dbDir, archiveDir){
-  #logFile = logFiles[1]
-  # logFile="C:/Users/HaleyOhms/Documents/GitHub/AntWrangler/example/NewORFIDformat/RSC_Downstream_20190719"
-  # archiveDir="C:/Users/HaleyOhms/Documents/GitHub/AntWrangler/example/NewORFIDformat"
-  # dbDir="C:/Users/HaleyOhms/Documents/GitHub/AntWrangler/example/NewORFIDformat"
-  # 
-  # logFile="C:/Users/HaleyOhms/Documents/GitHub/AntWrangler/NewFormTest/RSC/downloads/RSCDS_test2"
-  # dbDir="C:/Users/HaleyOhms/Documents/GitHub/AntWrangler/NewFormTest/RSC"
-  # archiveDir="C:/Users/HaleyOhms/Documents/GitHub/AntWrangler/NewFormTest/RSC"
-  
-  
   print(str_glue('    File: ', logFile))
   bname = basename(logFile)
   archiveFile = suppressWarnings(normalizePath(file.path(archiveDir,str_glue(as.character(Sys.Date()),'_',bname))))
@@ -555,7 +560,8 @@ parseScanLog = function(logFile, dbDir, archiveDir){
       dateCheck = do.call("c", lapply(date, getDate)) # need to use do.call('c') here to unlist because unlist reformats the date
       
       #... for dates that are good and the number of columns is correct, assume they are tags and put them in a DF
-      tagDataLines = dataMaybe[which(lens == 5 & !is.na(dateCheck))]
+      tagDataLines = dataMaybe[which(lens == 5 | lens == 7 & !is.na(dateCheck))] #added length of 6 to accomodate new Biomark format on test tags (mv in 6th col.)
+      #tagDataLines = dataMaybe[which(lens == 5 & !is.na(dateCheck))] original: working as of 2/22/22
       #MCdat: tagDataLines = dataMaybe[which(lens == 6 & !is.na(dateCheck))]
       tagDataLinesLength = length(tagDataLines)
       if(tagDataLinesLength > 0){
@@ -566,6 +572,11 @@ parseScanLog = function(logFile, dbDir, archiveDir){
         
         if(tagDataGoodLength>0){
           tagDataLinesGood = spaceDelim(lines[tagDataLines[tagDataGood]])
+          
+          # Take out first 5 values only; ignore the mV addition (2 add'l columns) for test tag data; Biomark format change 2/2022
+          tagDataLinesGood = tagDataLinesGood %>% 
+            map(., function(x) c(x[[1]], x[[2]], x[[3]], x[[4]], x[[5]]))
+          
           tagDataMatrixGood = do.call(rbind, tagDataLinesGood)
           tagDataDF = as.data.frame(tagDataMatrixGood) %>%  #cbind(tagDataMatrix, tagDataLines)
             makeBiomarkDF() %>%
@@ -608,7 +619,7 @@ parseScanLog = function(logFile, dbDir, archiveDir){
       
       #... for dates that are good but the number of columns is incorrect, assume they are 
       #... failed reads and put them in a separate DF
-      tagDataFailLines = dataMaybe[which(lens != 5 & !is.na(dateCheck))]
+      tagDataFailLines = dataMaybe[which(lens != 5 & !is.na(dateCheck))] #NOTE: This means test tag values with new mV show up here, even though they were also parsed as good. Leaving for now (2/22/22) to see if we can change format on Biomark end
       tagDataFailLinesLength = length(tagDataFailLines)
       
       #make an empty df in case there are no bad tags
